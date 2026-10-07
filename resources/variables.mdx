@@ -1,0 +1,126 @@
+---
+title: 'Variables'
+description: 'Every placeholder you can use in embeds, welcomes, boost messages and responders.'
+---
+
+# Variables
+
+Variables work anywhere text is rendered: embeds, welcome and leave messages,
+boost messages, invoke messages and the dashboard's embed sender. Run
+`,variables` in Discord for the same list, or `,variables test <text>`
+to see one rendered with real values.
+
+Unknown variables are left exactly as typed, so a typo stays visible instead of
+silently rendering as empty.
+
+## User
+
+| Variable | Renders |
+|----------|---------|
+| `{user}` | mentions the member |
+| `{user.name}` | username |
+| `{user.display_name}` | display name |
+| `{user.id}` | user id |
+| `{user.mention}` | mentions the member |
+| `{user.tag}` | username |
+| `{user.nickname}` | nickname in this server |
+| `{user.avatar}` | avatar url |
+| `{user.display_avatar}` | avatar url |
+| `{user.guild_avatar}` | server avatar url |
+| `{user.created_at}` | account age, relative |
+| `{user.created_at_timestamp}` | account creation, unix |
+| `{user.joined_at}` | join date, relative |
+| `{user.joined_at_timestamp}` | join date, unix |
+| `{user.bot}` | Yes / No |
+| `{user.boost}` | Yes / No |
+| `{user.boost_since}` | boost date |
+| `{user.boost_since_timestamp}` | boost date, unix |
+| `{user.color}` | top role colour |
+| `{user.top_role}` | highest role |
+| `{user.role_list}` | role names |
+| `{user.role_text_list}` | role mentions |
+| `{user.join_position}` | join position |
+| `{user.join_position_suffix}` | join position with suffix |
+| `{accountage}` | how old the account is |
+
+## Server
+
+| Variable | Renders |
+|----------|---------|
+| `{guild.name}` | server name |
+| `{guild.id}` | server id |
+| `{guild.count}` | member count |
+| `{guild.owner_id}` | owner id |
+| `{guild.owner}` | mentions the owner |
+| `{guild.icon}` | icon url |
+| `{guild.banner}` | banner url |
+| `{guild.splash}` | splash url |
+| `{guild.discovery}` | discovery splash url |
+| `{guild.created_at}` | creation, unix |
+| `{guild.created_at_relative}` | creation, relative |
+| `{guild.region}` | no longer reported by Discord |
+| `{guild.shard}` | shard id |
+| `{guild.emoji_count}` | custom emoji count |
+| `{guild.role_count}` | role count |
+| `{guild.boost_count}` | boost count |
+| `{guild.boost_tier}` | boost tier |
+| `{guild.preferred_locale}` | locale |
+| `{guild.max_members}` | member cap |
+| `{guild.max_presences}` | presence cap |
+| `{guild.afk_timeout}` | afk timeout, seconds |
+| `{guild.afk_channel}` | afk channel |
+| `{guild.channels}` | channel names |
+| `{guild.channels_count}` | channel count |
+| `{guild.text_channels}` | text channel names |
+| `{guild.text_channels_count}` | text channel count |
+| `{guild.voice_channels}` | voice channel names |
+| `{guild.voice_channels_count}` | voice channel count |
+| `{guild.category_channels}` | category names |
+| `{guild.category_channels_count}` | category count |
+
+## Channel
+
+| Variable | Renders |
+|----------|---------|
+| `{channel.name}` | channel name |
+| `{channel.id}` | channel id |
+| `{channel.mention}` | mentions the channel |
+| `{channel.type}` | channel type |
+| `{channel.position}` | position in the category |
+| `{channel.topic}` | channel topic |
+| `{channel.slowmode_delay}` | slowmode, seconds |
+| `{channel.category_id}` | parent category id |
+| `{channel.category_name}` | parent category name |
+
+## Target
+
+| Variable | Renders |
+|----------|---------|
+| `{target_user.id}` | the user being acted on |
+| `{target_user.name}` | their username |
+| `{target_user.mention}` | mentions them |
+| `{target_user.avatar}` | their avatar url |
+
+## Tracking
+
+| Variable | Renders |
+|----------|---------|
+| `{inviter}` | who invited the member |
+| `{inviter.name}` | inviter's name |
+| `{invites}` | how many the inviter brought in |
+
+## Bot
+
+| Variable | Renders |
+|----------|---------|
+| `{prefix}` | the command prefix |
+| `{brand}` | the bot's name |
+| `{site}` | website url |
+| `{support}` | support server url |
+| `{emoji:key}` | an emoji from the bleed pack |
+
+## Emoji
+
+`{emoji:key}` renders one of the 44 custom emojis in the pack:
+
+`{emoji:owner}` · `{emoji:helper}` · `{emoji:mod}` · `{emoji:channel_stage}` · `{emoji:channel_forum}` · `{emoji:arrow_right}` · `{emoji:discord}` · `{emoji:trashcan}` · `{emoji:developer}` · `{emoji:python}` · `{emoji:nuke}` · `{emoji:mute}` · `{emoji:plus}` · `{emoji:unlock}` · `{emoji:unmute}` · `{emoji:lock}` · `{emoji:minus}` · `{emoji:info}` · `{emoji:final_pageRight}` · `{emoji:links}` · `{emoji:final_pageLeft}` · `{emoji:giveaway}` · `{emoji:arrow_left}` · `{emoji:ghost}`

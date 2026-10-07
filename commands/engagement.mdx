@@ -1,0 +1,96 @@
+---
+title: 'Engagement commands'
+description: '6 engagement commands in bleed.'
+---
+
+# Engagement
+
+6 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,highlight`](#highlight) | Set notifications for when a keyword is said. |
+| [`,invitecodes`](#invitecodes) | List invite codes for a user. |
+| [`,invited`](#invited) | List members invited by a user. |
+| [`,inviter`](#inviter) | Show who invited a user. |
+| [`,starboard`](#starboard) | Configure and manage the server's starboards. |
+| [`,suggestions`](#suggestions) | Suggestion system. |
+
+## ,highlight
+
+Set notifications for when a keyword is said.
+
+**Usage:** `,highlight <add|remove|list|reset|ignore>`
+**Aliases:** `hl`
+**Subcommands:** `{prefix}highlight add <keyword>`, `{prefix}highlight remove <keyword>`, `{prefix}highlight list`, `{prefix}highlight reset`
+
+```bash
+{prefix}highlight add buffy
+{prefix}highlight list
+{prefix}highlight ignore channel #spam
+{prefix}highlight reset
+```
+
+## ,invitecodes
+
+List invite codes for a user.
+
+**Usage:** `,invitecodes [@user]`
+**Aliases:** `invc`, `invcode`, `invcodes`
+
+```bash
+{prefix}invitecodes
+{prefix}invitecodes @User
+```
+
+## ,invited
+
+List members invited by a user.
+
+**Usage:** `,invited [@user] [page]`
+**Aliases:** `invby`, `invitedby`, `invitedmembers`
+
+```bash
+{prefix}invited
+{prefix}invited @User 2
+```
+
+## ,inviter
+
+Show who invited a user.
+
+**Usage:** `,inviter [@user]`
+**Aliases:** `inviterof`, `whoinv`, `whoinvited`
+
+```bash
+{prefix}inviter
+{prefix}inviter @User
+```
+
+## ,starboard
+
+Configure and manage the server's starboards.
+
+**Usage:** `,starboard <add|remove|edit|ignore|unignore|lock|unlock|self|config>`
+**Aliases:** `eb`, `sboard`, `star`
+
+```bash
+{prefix}starboard add main #starboard <emoji> 3
+{prefix}starboard edit main threshold 5
+{prefix}starboard ignore #spam
+{prefix}starboard config
+```
+
+## ,suggestions
+
+Suggestion system.
+
+**Usage:** `,suggestions <setup|panel|blacklist|unblacklist|config>`
+**Aliases:** `sug`, `suggest`
+
+```bash
+{prefix}suggestions setup #suggestions
+{prefix}suggestions panel
+{prefix}suggestions blacklist @User
+{prefix}suggestions unblacklist @User
+```

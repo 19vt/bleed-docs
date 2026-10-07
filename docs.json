@@ -1,0 +1,87 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "bleed",
+  "colors": {
+    "primary": "#e11d2e",
+    "light": "#ff4b5c",
+    "dark": "#6d0a14"
+  },
+  "favicon": "/logo-256.png",
+  "navigation": [
+    {
+      "group": "Start",
+      "pages": [
+        "index",
+        "quickstart"
+      ]
+    },
+    {
+      "group": "Security",
+      "pages": [
+        "security/antinuke",
+        "security/antiraid",
+        "security/automod",
+        "security/setup"
+      ]
+    },
+    {
+      "group": "Commands",
+      "pages": [
+        "commands/automation",
+        "commands/automod",
+        "commands/backup",
+        "commands/boosting",
+        "commands/cards",
+        "commands/casino",
+        "commands/community",
+        "commands/convert",
+        "commands/customization",
+        "commands/economy",
+        "commands/engagement",
+        "commands/fun",
+        "commands/games",
+        "commands/giveaway",
+        "commands/image",
+        "commands/marriage",
+        "commands/math",
+        "commands/misc",
+        "commands/moderation",
+        "commands/music",
+        "commands/random",
+        "commands/security",
+        "commands/server",
+        "commands/social",
+        "commands/streaks",
+        "commands/system",
+        "commands/text",
+        "commands/tools",
+        "commands/utility"
+      ]
+    },
+    {
+      "group": "Server configuration",
+      "pages": [
+        "server-configuration/appearance",
+        "server-configuration/automod",
+        "server-configuration/branding",
+        "server-configuration/community",
+        "server-configuration/face-reveal",
+        "server-configuration/levels",
+        "server-configuration/moderation",
+        "server-configuration/pic-perms",
+        "server-configuration/rep",
+        "server-configuration/tickets",
+        "server-configuration/voice",
+        "server-configuration/welcome"
+      ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "resources/variables",
+        "resources/permissions",
+        "resources/faq"
+      ]
+    }
+  ]
+}

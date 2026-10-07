@@ -1,0 +1,994 @@
+---
+title: 'Text commands'
+description: '82 text commands in bleed.'
+---
+
+# Text
+
+82 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,acronym`](#acronym) | Build an acronym from a phrase. |
+| [`,alternate`](#alternate) | Restyle text as **Alt Ernate**. |
+| [`,anagram`](#anagram) | Scramble a word into an anagram. |
+| [`,arrow`](#arrow) | Restyle text as **Arrow**. |
+| [`,atbash`](#atbash) | Text tool — atbash. |
+| [`,binary`](#binary) | Turn text into binary. |
+| [`,binarycode`](#binarycode) | Text tool — binary code. |
+| [`,bold`](#bold) | Restyle text as **Bold**. |
+| [`,brackets`](#brackets) | Restyle text as **Brackets**. |
+| [`,braille`](#braille) | Restyle text as **Braille**. |
+| [`,bubblenums`](#bubblenums) | Restyle text as **Bubble Numbers**. |
+| [`,bullet`](#bullet) | Restyle text as **Bullet**. |
+| [`,camel`](#camel) | Convert text to camelCase. |
+| [`,circled`](#circled) | Restyle text as **Circle D**. |
+| [`,comma`](#comma) | Restyle text as **Comma**. |
+| [`,consonants`](#consonants) | Text tool — consonants. |
+| [`,constant`](#constant) | Convert text to CONSTANT_CASE. |
+| [`,count`](#count) | Count characters, words, lines and sentences. |
+| [`,dashed`](#dashed) | Restyle text as **Dashed**. |
+| [`,decimal`](#decimal) | Text tool — decimal. |
+| [`,dedupe`](#dedupe) | Remove repeated items while keeping the order. |
+| [`,dotted`](#dotted) | Restyle text as **Dotted**. |
+| [`,doublestruck`](#doublestruck) | Restyle text as **Double Struck**. |
+| [`,drunk`](#drunk) | Restyle text as **Drunk**. |
+| [`,english`](#english) | Text tool — english. |
+| [`,fraktur`](#fraktur) | Restyle text as **Fraktur**. |
+| [`,fullwidth`](#fullwidth) | Restyle text as **Full Width**. |
+| [`,hashtag`](#hashtag) | Text tool — hashtag. |
+| [`,initials`](#initials) | Initials from a name. |
+| [`,italic`](#italic) | Restyle text as **Italic**. |
+| [`,kebab`](#kebab) | Convert text to kebab-case. |
+| [`,leet`](#leet) | Restyle text as **Leet**. |
+| [`,leetspeak`](#leetspeak) | Text tool — leetspeak. |
+| [`,letters`](#letters) | Text tool — letter s. |
+| [`,longest`](#longest) | Longest word in a piece of text. |
+| [`,mention`](#mention) | Text tool — mention. |
+| [`,mirror`](#mirror) | Restyle text as **Mirror**. |
+| [`,monospace`](#monospace) | Restyle text as **Monospace**. |
+| [`,morse`](#morse) | Restyle text as **Morse**. |
+| [`,numbered`](#numbered) | Restyle text as **Number Ed**. |
+| [`,nya`](#nya) | Restyle text as **Nya**. |
+| [`,octal`](#octal) | Text tool — octal. |
+| [`,palindrome`](#palindrome) | Check whether text reads the same backwards. |
+| [`,pascal`](#pascal) | Convert text to PascalCase. |
+| [`,pig`](#pig) | Restyle text as **Pig**. |
+| [`,pipe`](#pipe) | Restyle text as **Pipe**. |
+| [`,quoteeach`](#quoteeach) | Restyle text as **Quote Each**. |
+| [`,randomcase`](#randomcase) | Text tool — random case. |
+| [`,regions`](#regions) | Text tool — regions. |
+| [`,reversewords`](#reversewords) | Restyle text as **Reverse Words**. |
+| [`,rot13`](#rot13) | Text tool — rot 1 3. |
+| [`,sansbold`](#sansbold) | Restyle text as **Sans Bold**. |
+| [`,sansitalic`](#sansitalic) | Restyle text as **Sans Italic**. |
+| [`,scramble`](#scramble) | Text tool — scramble. |
+| [`,sentence`](#sentence) | Sentence-case the text. |
+| [`,shortest`](#shortest) | Shortest word in a piece of text. |
+| [`,shout`](#shout) | Restyle text as **Shout**. |
+| [`,slash`](#slash) | Restyle text as **Slash**. |
+| [`,slug`](#slug) | Turn a title into a URL slug. |
+| [`,smallcaps`](#smallcaps) | Restyle text as **Small Caps**. |
+| [`,snake`](#snake) | Convert text to snake_case. |
+| [`,sort`](#sort) | Sort lines alphabetically or numerically. |
+| [`,spaced`](#spaced) | Restyle text as **Spaced**. |
+| [`,spoiler`](#spoiler) | Restyle text as **Spoiler**. |
+| [`,spoken`](#spoken) | Text tool — spoken. |
+| [`,spongebob`](#spongebob) | Text tool — spongebob case. |
+| [`,squared`](#squared) | Restyle text as **Square D**. |
+| [`,strikethrough`](#strikethrough) | Restyle text as **Strikethrough**. |
+| [`,strip`](#strip) | Strip all whitespace from text. |
+| [`,stutter`](#stutter) | Restyle text as **Stutter**. |
+| [`,subscript`](#subscript) | Restyle text as **Subscript**. |
+| [`,superscript`](#superscript) | Restyle text as **Superscript**. |
+| [`,title`](#title) | Title-case every word. |
+| [`,trim`](#trim) | Text tool — trim. |
+| [`,under`](#under) | Restyle text as **Un Der**. |
+| [`,underline`](#underline) | Restyle text as **Un Derline**. |
+| [`,unique`](#unique) | Remove duplicate lines. |
+| [`,upsidedown`](#upsidedown) | Restyle text as **Up Sidedown**. |
+| [`,vowels`](#vowels) | Count the vowels and consonants. |
+| [`,whisper`](#whisper) | Restyle text as **Whisper**. |
+| [`,wide`](#wide) | Restyle text as **Wide**. |
+| [`,zalgo`](#zalgo) | Restyle text as **Zalgo**. |
+
+## ,acronym
+
+Build an acronym from a phrase.
+
+**Usage:** `,acronym [text]`
+**Aliases:** `acr`, `acro`
+
+```bash
+{prefix}acronym The quick brown fox
+```
+
+## ,alternate
+
+Restyle text as **Alt Ernate**.
+
+**Usage:** `,alternate <text>`
+**Aliases:** `alt`, `alte`
+
+```bash
+{prefix}alternate hello world
+```
+
+## ,anagram
+
+Scramble a word into an anagram.
+
+**Usage:** `,anagram [text]`
+**Aliases:** `ana`, `anag`
+
+```bash
+{prefix}anagram The quick brown fox
+```
+
+## ,arrow
+
+Restyle text as **Arrow**.
+
+**Usage:** `,arrow <text>`
+**Aliases:** `arr`, `arrx`
+
+```bash
+{prefix}arrow hello world
+```
+
+## ,atbash
+
+Text tool — atbash.
+
+**Usage:** `,atbash [text]`
+**Aliases:** `atb`, `atba`
+
+```bash
+{prefix}atbash The quick brown fox
+```
+
+## ,binary
+
+Turn text into binary.
+
+**Usage:** `,binary <text>`
+**Aliases:** `bin`, `bina`
+
+```bash
+{prefix}binary hello world
+```
+
+## ,binarycode
+
+Text tool — binary code.
+
+**Usage:** `,binarycode [text]`
+**Aliases:** `binx`
+
+```bash
+{prefix}binarycode The quick brown fox
+```
+
+## ,bold
+
+Restyle text as **Bold**.
+
+**Usage:** `,bold <text>`
+**Aliases:** `bol`, `bolx`
+
+```bash
+{prefix}bold hello world
+```
+
+## ,brackets
+
+Restyle text as **Brackets**.
+
+**Usage:** `,brackets <text>`
+**Aliases:** `brac`, `brax`
+
+```bash
+{prefix}brackets hello world
+```
+
+## ,braille
+
+Restyle text as **Braille**.
+
+**Usage:** `,braille <text>`
+**Aliases:** `bra`, `brai`
+
+```bash
+{prefix}braille hello world
+```
+
+## ,bubblenums
+
+Restyle text as **Bubble Numbers**.
+
+**Usage:** `,bubblenums <text>`
+**Aliases:** `bub`, `bubb`
+
+```bash
+{prefix}bubblenums hello world
+```
+
+## ,bullet
+
+Restyle text as **Bullet**.
+
+**Usage:** `,bullet <text>`
+**Aliases:** `bul`, `bull`
+
+```bash
+{prefix}bullet hello world
+```
+
+## ,camel
+
+Convert text to camelCase.
+
+**Usage:** `,camel [text]`
+**Aliases:** `cam`, `camx`
+
+```bash
+{prefix}camel The quick brown fox
+```
+
+## ,circled
+
+Restyle text as **Circle D**.
+
+**Usage:** `,circled <text>`
+**Aliases:** `cd`, `circ`
+
+```bash
+{prefix}circled hello world
+```
+
+## ,comma
+
+Restyle text as **Comma**.
+
+**Usage:** `,comma <text>`
+**Aliases:** `com`, `comx`
+
+```bash
+{prefix}comma hello world
+```
+
+## ,consonants
+
+Text tool — consonants.
+
+**Usage:** `,consonants [text]`
+**Aliases:** `conx`
+
+```bash
+{prefix}consonants The quick brown fox
+```
+
+## ,constant
+
+Convert text to CONSTANT_CASE.
+
+**Usage:** `,constant [text]`
+**Aliases:** `con`, `cons`
+
+```bash
+{prefix}constant The quick brown fox
+```
+
+## ,count
+
+Count characters, words, lines and sentences.
+
+**Usage:** `,count [text]`
+**Aliases:** `cou`, `coux`
+
+```bash
+{prefix}count The quick brown fox
+```
+
+## ,dashed
+
+Restyle text as **Dashed**.
+
+**Usage:** `,dashed <text>`
+**Aliases:** `das`, `dash`
+
+```bash
+{prefix}dashed hello world
+```
+
+## ,decimal
+
+Text tool — decimal.
+
+**Usage:** `,decimal [text]`
+**Aliases:** `dec`, `deci`
+
+```bash
+{prefix}decimal The quick brown fox
+```
+
+## ,dedupe
+
+Remove repeated items while keeping the order.
+
+**Usage:** `,dedupe [text]`
+**Aliases:** `ded`, `dedu`
+
+```bash
+{prefix}dedupe The quick brown fox
+```
+
+## ,dotted
+
+Restyle text as **Dotted**.
+
+**Usage:** `,dotted <text>`
+**Aliases:** `dot`, `dott`
+
+```bash
+{prefix}dotted hello world
+```
+
+## ,doublestruck
+
+Restyle text as **Double Struck**.
+
+**Usage:** `,doublestruck <text>`
+**Aliases:** `doub`, `ds`
+
+```bash
+{prefix}doublestruck hello world
+```
+
+## ,drunk
+
+Restyle text as **Drunk**.
+
+**Usage:** `,drunk <text>`
+**Aliases:** `dru`, `drux`
+
+```bash
+{prefix}drunk hello world
+```
+
+## ,english
+
+Text tool — english.
+
+**Usage:** `,english [text]`
+**Aliases:** `eng`, `engl`
+
+```bash
+{prefix}english The quick brown fox
+```
+
+## ,fraktur
+
+Restyle text as **Fraktur**.
+
+**Usage:** `,fraktur <text>`
+**Aliases:** `fra`, `frak`
+
+```bash
+{prefix}fraktur hello world
+```
+
+## ,fullwidth
+
+Restyle text as **Full Width**.
+
+**Usage:** `,fullwidth <text>`
+**Aliases:** `ful`, `fulx`
+
+```bash
+{prefix}fullwidth hello world
+```
+
+## ,hashtag
+
+Text tool — hashtag.
+
+**Usage:** `,hashtag [text]`
+**Aliases:** `has`, `hasx`
+
+```bash
+{prefix}hashtag The quick brown fox
+```
+
+## ,initials
+
+Initials from a name.
+
+**Usage:** `,initials [text]`
+**Aliases:** `ini`, `init`
+
+```bash
+{prefix}initials The quick brown fox
+```
+
+## ,italic
+
+Restyle text as **Italic**.
+
+**Usage:** `,italic <text>`
+**Aliases:** `ita`, `ital`
+
+```bash
+{prefix}italic hello world
+```
+
+## ,kebab
+
+Convert text to kebab-case.
+
+**Usage:** `,kebab [text]`
+**Aliases:** `keb`, `kebx`
+
+```bash
+{prefix}kebab The quick brown fox
+```
+
+## ,leet
+
+Restyle text as **Leet**.
+
+**Usage:** `,leet <text>`
+**Aliases:** `lee`, `leex`
+
+```bash
+{prefix}leet hello world
+```
+
+## ,leetspeak
+
+Text tool — leetspeak.
+
+**Usage:** `,leetspeak [text]`
+
+```bash
+{prefix}leetspeak The quick brown fox
+```
+
+## ,letters
+
+Text tool — letter s.
+
+**Usage:** `,letters [text]`
+**Aliases:** `lett`, `ls`
+
+```bash
+{prefix}letters The quick brown fox
+```
+
+## ,longest
+
+Longest word in a piece of text.
+
+**Usage:** `,longest [text]`
+**Aliases:** `lon`, `long`
+
+```bash
+{prefix}longest The quick brown fox
+```
+
+## ,mention
+
+Text tool — mention.
+
+**Usage:** `,mention [text]`
+**Aliases:** `men`, `ment`
+
+```bash
+{prefix}mention The quick brown fox
+```
+
+## ,mirror
+
+Restyle text as **Mirror**.
+
+**Usage:** `,mirror <text>`
+**Aliases:** `mir`, `mirr`
+
+```bash
+{prefix}mirror hello world
+```
+
+## ,monospace
+
+Restyle text as **Monospace**.
+
+**Usage:** `,monospace <text>`
+**Aliases:** `mon`, `mono`
+
+```bash
+{prefix}monospace hello world
+```
+
+## ,morse
+
+Restyle text as **Morse**.
+
+**Usage:** `,morse <text>`
+**Aliases:** `mor`, `morx`
+
+```bash
+{prefix}morse hello world
+```
+
+## ,numbered
+
+Restyle text as **Number Ed**.
+
+**Usage:** `,numbered <text>`
+**Aliases:** `ne`, `numb`
+
+```bash
+{prefix}numbered hello world
+```
+
+## ,nya
+
+Restyle text as **Nya**.
+
+**Usage:** `,nya <text>`
+**Aliases:** `nyax`
+
+```bash
+{prefix}nya hello world
+```
+
+## ,octal
+
+Text tool — octal.
+
+**Usage:** `,octal [text]`
+**Aliases:** `oct`, `octx`
+
+```bash
+{prefix}octal The quick brown fox
+```
+
+## ,palindrome
+
+Check whether text reads the same backwards.
+
+**Usage:** `,palindrome [text]`
+**Aliases:** `pal`, `pali`
+
+```bash
+{prefix}palindrome The quick brown fox
+```
+
+## ,pascal
+
+Convert text to PascalCase.
+
+**Usage:** `,pascal [text]`
+**Aliases:** `pas`, `pasc`
+
+```bash
+{prefix}pascal The quick brown fox
+```
+
+## ,pig
+
+Restyle text as **Pig**.
+
+**Usage:** `,pig <text>`
+**Aliases:** `pigx`
+
+```bash
+{prefix}pig hello world
+```
+
+## ,pipe
+
+Restyle text as **Pipe**.
+
+**Usage:** `,pipe <text>`
+**Aliases:** `pip`, `pipx`
+
+```bash
+{prefix}pipe hello world
+```
+
+## ,quoteeach
+
+Restyle text as **Quote Each**.
+
+**Usage:** `,quoteeach <text>`
+**Aliases:** `qe`, `quot`
+
+```bash
+{prefix}quoteeach hello world
+```
+
+## ,randomcase
+
+Text tool — random case.
+
+**Usage:** `,randomcase [text]`
+**Aliases:** `rand`, `rc`
+
+```bash
+{prefix}randomcase The quick brown fox
+```
+
+## ,regions
+
+Text tool — regions.
+
+**Usage:** `,regions [text]`
+**Aliases:** `reg`, `regi`
+
+```bash
+{prefix}regions The quick brown fox
+```
+
+## ,reversewords
+
+Restyle text as **Reverse Words**.
+
+**Usage:** `,reversewords <text>`
+**Aliases:** `reve`, `revx`
+
+```bash
+{prefix}reversewords hello world
+```
+
+## ,rot13
+
+Text tool — rot 1 3.
+
+**Usage:** `,rot13 [text]`
+**Aliases:** `r13`, `rot`
+
+```bash
+{prefix}rot13 The quick brown fox
+```
+
+## ,sansbold
+
+Restyle text as **Sans Bold**.
+
+**Usage:** `,sansbold <text>`
+**Aliases:** `san`, `sans`
+
+```bash
+{prefix}sansbold hello world
+```
+
+## ,sansitalic
+
+Restyle text as **Sans Italic**.
+
+**Usage:** `,sansitalic <text>`
+**Aliases:** `sanx`
+
+```bash
+{prefix}sansitalic hello world
+```
+
+## ,scramble
+
+Text tool — scramble.
+
+**Usage:** `,scramble [text]`
+**Aliases:** `scr`, `scra`
+
+```bash
+{prefix}scramble The quick brown fox
+```
+
+## ,sentence
+
+Sentence-case the text.
+
+**Usage:** `,sentence [text]`
+**Aliases:** `sen`, `sent`
+
+```bash
+{prefix}sentence The quick brown fox
+```
+
+## ,shortest
+
+Shortest word in a piece of text.
+
+**Usage:** `,shortest [text]`
+**Aliases:** `shor`
+
+```bash
+{prefix}shortest The quick brown fox
+```
+
+## ,shout
+
+Restyle text as **Shout**.
+
+**Usage:** `,shout <text>`
+**Aliases:** `sho`, `shox`
+
+```bash
+{prefix}shout hello world
+```
+
+## ,slash
+
+Restyle text as **Slash**.
+
+**Usage:** `,slash <text>`
+**Aliases:** `sla`, `slax`
+
+```bash
+{prefix}slash hello world
+```
+
+## ,slug
+
+Turn a title into a URL slug.
+
+**Usage:** `,slug [text]`
+**Aliases:** `slu`, `slux`
+
+```bash
+{prefix}slug The quick brown fox
+```
+
+## ,smallcaps
+
+Restyle text as **Small Caps**.
+
+**Usage:** `,smallcaps <text>`
+**Aliases:** `sma`, `smal`
+
+```bash
+{prefix}smallcaps hello world
+```
+
+## ,snake
+
+Convert text to snake_case.
+
+**Usage:** `,snake [text]`
+**Aliases:** `sna`, `snax`
+
+```bash
+{prefix}snake The quick brown fox
+```
+
+## ,sort
+
+Sort lines alphabetically or numerically.
+
+**Usage:** `,sort [text]`
+**Aliases:** `sor`, `sorx`
+
+```bash
+{prefix}sort The quick brown fox
+```
+
+## ,spaced
+
+Restyle text as **Spaced**.
+
+**Usage:** `,spaced <text>`
+**Aliases:** `spa`, `spac`
+
+```bash
+{prefix}spaced hello world
+```
+
+## ,spoiler
+
+Restyle text as **Spoiler**.
+
+**Usage:** `,spoiler <text>`
+**Aliases:** `spo`, `spoi`
+
+```bash
+{prefix}spoiler hello world
+```
+
+## ,spoken
+
+Text tool — spoken.
+
+**Usage:** `,spoken [text]`
+**Aliases:** `spok`
+
+```bash
+{prefix}spoken The quick brown fox
+```
+
+## ,spongebob
+
+Text tool — spongebob case.
+
+**Usage:** `,spongebob [text]`
+**Aliases:** `spon`, `spox`
+
+```bash
+{prefix}spongebob The quick brown fox
+```
+
+## ,squared
+
+Restyle text as **Square D**.
+
+**Usage:** `,squared <text>`
+**Aliases:** `squ`, `squa`
+
+```bash
+{prefix}squared hello world
+```
+
+## ,strikethrough
+
+Restyle text as **Strikethrough**.
+
+**Usage:** `,strikethrough <text>`
+**Aliases:** `str`, `stri`
+
+```bash
+{prefix}strikethrough hello world
+```
+
+## ,strip
+
+Strip all whitespace from text.
+
+**Usage:** `,strip [text]`
+**Aliases:** `strx`
+
+```bash
+{prefix}strip The quick brown fox
+```
+
+## ,stutter
+
+Restyle text as **Stutter**.
+
+**Usage:** `,stutter <text>`
+**Aliases:** `stu`, `stut`
+
+```bash
+{prefix}stutter hello world
+```
+
+## ,subscript
+
+Restyle text as **Subscript**.
+
+**Usage:** `,subscript <text>`
+**Aliases:** `sub`, `subs`
+
+```bash
+{prefix}subscript hello world
+```
+
+## ,superscript
+
+Restyle text as **Superscript**.
+
+**Usage:** `,superscript <text>`
+**Aliases:** `sup`, `supe`
+
+```bash
+{prefix}superscript hello world
+```
+
+## ,title
+
+Title-case every word.
+
+**Usage:** `,title [text]`
+**Aliases:** `tit`, `titx`
+
+```bash
+{prefix}title The quick brown fox
+```
+
+## ,trim
+
+Text tool — trim.
+
+**Usage:** `,trim [text]`
+**Aliases:** `tri`, `trix`
+
+```bash
+{prefix}trim The quick brown fox
+```
+
+## ,under
+
+Restyle text as **Un Der**.
+
+**Usage:** `,under <text>`
+**Aliases:** `undx`
+
+```bash
+{prefix}under hello world
+```
+
+## ,underline
+
+Restyle text as **Un Derline**.
+
+**Usage:** `,underline <text>`
+**Aliases:** `und`, `unde`
+
+```bash
+{prefix}underline hello world
+```
+
+## ,unique
+
+Remove duplicate lines.
+
+**Usage:** `,unique [text]`
+**Aliases:** `uni`, `uniq`
+
+```bash
+{prefix}unique The quick brown fox
+```
+
+## ,upsidedown
+
+Restyle text as **Up Sidedown**.
+
+**Usage:** `,upsidedown <text>`
+**Aliases:** `upsi`, `us`
+
+```bash
+{prefix}upsidedown hello world
+```
+
+## ,vowels
+
+Count the vowels and consonants.
+
+**Usage:** `,vowels [text]`
+**Aliases:** `vow`, `vowe`
+
+```bash
+{prefix}vowels The quick brown fox
+```
+
+## ,whisper
+
+Restyle text as **Whisper**.
+
+**Usage:** `,whisper <text>`
+**Aliases:** `whi`, `whis`
+
+```bash
+{prefix}whisper hello world
+```
+
+## ,wide
+
+Restyle text as **Wide**.
+
+**Usage:** `,wide <text>`
+**Aliases:** `wid`, `widx`
+
+```bash
+{prefix}wide hello world
+```
+
+## ,zalgo
+
+Restyle text as **Zalgo**.
+
+**Usage:** `,zalgo <text>`
+**Aliases:** `zal`, `zalx`
+
+```bash
+{prefix}zalgo hello world
+```

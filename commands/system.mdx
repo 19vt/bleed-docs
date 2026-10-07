@@ -1,0 +1,207 @@
+---
+title: 'System commands'
+description: '19 system commands in bleed.'
+---
+
+# System
+
+19 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,blacklist`](#blacklist) | Blacklist a user from using the bot. _(owner only)_ |
+| [`,blacklistserver`](#blacklistserver) | Blacklist a server from using the bot. _(owner only)_ |
+| [`,broadcast`](#broadcast) | DM an audience (server owners, every user, a server or a role). Dashboard only. _(owner only)_ |
+| [`,dmsay`](#dmsay) | Send a direct message as the bot — bot developers only. _(owner only, owner only)_ |
+| [`,eval`](#eval) | Evaluate JavaScript as the bot owner. _(owner only)_ |
+| [`,ginvite`](#ginvite) | Create an invite to any server the bot is in — bot developers only. _(owner only, owner only)_ |
+| [`,globalban`](#globalban) | Ban a user from every server the bot is in — bot owners only. _(owner only, owner only)_ |
+| [`,leaveserver`](#leaveserver) | Leaves A Guild _(owner only, owner only)_ |
+| [`,maintanance`](#maintanance) | Toggle maintenance mode for the bot. _(owner only)_ |
+| [`,noprefix`](#noprefix) | Manage who can use commands without a prefix. _(owner only)_ |
+| [`,ownerhelp`](#ownerhelp) | List every owner-only command and who each one answers to. _(owner only, owner only)_ |
+| [`,raidlock`](#raidlock) | Lock the server down during a raid. _(owner only)_ |
+| [`,raidunlock`](#raidunlock) | Lift a server-wide lockdown. _(owner only)_ |
+| [`,reloadcache`](#reloadcache) | Reload the cached prefixes and blacklists. _(owner only)_ |
+| [`,restart`](#restart) | Restart the bot process — bot developers only. _(owner only, owner only)_ |
+| [`,sendto`](#sendto) | Send a message to any channel the bot can see, by id — bot developers only. _(owner only, owner only)_ |
+| [`,serverlist`](#serverlist) | List every server the bot is in, biggest first. _(owner only)_ |
+| [`,shutdown`](#shutdown) | Lock every channel down, or lift the lockdown. _(owner only)_ |
+| [`,ungb`](#ungb) | Lift a global ban — unban a user from every server the bot is in. _(owner only, owner only)_ |
+
+## ,blacklist
+
+Blacklist a user from using the bot.
+
+**Usage:** `,blacklist`
+**Aliases:** `bl`
+**Restricted:** bot owners only.
+
+## ,blacklistserver
+
+Blacklist a server from using the bot.
+
+**Usage:** `,blacklistserver`
+**Aliases:** `bs`
+**Restricted:** bot owners only.
+
+## ,broadcast
+
+DM an audience (server owners, every user, a server or a role). Dashboard only.
+
+**Usage:** `,broadcast <owners|users|guild|role> <message>`
+**Aliases:** `dmall`, `massdm`
+**Subcommands:** `owners`, `users`, `guild`, `role`, `count`
+**Restricted:** bot owners only.
+
+```bash
+,broadcast count owners
+```
+
+## ,dmsay
+
+Send a direct message as the bot — bot developers only.
+
+**Usage:** `,dmsay <userId|@user> <message>`
+**Aliases:** `dmu`, `senddm`
+**Restricted:** bot owners only.
+
+```bash
+{prefix}dmsay 123456789012345678 your appeal was accepted
+```
+
+## ,eval
+
+Evaluate JavaScript as the bot owner.
+
+**Usage:** `,eval`
+**Aliases:** `ev`, `jaduexe`
+**Restricted:** bot owners only.
+
+## ,ginvite
+
+Create an invite to any server the bot is in — bot developers only.
+
+**Usage:** `,ginvite <serverId> [maxAgeHours]`
+**Aliases:** `createinvite`, `ginv`
+**Restricted:** bot owners only.
+
+```bash
+{prefix}ginvite 123456789012345678 24
+```
+
+## ,globalban
+
+Ban a user from every server the bot is in — bot owners only.
+
+**Usage:** `,gb <userId|@user> [reason]`
+**Aliases:** `gb`, `gban`
+**Restricted:** bot owners only.
+
+```bash
+{prefix}gb 123456789012345678 raiding
+```
+
+## ,leaveserver
+
+Leaves A Guild
+
+**Usage:** `,leaveserver`
+**Aliases:** `gleave`, `leaveg`
+**Restricted:** bot owners only.
+
+## ,maintanance
+
+Toggle maintenance mode for the bot.
+
+**Usage:** `,maintanance`
+**Aliases:** `maintain`
+**Restricted:** bot owners only.
+
+## ,noprefix
+
+Manage who can use commands without a prefix.
+
+**Usage:** `,noprefix`
+**Aliases:** `np`
+**Restricted:** bot owners only.
+
+## ,ownerhelp
+
+List every owner-only command and who each one answers to.
+
+**Usage:** `,ownerhelp`
+**Aliases:** `ownercommands`, `owneronly`
+**Restricted:** bot owners only.
+
+## ,raidlock
+
+Lock the server down during a raid.
+
+**Usage:** `,raidlock`
+**Aliases:** `lockserver`
+**Restricted:** bot owners only.
+
+## ,raidunlock
+
+Lift a server-wide lockdown.
+
+**Usage:** `,raidunlock`
+**Aliases:** `unlockdown`
+**Restricted:** bot owners only.
+
+## ,reloadcache
+
+Reload the cached prefixes and blacklists.
+
+**Usage:** `,reloadcache`
+**Aliases:** `reloadch`
+**Restricted:** bot owners only.
+
+## ,restart
+
+Restart the bot process — bot developers only.
+
+**Usage:** `,restart`
+**Aliases:** `reboot`, `restarts`, `rs`
+**Restricted:** bot owners only.
+
+## ,sendto
+
+Send a message to any channel the bot can see, by id — bot developers only.
+
+**Usage:** `,sendto <channelId> <message>`
+**Aliases:** `msgto`, `sayin`
+**Restricted:** bot owners only.
+
+```bash
+{prefix}sendto 123456789012345678 maintenance in ten minutes
+```
+
+## ,serverlist
+
+List every server the bot is in, biggest first.
+
+**Usage:** `,serverlist`
+**Aliases:** `guildlist`, `serverslist`, `slist`
+**Restricted:** bot owners only.
+
+## ,shutdown
+
+Lock every channel down, or lift the lockdown.
+
+**Usage:** `,shutdown`
+**Aliases:** `lockdown`, `sd`
+**Restricted:** bot owners only.
+
+## ,ungb
+
+Lift a global ban — unban a user from every server the bot is in.
+
+**Usage:** `,ungb <userId|@user> [reason]`
+**Aliases:** `globalunban`, `gunban`, `ungban`
+**Restricted:** bot owners only.
+
+```bash
+{prefix}ungb 123456789012345678 appeal accepted
+```

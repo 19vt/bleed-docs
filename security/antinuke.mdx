@@ -1,0 +1,26 @@
+---
+title: 'Anti-Nuke'
+description: 'Anti-Nuke in bleed.'
+---
+
+# Anti-Nuke
+
+Watches the audit log for destructive actions and reverts them, then punishes the executor.
+Every module can be enabled on its own, with its own punishment.
+
+| Module | Watches for |
+|--------|-------------|
+| antiban | unexpected bans |
+| antikick | unexpected kicks |
+| antichannel | channel creation and deletion |
+| antirole | role creation, deletion and permission changes |
+| antiwebhook | webhook creation |
+| antimember | unauthorised member pruning |
+| antibot | bot additions |
+| antiintegration | app integrations |
+
+```bash
+,antinuke setup
+,antinuke enable
+,whitelist add @user
+```

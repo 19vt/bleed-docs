@@ -1,0 +1,89 @@
+---
+title: 'Tickets settings'
+description: 'Every tickets setting bleed exposes per server.'
+---
+
+# Tickets
+
+11 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `ticketEnabled` | Tickets enabled | `boolean` | `false` | Members can open support tickets. |
+| `ticketCategoryId` | Ticket category | `channel` | *not set* | Category new ticket channels are created in. |
+| `ticketLogChannelId` | Ticket log | `channel` | *not set* | Closed tickets and transcripts are posted here. |
+| `ticketTranscripts` | Save transcripts | `boolean` | `true` | Attach an HTML transcript when a ticket closes. |
+| `ticketSupportRoleIds` | Support roles | `list` | *empty* | Roles that can see and answer every ticket. |
+| `ticketPanelChannelId` | Panel channel | `channel` | *not set* | Channel the open-a-ticket panel lives in. |
+| `ticketPanelMessageId` | Panel message | `string` | *not set* | Message id of the ticket panel. |
+| `ticketNameTemplate` | Channel name | `string` | `ticket-{user}` | Placeholders: {user}, {count}, {subject}. |
+| `ticketOpenMessage` | Ticket greeting | `string` | `Thanks for reaching out — a member of the team will be with you shortly.` | Posted inside a freshly opened ticket. |
+| `ticketAllowMultiple` | Multiple tickets | `boolean` | `false` | Let one member hold more than one open ticket. |
+| `ticketPingSupport` | Ping support | `boolean` | `true` | Mention the support roles when a ticket opens. |
+
+## Tickets enabled
+```bash
+,config set ticketEnabled <value>
+```
+Members can open support tickets.
+
+## Ticket category
+```bash
+,config set ticketCategoryId <value>
+```
+Category new ticket channels are created in.
+
+## Ticket log
+```bash
+,config set ticketLogChannelId <value>
+```
+Closed tickets and transcripts are posted here.
+
+## Save transcripts
+```bash
+,config set ticketTranscripts <value>
+```
+Attach an HTML transcript when a ticket closes.
+
+## Support roles
+```bash
+,config set ticketSupportRoleIds <value>
+```
+Roles that can see and answer every ticket.
+
+## Panel channel
+```bash
+,config set ticketPanelChannelId <value>
+```
+Channel the open-a-ticket panel lives in.
+
+## Panel message
+```bash
+,config set ticketPanelMessageId <value>
+```
+Message id of the ticket panel.
+
+## Channel name
+```bash
+,config set ticketNameTemplate <value>
+```
+Placeholders: {user}, {count}, {subject}.
+
+## Ticket greeting
+```bash
+,config set ticketOpenMessage <value>
+```
+Posted inside a freshly opened ticket.
+
+## Multiple tickets
+```bash
+,config set ticketAllowMultiple <value>
+```
+Let one member hold more than one open ticket.
+
+## Ping support
+```bash
+,config set ticketPingSupport <value>
+```
+Mention the support roles when a ticket opens.

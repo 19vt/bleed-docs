@@ -1,0 +1,370 @@
+---
+title: 'Boosting commands'
+description: '32 boosting commands in bleed.'
+---
+
+# Boosting
+
+32 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,boostannounce`](#boostannounce) | Toggle boost announcements. |
+| [`,boostchannel`](#boostchannel) | Choose where boost announcements go. |
+| [`,boostcleanup`](#boostcleanup) | Delete booster roles for members who stopped boosting. |
+| [`,boostcolor`](#boostcolor) | Colour applied to booster roles on sync. |
+| [`,boostconfig`](#boostconfig) | Show every boost setting for this server. |
+| [`,boosterrole`](#boosterrole) | Create or remove a member's custom booster role. |
+| [`,boosterroles`](#boosterroles) | Custom booster roles. |
+| [`,boosters`](#boosters) | List the server's boosters. |
+| [`,boostestimate`](#boostestimate) | Estimate when the next tier lands. |
+| [`,boostgoal`](#boostgoal) | Set a boost goal with a progress bar. |
+| [`,boosthide`](#boosthide) | Hide the boost channel from non-boosters. |
+| [`,boostlog`](#boostlog) | Choose where boost events are logged. |
+| [`,boostmessage`](#boostmessage) | Set the boost announcement text. |
+| [`,boostmilestone`](#boostmilestone) | Reward roles at boost milestones. |
+| [`,boostmonthly`](#boostmonthly) | Boosts gained in the last 30 days. |
+| [`,boostnexttier`](#boostnexttier) | How many boosts until the next tier. |
+| [`,boostnick`](#boostnick) | Nickname suffix applied to boosters. |
+| [`,boostonly`](#boostonly) | Make a channel booster-only. |
+| [`,boostperks`](#boostperks) | Explain the booster perks. |
+| [`,boostprogress`](#boostprogress) | Progress bar towards the next boost tier. |
+| [`,boostreset`](#boostreset) | Clear every boost setting. |
+| [`,boostreward`](#boostreward) | Give a role at a boost count. |
+| [`,boostroleinfo`](#boostroleinfo) | Everything about a member's booster role. |
+| [`,boostsetup`](#boostsetup) | Post the booster perks panel. |
+| [`,booststats`](#booststats) | Boost totals for this server. |
+| [`,booststreak`](#booststreak) | How long a member has been boosting. |
+| [`,boostsync`](#boostsync) | Re-apply booster perks to every booster. |
+| [`,boosttest`](#boosttest) | Preview the boost announcement. |
+| [`,boostthanks`](#boostthanks) | Set the thank-you message for boosters. |
+| [`,boosttier`](#boosttier) | Current boost tier and its perks. |
+| [`,boosttop`](#boosttop) | Booster settings — boost top. |
+| [`,boostweekly`](#boostweekly) | Boosts gained in the last 7 days. |
+
+## ,boostannounce
+
+Toggle boost announcements.
+
+**Usage:** `,boostannounce [value]`
+**Aliases:** `ba`
+
+```bash
+{prefix}boostannounce
+```
+
+## ,boostchannel
+
+Choose where boost announcements go.
+
+**Usage:** `,boostchannel [value]`
+
+```bash
+{prefix}boostchannel
+```
+
+## ,boostcleanup
+
+Delete booster roles for members who stopped boosting.
+
+**Usage:** `,boostcleanup [value]`
+
+```bash
+{prefix}boostcleanup
+```
+
+## ,boostcolor
+
+Colour applied to booster roles on sync.
+
+**Usage:** `,boostcolor [value]`
+
+```bash
+{prefix}boostcolor
+```
+
+## ,boostconfig
+
+Show every boost setting for this server.
+
+**Usage:** `,boostconfig [value]`
+**Aliases:** `bcfg`
+
+```bash
+{prefix}boostconfig
+```
+
+## ,boosterrole
+
+Create or remove a member's custom booster role.
+
+**Usage:** `,boosterrole`
+**Aliases:** `br`
+
+## ,boosterroles
+
+Custom booster roles.
+
+**Usage:** `,boosterroles <setup|limit|base|filter|award|shares|list|sync|cleanup|create|color|icon|rename|random|dominant>`
+**Aliases:** `boostroles`, `broles`, `brolsys`
+**Subcommands:** `{prefix}boosterroles setup|disable`, `{prefix}boosterroles create|delete`, `{prefix}boosterroles color <hex>|dominant|random`, `{prefix}boosterroles rename|icon|hoist`, `{prefix}boosterroles list|sync|cleanup`, `{prefix}boosterroles limit <number>|base @role`, `{prefix}boosterroles award add|remove|list @role`
+
+```bash
+{prefix}boosterroles setup
+{prefix}boosterroles create
+{prefix}boosterroles color #ff88cc
+{prefix}boosterroles shares add @Friend
+{prefix}boosterroles limit 40
+```
+
+## ,boosters
+
+List the server's boosters.
+
+**Usage:** `,boosters`
+**Aliases:** `blist`, `boostlist`, `serverboosts`
+
+## ,boostestimate
+
+Estimate when the next tier lands.
+
+**Usage:** `,boostestimate [value]`
+**Aliases:** `best`
+
+```bash
+{prefix}boostestimate
+```
+
+## ,boostgoal
+
+Set a boost goal with a progress bar.
+
+**Usage:** `,boostgoal [value]`
+**Aliases:** `bgoal`
+
+```bash
+{prefix}boostgoal
+```
+
+## ,boosthide
+
+Hide the boost channel from non-boosters.
+
+**Usage:** `,boosthide [value]`
+**Aliases:** `bh`
+
+```bash
+{prefix}boosthide
+```
+
+## ,boostlog
+
+Choose where boost events are logged.
+
+**Usage:** `,boostlog [value]`
+
+```bash
+{prefix}boostlog
+```
+
+## ,boostmessage
+
+Set the boost announcement text.
+
+**Usage:** `,boostmessage [value]`
+
+```bash
+{prefix}boostmessage
+```
+
+## ,boostmilestone
+
+Reward roles at boost milestones.
+
+**Usage:** `,boostmilestone [value]`
+
+```bash
+{prefix}boostmilestone
+```
+
+## ,boostmonthly
+
+Boosts gained in the last 30 days.
+
+**Usage:** `,boostmonthly [value]`
+
+```bash
+{prefix}boostmonthly
+```
+
+## ,boostnexttier
+
+How many boosts until the next tier.
+
+**Usage:** `,boostnexttier [value]`
+**Aliases:** `bnt`
+
+```bash
+{prefix}boostnexttier
+```
+
+## ,boostnick
+
+Nickname suffix applied to boosters.
+
+**Usage:** `,boostnick [value]`
+
+```bash
+{prefix}boostnick
+```
+
+## ,boostonly
+
+Make a channel booster-only.
+
+**Usage:** `,boostonly [value]`
+**Aliases:** `bo`
+
+```bash
+{prefix}boostonly
+```
+
+## ,boostperks
+
+Explain the booster perks.
+
+**Usage:** `,boostperks`
+**Aliases:** `boostinfo`, `bperks`, `perks`
+
+## ,boostprogress
+
+Progress bar towards the next boost tier.
+
+**Usage:** `,boostprogress [value]`
+**Aliases:** `bprog`
+
+```bash
+{prefix}boostprogress
+```
+
+## ,boostreset
+
+Clear every boost setting.
+
+**Usage:** `,boostreset [value]`
+
+```bash
+{prefix}boostreset
+```
+
+## ,boostreward
+
+Give a role at a boost count.
+
+**Usage:** `,boostreward [value]`
+
+```bash
+{prefix}boostreward
+```
+
+## ,boostroleinfo
+
+Everything about a member's booster role.
+
+**Usage:** `,boostroleinfo [value]`
+
+```bash
+{prefix}boostroleinfo
+```
+
+## ,boostsetup
+
+Post the booster perks panel.
+
+**Usage:** `,boostsetup`
+**Aliases:** `bset`, `bsetup`
+
+## ,booststats
+
+Boost totals for this server.
+
+**Usage:** `,booststats [value]`
+**Aliases:** `bst`
+
+```bash
+{prefix}booststats
+```
+
+## ,booststreak
+
+How long a member has been boosting.
+
+**Usage:** `,booststreak [value]`
+
+```bash
+{prefix}booststreak
+```
+
+## ,boostsync
+
+Re-apply booster perks to every booster.
+
+**Usage:** `,boostsync [value]`
+**Aliases:** `bsync`
+
+```bash
+{prefix}boostsync
+```
+
+## ,boosttest
+
+Preview the boost announcement.
+
+**Usage:** `,boosttest [value]`
+
+```bash
+{prefix}boosttest
+```
+
+## ,boostthanks
+
+Set the thank-you message for boosters.
+
+**Usage:** `,boostthanks [value]`
+
+```bash
+{prefix}boostthanks
+```
+
+## ,boosttier
+
+Current boost tier and its perks.
+
+**Usage:** `,boosttier [value]`
+**Aliases:** `btier`
+
+```bash
+{prefix}boosttier
+```
+
+## ,boosttop
+
+Booster settings — boost top.
+
+**Usage:** `,boosttop [value]`
+**Aliases:** `btop`
+
+```bash
+{prefix}boosttop
+```
+
+## ,boostweekly
+
+Boosts gained in the last 7 days.
+
+**Usage:** `,boostweekly [value]`
+**Aliases:** `bw`
+
+```bash
+{prefix}boostweekly
+```

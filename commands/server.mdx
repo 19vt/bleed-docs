@@ -1,0 +1,191 @@
+---
+title: 'Server commands'
+description: '11 server commands in bleed.'
+---
+
+# Server
+
+11 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,admin`](#admin) | Admin tools for managing your server. |
+| [`,alias`](#alias) | Create your own shortcuts for commands. |
+| [`,customise`](#customise) | Customize how the bot looks. |
+| [`,forums`](#forums) | Manage forum channels and threads. |
+| [`,logs`](#logs) | Channel, role and server updates. |
+| [`,prefixes`](#prefixes) | Server prefix settings. |
+| [`,restrict`](#restrict) | Restrict commands to specific roles. _(owner only)_ |
+| [`,settings`](#settings) | Manage server specific settings. |
+| [`,stickyrole`](#stickyrole) | Manage sticky roles for the server. |
+| [`,suppress`](#suppress) | Suppress commands in specific channels. _(owner only)_ |
+| [`,webhook`](#webhook) | Manage webhooks in your server. |
+
+## ,admin
+
+Admin tools for managing your server.
+
+**Usage:** `,admin <viewwarnings|notes|cleanup|history|recent|announce>`
+**Aliases:** `sadm`, `serveradmins`
+**Subcommands:** `viewwarnings`, `notes`, `cleanup`, `history`, `recent`, `announce`
+
+```bash
+,admin viewwarnings @user
+,admin notes add @user broke rules
+,admin cleanup roles
+,admin recent bans
+,admin announce #general hello
+```
+
+## ,alias
+
+Create your own shortcuts for commands.
+
+**Usage:** `,alias <add|view|list|remove|removeall|reset>`
+**Aliases:** `ali`, `cmdalias`
+**Subcommands:** `add`, `view`, `list`, `remove`, `removeall`, `reset`
+
+```bash
+,alias add b ban
+,alias b @user spamming
+,alias list
+,alias view b
+,alias remove b
+```
+
+## ,customise
+
+Customize how the bot looks.
+
+**Usage:** `,customise <name|pfp|banner|bio|success|warn>`
+**Aliases:** `customize`, `reskin`
+**Subcommands:** `name`, `pfp`, `banner`, `bio`, `success`, `warn`, `error`, `reset`
+
+```bash
+,customise name bleed
+,customise pfp (attach an image)
+,customise success #57f287
+,customise reset all
+```
+
+## ,forums
+
+Manage forum channels and threads.
+
+**Usage:** `,forums <list|info|lock|unlock|archive|delete>`
+**Aliases:** `f`, `forum`, `thread`, `threads`
+**Subcommands:** `list`, `info`, `lock`, `unlock`, `archive`, `delete`, `purge`, `tag`, `untag`, `search`, `setup`, `stats`, `top`, `config`
+
+```bash
+,forums list
+,forums info 1234567890
+,forums archive 1234
+,forums purge no-reply
+,forums setup #general
+,forums stats
+```
+
+## ,logs
+
+Channel, role and server updates.
+
+**Usage:** `,logs <setup|aio|disable|ignore|unignore|list>`
+**Aliases:** `log`, `logging`
+**Subcommands:** `setup`, `aio`, `disable`, `ignore`, `unignore`, `list`
+
+```bash
+,logs setup #logs
+,logs aio #logs
+,logs ignore user @user
+,logs ignore channel #spam
+,logs disable
+```
+
+## ,prefixes
+
+Server prefix settings.
+
+**Usage:** `,prefixes <list|self|add|remove|noprefix>`
+**Aliases:** `pfx`, `px`
+**Subcommands:** `list`, `self`, `add`, `remove`, `noprefix`
+
+```bash
+,prefixes
+,prefixes add ?
+,prefixes remove ?
+,prefixes noprefix @user
+,prefixes self !
+```
+
+## ,restrict
+
+Restrict commands to specific roles.
+
+**Usage:** `,restrict <add|remove|list|clear>`
+**Aliases:** `resc`, `restrictcmd`
+**Subcommands:** `add`, `remove`, `list`, `clear`
+
+```bash
+,restrict add ban @Moderator
+,restrict list
+,restrict remove ban @Moderator
+```
+
+## ,settings
+
+Manage server specific settings.
+
+**Usage:** `,settings <modlogs|role|confirm|view>`
+**Aliases:** `configview`, `sg`
+**Subcommands:** `modlogs`, `role`, `confirm`, `view`
+
+```bash
+,settings modlogs enable #mod-logs
+,settings modlogs disable
+,settings role moderator @Moderator
+,settings confirm ban on
+```
+
+## ,stickyrole
+
+Manage sticky roles for the server.
+
+**Usage:** `,stickyrole <enable|disable|add|remove|list>`
+**Aliases:** `srole`, `stickyroles`
+**Subcommands:** `enable`, `disable`, `add`, `remove`, `list`
+
+```bash
+,stickyrole enable
+,stickyrole add @Member
+,stickyrole list
+,stickyrole remove @Member
+```
+
+## ,suppress
+
+Suppress commands in specific channels.
+
+**Usage:** `,suppress <add|remove|list|copy|clear>`
+**Aliases:** `supp`, `suppresscmd`
+**Subcommands:** `add`, `remove`, `list`, `copy`, `clear`
+
+```bash
+,suppress add all #general
+,suppress add ban #mod-chat
+,suppress list
+```
+
+## ,webhook
+
+Manage webhooks in your server.
+
+**Usage:** `,webhook <list|create|delete|send|edit|avatar>`
+**Aliases:** `hook`, `webhooks`, `whook`
+**Subcommands:** `list`, `create`, `delete`, `send`, `edit`, `avatar`, `lock`, `unlock`, `recreate`
+
+```bash
+,webhook list
+,webhook create Announcements
+,webhook send 1234 hello
+,webhook delete 1234
+```

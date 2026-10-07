@@ -1,0 +1,52 @@
+---
+title: 'Community settings'
+description: 'Every community setting bleed exposes per server.'
+---
+
+# Community
+
+5 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `introChannelId` | Intro channel | `channel` | *not set* |  |
+| `confessionsChannelId` | Confessions channel | `channel` | *not set* |  |
+| `confessionsLogId` | Confessions log | `channel` | *not set* |  |
+| `transcriptChannelId` | Transcript channel | `channel` | *not set* |  |
+| `pingRoles` | Ping roles | `json` | *empty* |  |
+
+## Intro channel
+```bash
+,config set introChannelId <value>
+```
+Type: `channel`.
+Defaults to the `introChannelId` environment value when set.
+
+## Confessions channel
+```bash
+,config set confessionsChannelId <value>
+```
+Type: `channel`.
+Defaults to the `confessionsChannelId` environment value when set.
+
+## Confessions log
+```bash
+,config set confessionsLogId <value>
+```
+Type: `channel`.
+Defaults to the `confessionsLogId` environment value when set.
+
+## Transcript channel
+```bash
+,config set transcriptChannelId <value>
+```
+Type: `channel`.
+Defaults to the `transcriptChannelId` environment value when set.
+
+## Ping roles
+```bash
+,config set pingRoles <value>
+```
+Type: `json`.
+Defaults to the `pingRoles` environment value when set.

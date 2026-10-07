@@ -1,0 +1,111 @@
+---
+title: 'Automod settings'
+description: 'Every automod setting bleed exposes per server.'
+---
+
+# Automod
+
+13 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `antiSpamEnabled` | Anti spam | `boolean` | `true` |  |
+| `antiInviteEnabled` | Anti invite | `boolean` | `true` |  |
+| `antiRaidEnabled` | Anti raid | `boolean` | `true` |  |
+| `antiMentionEnabled` | Anti mention | `boolean` | `true` |  |
+| `automodLogChannelId` | Automod log | `channel` | *not set* |  |
+| `spamLimit` | Spam limit | `number` | `6` |  |
+| `spamWindow` | Spam window (s) | `number` | `5` |  |
+| `spamTimeout` | Spam timeout (min) | `number` | `5` |  |
+| `mentionLimit` | Mention limit | `number` | `5` |  |
+| `raidJoinLimit` | Join flood limit | `number` | `6` | Joins inside the window that trigger a lockdown. |
+| `raidJoinWindow` | Join flood window (s) | `number` | `12` |  |
+| `lockdownSlowmode` | Lockdown slowmode (s) | `number` | `30` | Slowmode applied to every channel during a lockdown. |
+| `raidExemptCategories` | Raid-exempt categories | `list` | *empty* | Categories the anti-raid lockdown skips. |
+
+## Anti spam
+```bash
+,config set antiSpamEnabled <value>
+```
+Type: `boolean`.
+
+## Anti invite
+```bash
+,config set antiInviteEnabled <value>
+```
+Type: `boolean`.
+
+## Anti raid
+```bash
+,config set antiRaidEnabled <value>
+```
+Type: `boolean`.
+
+## Anti mention
+```bash
+,config set antiMentionEnabled <value>
+```
+Type: `boolean`.
+
+## Automod log
+```bash
+,config set automodLogChannelId <value>
+```
+Type: `channel`.
+
+## Spam limit
+```bash
+,config set spamLimit <value>
+```
+Type: `number`.
+Defaults to the `spamLimit` environment value when set.
+
+## Spam window (s)
+```bash
+,config set spamWindow <value>
+```
+Type: `number`.
+Defaults to the `spamWindow` environment value when set.
+
+## Spam timeout (min)
+```bash
+,config set spamTimeout <value>
+```
+Type: `number`.
+Defaults to the `spamTimeout` environment value when set.
+
+## Mention limit
+```bash
+,config set mentionLimit <value>
+```
+Type: `number`.
+Defaults to the `mentionLimit` environment value when set.
+
+## Join flood limit
+```bash
+,config set raidJoinLimit <value>
+```
+Joins inside the window that trigger a lockdown.
+Defaults to the `raidLimit` environment value when set.
+
+## Join flood window (s)
+```bash
+,config set raidJoinWindow <value>
+```
+Type: `number`.
+Defaults to the `raidWindow` environment value when set.
+
+## Lockdown slowmode (s)
+```bash
+,config set lockdownSlowmode <value>
+```
+Slowmode applied to every channel during a lockdown.
+Defaults to the `lockdownSlowmode` environment value when set.
+
+## Raid-exempt categories
+```bash
+,config set raidExemptCategories <value>
+```
+Categories the anti-raid lockdown skips.
+Defaults to the `raidExemptCategories` environment value when set.

@@ -1,0 +1,826 @@
+---
+title: 'Image commands'
+description: '68 image commands in bleed.'
+---
+
+# Image
+
+68 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,ascii`](#ascii) | Apply the **Ascii** image effect to an avatar, attachment or URL. |
+| [`,beautiful`](#beautiful) | Apply the **Beautiful** image effect to an avatar, attachment or URL. |
+| [`,blur`](#blur) | Apply the **Blur** image effect to an avatar, attachment or URL. |
+| [`,blurpixel`](#blurpixel) | Apply the **Blur Pixel** image effect to an avatar, attachment or URL. |
+| [`,brighten`](#brighten) | Apply the **Brighten** image effect to an avatar, attachment or URL. |
+| [`,bsod`](#bsod) | Apply the **Bsod** image effect to an avatar, attachment or URL. |
+| [`,bulge`](#bulge) | Apply the **Bulge** image effect to an avatar, attachment or URL. |
+| [`,circle`](#circle) | Apply the **Circle** image effect to an avatar, attachment or URL. |
+| [`,clown`](#clown) | Apply the **Clown** image effect to an avatar, attachment or URL. |
+| [`,cold`](#cold) | Apply the **Cold** image effect to an avatar, attachment or URL. |
+| [`,contrast`](#contrast) | Apply the **Contrast** image effect to an avatar, attachment or URL. |
+| [`,cyberpunk`](#cyberpunk) | Apply the **Cyberpunk** image effect to an avatar, attachment or URL. |
+| [`,darken`](#darken) | Apply the **Darken** image effect to an avatar, attachment or URL. |
+| [`,deepfry`](#deepfry) | Apply the **Deep Fry** image effect to an avatar, attachment or URL. |
+| [`,desaturate`](#desaturate) | Apply the **Desaturate** image effect to an avatar, attachment or URL. |
+| [`,dreamy`](#dreamy) | Apply the **Dreamy** image effect to an avatar, attachment or URL. |
+| [`,duotone`](#duotone) | Apply the **Duotone** image effect to an avatar, attachment or URL. |
+| [`,edges`](#edges) | Apply the **Edges** image effect to an avatar, attachment or URL. |
+| [`,emboss`](#emboss) | Apply the **Emboss** image effect to an avatar, attachment or URL. |
+| [`,fade`](#fade) | Apply the **Fade** image effect to an avatar, attachment or URL. |
+| [`,fisheye`](#fisheye) | Apply the **Fisheye** image effect to an avatar, attachment or URL. |
+| [`,fliph`](#fliph) | Apply the **Flip H** image effect to an avatar, attachment or URL. |
+| [`,flipv`](#flipv) | Apply the **Flip V** image effect to an avatar, attachment or URL. |
+| [`,frame`](#frame) | Apply the **Frame** image effect to an avatar, attachment or URL. |
+| [`,glitch`](#glitch) | Apply the **Glitch** image effect to an avatar, attachment or URL. |
+| [`,grayscale`](#grayscale) | Apply the **Grayscale** image effect to an avatar, attachment or URL. |
+| [`,halftone`](#halftone) | Apply the **Halftone** image effect to an avatar, attachment or URL. |
+| [`,hue`](#hue) | Apply the **Hue** image effect to an avatar, attachment or URL. |
+| [`,hueinvert`](#hueinvert) | Apply the **Hue Invert** image effect to an avatar, attachment or URL. |
+| [`,huge`](#huge) | Apply the **Huge** image effect to an avatar, attachment or URL. |
+| [`,impact`](#impact) | Apply the **Impact** image effect to an avatar, attachment or URL. |
+| [`,infrared`](#infrared) | Apply the **Infrared** image effect to an avatar, attachment or URL. |
+| [`,invert`](#invert) | Apply the **Invert** image effect to an avatar, attachment or URL. |
+| [`,lowcontrast`](#lowcontrast) | Apply the **Low Contrast** image effect to an avatar, attachment or URL. |
+| [`,matrix`](#matrix) | Apply the **Matrix** image effect to an avatar, attachment or URL. |
+| [`,mosaic`](#mosaic) | Apply the **Mosaic** image effect to an avatar, attachment or URL. |
+| [`,neon`](#neon) | Apply the **Neon** image effect to an avatar, attachment or URL. |
+| [`,noise`](#noise) | Apply the **Noise** image effect to an avatar, attachment or URL. |
+| [`,oil`](#oil) | Apply the **Oil** image effect to an avatar, attachment or URL. |
+| [`,opacity`](#opacity) | Apply the **Opacity** image effect to an avatar, attachment or URL. |
+| [`,pinch`](#pinch) | Apply the **Pinch** image effect to an avatar, attachment or URL. |
+| [`,pixelate`](#pixelate) | Apply the **Pixelate** image effect to an avatar, attachment or URL. |
+| [`,polaroid`](#polaroid) | Apply the **Polaroid** image effect to an avatar, attachment or URL. |
+| [`,posterize`](#posterize) | Apply the **Posterize** image effect to an avatar, attachment or URL. |
+| [`,rgbsplit`](#rgbsplit) | Apply the **Rgb Split** image effect to an avatar, attachment or URL. |
+| [`,ripple`](#ripple) | Apply the **Ripple** image effect to an avatar, attachment or URL. |
+| [`,rotate180`](#rotate180) | Apply the **Rotate 1 8 0** image effect to an avatar, attachment or URL. |
+| [`,rotate270`](#rotate270) | Apply the **Rotate 2 7 0** image effect to an avatar, attachment or URL. |
+| [`,rotate90`](#rotate90) | Apply the **Rotate 9 0** image effect to an avatar, attachment or URL. |
+| [`,saturate`](#saturate) | Apply the **Saturate** image effect to an avatar, attachment or URL. |
+| [`,scanlines`](#scanlines) | Apply the **Scanlines** image effect to an avatar, attachment or URL. |
+| [`,sepia`](#sepia) | Apply the **Sepia** image effect to an avatar, attachment or URL. |
+| [`,sharpen`](#sharpen) | Apply the **Sharpen** image effect to an avatar, attachment or URL. |
+| [`,sketchify`](#sketchify) | Apply the **Sketchify** image effect to an avatar, attachment or URL. |
+| [`,softblur`](#softblur) | Apply the **Soft Blur** image effect to an avatar, attachment or URL. |
+| [`,square`](#square) | Apply the **Square** image effect to an avatar, attachment or URL. |
+| [`,thermal`](#thermal) | Apply the **Thermal** image effect to an avatar, attachment or URL. |
+| [`,threshold`](#threshold) | Apply the **Threshold** image effect to an avatar, attachment or URL. |
+| [`,tiny`](#tiny) | Apply the **Tiny** image effect to an avatar, attachment or URL. |
+| [`,triggered`](#triggered) | Apply the **Triggered** image effect to an avatar, attachment or URL. |
+| [`,twirl`](#twirl) | Apply the **Twirl** image effect to an avatar, attachment or URL. |
+| [`,uncaption`](#uncaption) | Apply the **Un Caption** image effect to an avatar, attachment or URL. |
+| [`,vignette`](#vignette) | Apply the **Vignette** image effect to an avatar, attachment or URL. |
+| [`,vintage`](#vintage) | Apply the **Vintage** image effect to an avatar, attachment or URL. |
+| [`,wanted`](#wanted) | Apply the **Wanted** image effect to an avatar, attachment or URL. |
+| [`,warm`](#warm) | Apply the **Warm** image effect to an avatar, attachment or URL. |
+| [`,wasted`](#wasted) | Apply the **Wasted** image effect to an avatar, attachment or URL. |
+| [`,waves`](#waves) | Apply the **Waves** image effect to an avatar, attachment or URL. |
+
+## ,ascii
+
+Apply the **Ascii** image effect to an avatar, attachment or URL.
+
+**Usage:** `,ascii [@user|url]`
+**Aliases:** `asc`, `ascx`
+
+```bash
+{prefix}ascii @user
+```
+
+## ,beautiful
+
+Apply the **Beautiful** image effect to an avatar, attachment or URL.
+
+**Usage:** `,beautiful [@user|url]`
+**Aliases:** `bea`, `beau`
+
+```bash
+{prefix}beautiful @user
+```
+
+## ,blur
+
+Apply the **Blur** image effect to an avatar, attachment or URL.
+
+**Usage:** `,blur [@user|url]`
+**Aliases:** `blu`, `blux`
+
+```bash
+{prefix}blur @user
+```
+
+## ,blurpixel
+
+Apply the **Blur Pixel** image effect to an avatar, attachment or URL.
+
+**Usage:** `,blurpixel [@user|url]`
+**Aliases:** `bp`
+
+```bash
+{prefix}blurpixel @user
+```
+
+## ,brighten
+
+Apply the **Brighten** image effect to an avatar, attachment or URL.
+
+**Usage:** `,brighten [@user|url]`
+**Aliases:** `bri`, `brig`
+
+```bash
+{prefix}brighten @user
+```
+
+## ,bsod
+
+Apply the **Bsod** image effect to an avatar, attachment or URL.
+
+**Usage:** `,bsod [@user|url]`
+**Aliases:** `bso`, `bsox`
+
+```bash
+{prefix}bsod @user
+```
+
+## ,bulge
+
+Apply the **Bulge** image effect to an avatar, attachment or URL.
+
+**Usage:** `,bulge [@user|url]`
+**Aliases:** `bulx`
+
+```bash
+{prefix}bulge @user
+```
+
+## ,circle
+
+Apply the **Circle** image effect to an avatar, attachment or URL.
+
+**Usage:** `,circle [@user|url]`
+**Aliases:** `cir`, `cirx`
+
+```bash
+{prefix}circle @user
+```
+
+## ,clown
+
+Apply the **Clown** image effect to an avatar, attachment or URL.
+
+**Usage:** `,clown [@user|url]`
+**Aliases:** `clo`, `clox`
+
+```bash
+{prefix}clown @user
+```
+
+## ,cold
+
+Apply the **Cold** image effect to an avatar, attachment or URL.
+
+**Usage:** `,cold [@user|url]`
+**Aliases:** `colx`
+
+```bash
+{prefix}cold @user
+```
+
+## ,contrast
+
+Apply the **Contrast** image effect to an avatar, attachment or URL.
+
+**Usage:** `,contrast [@user|url]`
+**Aliases:** `cont`
+
+```bash
+{prefix}contrast @user
+```
+
+## ,cyberpunk
+
+Apply the **Cyberpunk** image effect to an avatar, attachment or URL.
+
+**Usage:** `,cyberpunk [@user|url]`
+**Aliases:** `cyb`, `cybe`
+
+```bash
+{prefix}cyberpunk @user
+```
+
+## ,darken
+
+Apply the **Darken** image effect to an avatar, attachment or URL.
+
+**Usage:** `,darken [@user|url]`
+**Aliases:** `dar`, `dark`
+
+```bash
+{prefix}darken @user
+```
+
+## ,deepfry
+
+Apply the **Deep Fry** image effect to an avatar, attachment or URL.
+
+**Usage:** `,deepfry [@user|url]`
+**Aliases:** `dee`, `deep`
+
+```bash
+{prefix}deepfry @user
+```
+
+## ,desaturate
+
+Apply the **Desaturate** image effect to an avatar, attachment or URL.
+
+**Usage:** `,desaturate [@user|url]`
+**Aliases:** `des`, `desa`
+
+```bash
+{prefix}desaturate @user
+```
+
+## ,dreamy
+
+Apply the **Dreamy** image effect to an avatar, attachment or URL.
+
+**Usage:** `,dreamy [@user|url]`
+**Aliases:** `dre`, `drea`
+
+```bash
+{prefix}dreamy @user
+```
+
+## ,duotone
+
+Apply the **Duotone** image effect to an avatar, attachment or URL.
+
+**Usage:** `,duotone [@user|url]`
+**Aliases:** `duo`, `duot`
+
+```bash
+{prefix}duotone @user
+```
+
+## ,edges
+
+Apply the **Edges** image effect to an avatar, attachment or URL.
+
+**Usage:** `,edges [@user|url]`
+**Aliases:** `edg`, `edgx`
+
+```bash
+{prefix}edges @user
+```
+
+## ,emboss
+
+Apply the **Emboss** image effect to an avatar, attachment or URL.
+
+**Usage:** `,emboss [@user|url]`
+**Aliases:** `emb`, `embo`
+
+```bash
+{prefix}emboss @user
+```
+
+## ,fade
+
+Apply the **Fade** image effect to an avatar, attachment or URL.
+
+**Usage:** `,fade [@user|url]`
+**Aliases:** `fad`, `fadx`
+
+```bash
+{prefix}fade @user
+```
+
+## ,fisheye
+
+Apply the **Fisheye** image effect to an avatar, attachment or URL.
+
+**Usage:** `,fisheye [@user|url]`
+**Aliases:** `fis`, `fish`
+
+```bash
+{prefix}fisheye @user
+```
+
+## ,fliph
+
+Apply the **Flip H** image effect to an avatar, attachment or URL.
+
+**Usage:** `,fliph [@user|url]`
+**Aliases:** `fh`, `fli`
+
+```bash
+{prefix}fliph @user
+```
+
+## ,flipv
+
+Apply the **Flip V** image effect to an avatar, attachment or URL.
+
+**Usage:** `,flipv [@user|url]`
+**Aliases:** `flix`, `fv`
+
+```bash
+{prefix}flipv @user
+```
+
+## ,frame
+
+Apply the **Frame** image effect to an avatar, attachment or URL.
+
+**Usage:** `,frame [@user|url]`
+**Aliases:** `frax`
+
+```bash
+{prefix}frame @user
+```
+
+## ,glitch
+
+Apply the **Glitch** image effect to an avatar, attachment or URL.
+
+**Usage:** `,glitch [@user|url]`
+**Aliases:** `gli`, `glit`
+
+```bash
+{prefix}glitch @user
+```
+
+## ,grayscale
+
+Apply the **Grayscale** image effect to an avatar, attachment or URL.
+
+**Usage:** `,grayscale [@user|url]`
+**Aliases:** `gra`, `gray`
+
+```bash
+{prefix}grayscale @user
+```
+
+## ,halftone
+
+Apply the **Halftone** image effect to an avatar, attachment or URL.
+
+**Usage:** `,halftone [@user|url]`
+**Aliases:** `hal`, `half`
+
+```bash
+{prefix}halftone @user
+```
+
+## ,hue
+
+Apply the **Hue** image effect to an avatar, attachment or URL.
+
+**Usage:** `,hue [@user|url]`
+**Aliases:** `huex`
+
+```bash
+{prefix}hue @user
+```
+
+## ,hueinvert
+
+Apply the **Hue Invert** image effect to an avatar, attachment or URL.
+
+**Usage:** `,hueinvert [@user|url]`
+**Aliases:** `hi`, `huei`
+
+```bash
+{prefix}hueinvert @user
+```
+
+## ,huge
+
+Apply the **Huge** image effect to an avatar, attachment or URL.
+
+**Usage:** `,huge [@user|url]`
+**Aliases:** `hugx`
+
+```bash
+{prefix}huge @user
+```
+
+## ,impact
+
+Apply the **Impact** image effect to an avatar, attachment or URL.
+
+**Usage:** `,impact [@user|url]`
+**Aliases:** `imp`, `impa`
+
+```bash
+{prefix}impact @user
+```
+
+## ,infrared
+
+Apply the **Infrared** image effect to an avatar, attachment or URL.
+
+**Usage:** `,infrared [@user|url]`
+**Aliases:** `inf`, `infr`
+
+```bash
+{prefix}infrared @user
+```
+
+## ,invert
+
+Apply the **Invert** image effect to an avatar, attachment or URL.
+
+**Usage:** `,invert [@user|url]`
+**Aliases:** `invx`
+
+```bash
+{prefix}invert @user
+```
+
+## ,lowcontrast
+
+Apply the **Low Contrast** image effect to an avatar, attachment or URL.
+
+**Usage:** `,lowcontrast [@user|url]`
+**Aliases:** `low`, `lowc`
+
+```bash
+{prefix}lowcontrast @user
+```
+
+## ,matrix
+
+Apply the **Matrix** image effect to an avatar, attachment or URL.
+
+**Usage:** `,matrix [@user|url]`
+**Aliases:** `mat`, `matr`
+
+```bash
+{prefix}matrix @user
+```
+
+## ,mosaic
+
+Apply the **Mosaic** image effect to an avatar, attachment or URL.
+
+**Usage:** `,mosaic [@user|url]`
+**Aliases:** `mos`, `mosa`
+
+```bash
+{prefix}mosaic @user
+```
+
+## ,neon
+
+Apply the **Neon** image effect to an avatar, attachment or URL.
+
+**Usage:** `,neon [@user|url]`
+**Aliases:** `neo`, `neox`
+
+```bash
+{prefix}neon @user
+```
+
+## ,noise
+
+Apply the **Noise** image effect to an avatar, attachment or URL.
+
+**Usage:** `,noise [@user|url]`
+**Aliases:** `noi`, `noix`
+
+```bash
+{prefix}noise @user
+```
+
+## ,oil
+
+Apply the **Oil** image effect to an avatar, attachment or URL.
+
+**Usage:** `,oil [@user|url]`
+**Aliases:** `oilx`
+
+```bash
+{prefix}oil @user
+```
+
+## ,opacity
+
+Apply the **Opacity** image effect to an avatar, attachment or URL.
+
+**Usage:** `,opacity [@user|url]`
+**Aliases:** `opa`, `opac`
+
+```bash
+{prefix}opacity @user
+```
+
+## ,pinch
+
+Apply the **Pinch** image effect to an avatar, attachment or URL.
+
+**Usage:** `,pinch [@user|url]`
+**Aliases:** `pinx`
+
+```bash
+{prefix}pinch @user
+```
+
+## ,pixelate
+
+Apply the **Pixelate** image effect to an avatar, attachment or URL.
+
+**Usage:** `,pixelate [@user|url]`
+**Aliases:** `pix`, `pixe`
+
+```bash
+{prefix}pixelate @user
+```
+
+## ,polaroid
+
+Apply the **Polaroid** image effect to an avatar, attachment or URL.
+
+**Usage:** `,polaroid [@user|url]`
+**Aliases:** `pol`, `pola`
+
+```bash
+{prefix}polaroid @user
+```
+
+## ,posterize
+
+Apply the **Posterize** image effect to an avatar, attachment or URL.
+
+**Usage:** `,posterize [@user|url]`
+**Aliases:** `pos`, `post`
+
+```bash
+{prefix}posterize @user
+```
+
+## ,rgbsplit
+
+Apply the **Rgb Split** image effect to an avatar, attachment or URL.
+
+**Usage:** `,rgbsplit [@user|url]`
+**Aliases:** `rgb`, `rgbs`
+
+```bash
+{prefix}rgbsplit @user
+```
+
+## ,ripple
+
+Apply the **Ripple** image effect to an avatar, attachment or URL.
+
+**Usage:** `,ripple [@user|url]`
+**Aliases:** `rip`, `ripp`
+
+```bash
+{prefix}ripple @user
+```
+
+## ,rotate180
+
+Apply the **Rotate 1 8 0** image effect to an avatar, attachment or URL.
+
+**Usage:** `,rotate180 [@user|url]`
+**Aliases:** `r180`, `rotx`
+
+```bash
+{prefix}rotate180 @user
+```
+
+## ,rotate270
+
+Apply the **Rotate 2 7 0** image effect to an avatar, attachment or URL.
+
+**Usage:** `,rotate270 [@user|url]`
+**Aliases:** `r270`
+
+```bash
+{prefix}rotate270 @user
+```
+
+## ,rotate90
+
+Apply the **Rotate 9 0** image effect to an avatar, attachment or URL.
+
+**Usage:** `,rotate90 [@user|url]`
+**Aliases:** `r90`, `rota`
+
+```bash
+{prefix}rotate90 @user
+```
+
+## ,saturate
+
+Apply the **Saturate** image effect to an avatar, attachment or URL.
+
+**Usage:** `,saturate [@user|url]`
+**Aliases:** `sat`, `satu`
+
+```bash
+{prefix}saturate @user
+```
+
+## ,scanlines
+
+Apply the **Scanlines** image effect to an avatar, attachment or URL.
+
+**Usage:** `,scanlines [@user|url]`
+**Aliases:** `sca`, `scan`
+
+```bash
+{prefix}scanlines @user
+```
+
+## ,sepia
+
+Apply the **Sepia** image effect to an avatar, attachment or URL.
+
+**Usage:** `,sepia [@user|url]`
+**Aliases:** `sep`, `sepx`
+
+```bash
+{prefix}sepia @user
+```
+
+## ,sharpen
+
+Apply the **Sharpen** image effect to an avatar, attachment or URL.
+
+**Usage:** `,sharpen [@user|url]`
+
+```bash
+{prefix}sharpen @user
+```
+
+## ,sketchify
+
+Apply the **Sketchify** image effect to an avatar, attachment or URL.
+
+**Usage:** `,sketchify [@user|url]`
+**Aliases:** `ske`, `sket`
+
+```bash
+{prefix}sketchify @user
+```
+
+## ,softblur
+
+Apply the **Soft Blur** image effect to an avatar, attachment or URL.
+
+**Usage:** `,softblur [@user|url]`
+**Aliases:** `sof`, `soft`
+
+```bash
+{prefix}softblur @user
+```
+
+## ,square
+
+Apply the **Square** image effect to an avatar, attachment or URL.
+
+**Usage:** `,square [@user|url]`
+**Aliases:** `squx`
+
+```bash
+{prefix}square @user
+```
+
+## ,thermal
+
+Apply the **Thermal** image effect to an avatar, attachment or URL.
+
+**Usage:** `,thermal [@user|url]`
+**Aliases:** `the`, `ther`
+
+```bash
+{prefix}thermal @user
+```
+
+## ,threshold
+
+Apply the **Threshold** image effect to an avatar, attachment or URL.
+
+**Usage:** `,threshold [@user|url]`
+**Aliases:** `thre`, `thrx`
+
+```bash
+{prefix}threshold @user
+```
+
+## ,tiny
+
+Apply the **Tiny** image effect to an avatar, attachment or URL.
+
+**Usage:** `,tiny [@user|url]`
+**Aliases:** `tin`, `tinx`
+
+```bash
+{prefix}tiny @user
+```
+
+## ,triggered
+
+Apply the **Triggered** image effect to an avatar, attachment or URL.
+
+**Usage:** `,triggered [@user|url]`
+**Aliases:** `trig`
+
+```bash
+{prefix}triggered @user
+```
+
+## ,twirl
+
+Apply the **Twirl** image effect to an avatar, attachment or URL.
+
+**Usage:** `,twirl [@user|url]`
+**Aliases:** `twi`, `twix`
+
+```bash
+{prefix}twirl @user
+```
+
+## ,uncaption
+
+Apply the **Un Caption** image effect to an avatar, attachment or URL.
+
+**Usage:** `,uncaption [@user|url]`
+**Aliases:** `unc`, `unca`
+
+```bash
+{prefix}uncaption @user
+```
+
+## ,vignette
+
+Apply the **Vignette** image effect to an avatar, attachment or URL.
+
+**Usage:** `,vignette [@user|url]`
+**Aliases:** `vig`, `vign`
+
+```bash
+{prefix}vignette @user
+```
+
+## ,vintage
+
+Apply the **Vintage** image effect to an avatar, attachment or URL.
+
+**Usage:** `,vintage [@user|url]`
+**Aliases:** `vin`, `vint`
+
+```bash
+{prefix}vintage @user
+```
+
+## ,wanted
+
+Apply the **Wanted** image effect to an avatar, attachment or URL.
+
+**Usage:** `,wanted [@user|url]`
+**Aliases:** `wan`, `want`
+
+```bash
+{prefix}wanted @user
+```
+
+## ,warm
+
+Apply the **Warm** image effect to an avatar, attachment or URL.
+
+**Usage:** `,warm [@user|url]`
+**Aliases:** `war`, `warx`
+
+```bash
+{prefix}warm @user
+```
+
+## ,wasted
+
+Apply the **Wasted** image effect to an avatar, attachment or URL.
+
+**Usage:** `,wasted [@user|url]`
+**Aliases:** `was`, `wast`
+
+```bash
+{prefix}wasted @user
+```
+
+## ,waves
+
+Apply the **Waves** image effect to an avatar, attachment or URL.
+
+**Usage:** `,waves [@user|url]`
+**Aliases:** `wav`, `wavx`
+
+```bash
+{prefix}waves @user
+```

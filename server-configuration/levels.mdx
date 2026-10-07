@@ -1,0 +1,68 @@
+---
+title: 'Levels settings'
+description: 'Every levels setting bleed exposes per server.'
+---
+
+# Levels
+
+8 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `xpEnabled` | Leveling enabled | `boolean` | `true` |  |
+| `xpPerMessage` | XP per message | `number` | `15` |  |
+| `xpCooldown` | XP cooldown (s) | `number` | `60` |  |
+| `xpAnnounceChannelId` | Level-up channel | `channel` | *not set* | Leave empty to announce in the channel they levelled in. |
+| `xpMessage` | Level-up message | `string` | `{user} reached level {level}!` | Placeholders: {user}, {level}, {server}. |
+| `xpIgnoredChannelIds` | Ignored channels | `list` | *empty* |  |
+| `xpIgnoredRoleIds` | Ignored roles | `list` | *empty* |  |
+| `xpRoleRewards` | Role rewards | `json` | *empty* | Array of { level, roleId }. |
+
+## Leveling enabled
+```bash
+,config set xpEnabled <value>
+```
+Type: `boolean`.
+
+## XP per message
+```bash
+,config set xpPerMessage <value>
+```
+Type: `number`.
+
+## XP cooldown (s)
+```bash
+,config set xpCooldown <value>
+```
+Type: `number`.
+
+## Level-up channel
+```bash
+,config set xpAnnounceChannelId <value>
+```
+Leave empty to announce in the channel they levelled in.
+
+## Level-up message
+```bash
+,config set xpMessage <value>
+```
+Placeholders: {user}, {level}, {server}.
+
+## Ignored channels
+```bash
+,config set xpIgnoredChannelIds <value>
+```
+Type: `list`.
+
+## Ignored roles
+```bash
+,config set xpIgnoredRoleIds <value>
+```
+Type: `list`.
+
+## Role rewards
+```bash
+,config set xpRoleRewards <value>
+```
+Array of { level, roleId }.

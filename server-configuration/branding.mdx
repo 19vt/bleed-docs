@@ -1,0 +1,44 @@
+---
+title: 'Branding settings'
+description: 'Every branding setting bleed exposes per server.'
+---
+
+# Branding
+
+4 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `botName` | Bot name | `string` | `Bleed` | Name used in embeds and bot replies. |
+| `prefix` | Prefix | `string` | `,` | Command prefix. |
+| `embedColor` | Embed color | `color` | `2829617` |  |
+| `accentColor` | Accent color | `color` | `16777215` |  |
+
+## Bot name
+```bash
+,config set botName <value>
+```
+Name used in embeds and bot replies.
+Defaults to the `botName` environment value when set.
+
+## Prefix
+```bash
+,config set prefix <value>
+```
+Command prefix.
+Defaults to the `prefix` environment value when set.
+
+## Embed color
+```bash
+,config set embedColor <value>
+```
+Type: `color`.
+Defaults to the `embedColor` environment value when set.
+
+## Accent color
+```bash
+,config set accentColor <value>
+```
+Type: `color`.
+Defaults to the `accentColor` environment value when set.

@@ -1,0 +1,482 @@
+---
+title: 'Security commands'
+description: '40 security commands in bleed.'
+---
+
+# Security
+
+40 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,altcheck`](#altcheck) | Look for alt-account signals on a member. |
+| [`,anticheck`](#anticheck) | Check the current antinuke status. |
+| [`,antinuke`](#antinuke) | Protect thread deletion |
+| [`,antiraid`](#antiraid) | Antiraid system management. |
+| [`,autoban`](#autoban) | Ban anyone posting a phishing link. |
+| [`,autopurge`](#autopurge) | Auto-delete messages on a schedule. |
+| [`,botguard`](#botguard) | Toggle the bot guard. |
+| [`,channelguard`](#channelguard) | Toggle the channel guard. |
+| [`,crypto`](#crypto) | Crypto scam detection. |
+| [`,denukify`](#denukify) | Recover your server from a nuke attack. _(owner only)_ |
+| [`,emojiguard`](#emojiguard) | Toggle the emoji guard. |
+| [`,extraowner`](#extraowner) | Manage extra owners who can lift punishments. _(owner only)_ |
+| [`,fakepermissions`](#fakepermissions) | Give roles/users permissions they don't actually have. _(owner only)_ |
+| [`,filter`](#filter) | No description provided. |
+| [`,joinshield`](#joinshield) | Guard the join gate and flag young accounts. |
+| [`,linkcheck`](#linkcheck) | Explain why a link looks safe or risky. |
+| [`,massjoinban`](#massjoinban) | Ban accounts that joined in a raid window. |
+| [`,mentionguard`](#mentionguard) | Toggle the mention-spam guard. |
+| [`,newaccountalert`](#newaccountalert) | Alert on accounts younger than N days. |
+| [`,nukeguard`](#nukeguard) | Toggle the nuke guard. |
+| [`,panicmode`](#panicmode) | Lock every channel at once (or release them). |
+| [`,phishcheck`](#phishcheck) | Check a URL against phishing heuristics. |
+| [`,quarantine`](#quarantine) | Quarantine a member, stripping their roles. |
+| [`,quarantineadd`](#quarantineadd) | Manually add a user to quarantine via the antinuke system. |
+| [`,raidalert`](#raidalert) | Set the join-rate threshold that raises a raid alarm. |
+| [`,roleguard`](#roleguard) | Toggle the role guard. |
+| [`,roleprotect`](#roleprotect) | Protect roles from unauthorised edits. |
+| [`,security`](#security) | Overview of this server's security settings. |
+| [`,securitylog`](#securitylog) | Choose the channel security events are logged to. |
+| [`,securityreport`](#securityreport) | Full security report for the server. |
+| [`,securityscan`](#securityscan) | Audit the server for dangerous roles and permissions. |
+| [`,securitystatus`](#securitystatus) | Which guards are active right now. |
+| [`,spamguard`](#spamguard) | Toggle the spam guard. |
+| [`,threatlevel`](#threatlevel) | Live threat level from joins, lockdowns and risky roles. |
+| [`,trustscore`](#trustscore) | Trust score for a member from account age, roles and history. |
+| [`,verify`](#verify) | Verify yourself and receive the verified role. |
+| [`,verifypanel`](#verifypanel) | Post a reaction-to-verify panel. |
+| [`,verifyrole`](#verifyrole) | Set the role given after verification. |
+| [`,webhookguard`](#webhookguard) | Toggle the webhook guard and remove unknown webhooks. |
+| [`,whitelist`](#whitelist) | Manage the antinuke whitelist. _(co-owner+)_ |
+
+## ,altcheck
+
+Look for alt-account signals on a member.
+
+**Usage:** `,altcheck [value]`
+**Aliases:** `ac`, `altc`
+
+```bash
+{prefix}altcheck
+```
+
+## ,anticheck
+
+Check the current antinuke status.
+
+**Usage:** `,anticheck`
+**Aliases:** `ancheck`, `checkan`
+
+## ,antinuke
+
+Protect thread deletion
+
+**Usage:** `,antinuke`
+**Aliases:** `an`, `antiwizz`
+
+## ,antiraid
+
+Antiraid system management.
+
+**Usage:** `,antiraid <logs|joins|bots|newaccounts>`
+**Aliases:** `antir`, `araid`
+**Subcommands:** `logs`, `joins`, `bots`, `newaccounts`
+
+```bash
+,antiraid logs #logs
+,antiraid joins enable
+,antiraid joins threshold 10 30
+,antiraid bots punishment kick
+,antiraid newaccounts days 7
+```
+
+## ,autoban
+
+Ban anyone posting a phishing link.
+
+**Usage:** `,autoban [value]`
+**Aliases:** `aut`, `auto`
+
+```bash
+{prefix}autoban
+```
+
+## ,autopurge
+
+Auto-delete messages on a schedule.
+
+**Usage:** `,autopurge <enable|disable|pause|resume|status|list>`
+**Aliases:** `ap`, `apurge`
+**Subcommands:** `enable`, `disable`, `pause`, `resume`, `status`, `list`, `interval`, `limit`, `type`, `lock`, `unlock`, `whitelist`, `blacklist`, `history`, `notify`, `logchannel`
+
+```bash
+,autopurge lock
+,autopurge interval 300
+,autopurge type images
+,autopurge enable
+,autopurge status
+```
+
+## ,botguard
+
+Toggle the bot guard.
+
+**Usage:** `,botguard [value]`
+**Aliases:** `bguard`
+
+```bash
+{prefix}botguard
+```
+
+## ,channelguard
+
+Toggle the channel guard.
+
+**Usage:** `,channelguard [value]`
+**Aliases:** `cg`
+
+```bash
+{prefix}channelguard
+```
+
+## ,crypto
+
+Crypto scam detection.
+
+**Usage:** `,crypto <setup|enable|disable|config|threshold|punishment>`
+**Aliases:** `cc`
+**Subcommands:** `setup`, `enable`, `disable`, `config`, `threshold`, `punishment`, `logs`, `check`
+
+```bash
+,crypto setup
+,crypto threshold 2
+,crypto punishment ban
+,crypto check 0x1234...
+```
+
+## ,denukify
+
+Recover your server from a nuke attack.
+
+**Usage:** `,denukify <created_channels|created_roles|deleted_channels|deleted_roles>`
+**Aliases:** `denuke`, `restore`
+**Subcommands:** `created_channels`, `created_roles`, `deleted_channels`, `deleted_roles`
+
+```bash
+,denukify created_channels 50
+,denukify deleted_channels 20
+,denukify deleted_roles 10
+```
+
+## ,emojiguard
+
+Toggle the emoji guard.
+
+**Usage:** `,emojiguard [value]`
+**Aliases:** `eg`, `emox`
+
+```bash
+{prefix}emojiguard
+```
+
+## ,extraowner
+
+Manage extra owners who can lift punishments.
+
+**Usage:** `,extraowner`
+**Aliases:** `eo`
+
+## ,fakepermissions
+
+Give roles/users permissions they don't actually have.
+
+**Usage:** `,fakepermissions <add|remove|list|clear|check|test>`
+**Aliases:** `fakepermission`, `fakeperms`, `fp`
+**Subcommands:** `add`, `remove`, `list`, `clear`, `check`, `test`, `whohas`, `permissions`
+
+```bash
+,fakepermissions add @Moderator manage_messages
+,fakepermissions list
+,fakepermissions check @user
+,fakepermissions whohas banmembers
+```
+
+## ,filter
+
+No description provided.
+
+**Usage:** `,filter <spam|word|mentions|walloftext|links|invites>`
+**Aliases:** `automoderator`, `automodfilter`, `flt`
+**Subcommands:** `spam`, `word`, `mentions`, `walloftext`, `links`, `invites`, `emoji`, `exempt`, `unexempt`, `punishment`, `logs`, `status`, `list`, `panel`, `setup`
+
+```bash
+,filter spam enable
+,filter spam threshold 5
+,filter word add badword
+,filter links exempt @Staff
+,filter status
+```
+
+## ,joinshield
+
+Guard the join gate and flag young accounts.
+
+**Usage:** `,joinshield [value]`
+**Aliases:** `jshield`
+
+```bash
+{prefix}joinshield
+```
+
+## ,linkcheck
+
+Explain why a link looks safe or risky.
+
+**Usage:** `,linkcheck [value]`
+**Aliases:** `lcheck`
+
+```bash
+{prefix}linkcheck
+```
+
+## ,massjoinban
+
+Ban accounts that joined in a raid window.
+
+**Usage:** `,massjoinban [value]`
+**Aliases:** `mass`, `mjb`
+
+```bash
+{prefix}massjoinban
+```
+
+## ,mentionguard
+
+Toggle the mention-spam guard.
+
+**Usage:** `,mentionguard [value]`
+**Aliases:** `menx`
+
+```bash
+{prefix}mentionguard
+```
+
+## ,newaccountalert
+
+Alert on accounts younger than N days.
+
+**Usage:** `,newaccountalert [value]`
+**Aliases:** `naa`, `newa`
+
+```bash
+{prefix}newaccountalert
+```
+
+## ,nukeguard
+
+Toggle the nuke guard.
+
+**Usage:** `,nukeguard [value]`
+**Aliases:** `nuk`, `nukx`
+
+```bash
+{prefix}nukeguard
+```
+
+## ,panicmode
+
+Lock every channel at once (or release them).
+
+**Usage:** `,panicmode [value]`
+**Aliases:** `panic2`
+
+```bash
+{prefix}panicmode
+```
+
+## ,phishcheck
+
+Check a URL against phishing heuristics.
+
+**Usage:** `,phishcheck [value]`
+**Aliases:** `phish`
+
+```bash
+{prefix}phishcheck
+```
+
+## ,quarantine
+
+Quarantine a member, stripping their roles.
+
+**Usage:** `,quarantine`
+**Aliases:** `quar`
+
+## ,quarantineadd
+
+Manually add a user to quarantine via the antinuke system.
+
+**Usage:** `,quarantine add <@user | id> [reason]`
+**Aliases:** `qadd`, `qforce`
+
+## ,raidalert
+
+Set the join-rate threshold that raises a raid alarm.
+
+**Usage:** `,raidalert [value]`
+**Aliases:** `ra`, `raid`
+
+```bash
+{prefix}raidalert
+```
+
+## ,roleguard
+
+Toggle the role guard.
+
+**Usage:** `,roleguard [value]`
+
+```bash
+{prefix}roleguard
+```
+
+## ,roleprotect
+
+Protect roles from unauthorised edits.
+
+**Usage:** `,roleprotect`
+**Aliases:** `protectedrole`, `rprotect`
+
+## ,security
+
+Overview of this server's security settings.
+
+**Usage:** `,security`
+**Aliases:** `sec`
+
+## ,securitylog
+
+Choose the channel security events are logged to.
+
+**Usage:** `,securitylog [value]`
+
+```bash
+{prefix}securitylog
+```
+
+## ,securityreport
+
+Full security report for the server.
+
+**Usage:** `,securityreport [value]`
+**Aliases:** `srep`
+
+```bash
+{prefix}securityreport
+```
+
+## ,securityscan
+
+Audit the server for dangerous roles and permissions.
+
+**Usage:** `,securityscan [value]`
+**Aliases:** `sscan`
+
+```bash
+{prefix}securityscan
+```
+
+## ,securitystatus
+
+Which guards are active right now.
+
+**Usage:** `,securitystatus [value]`
+**Aliases:** `secu`, `secx`
+
+```bash
+{prefix}securitystatus
+```
+
+## ,spamguard
+
+Toggle the spam guard.
+
+**Usage:** `,spamguard [value]`
+**Aliases:** `sguard`
+
+```bash
+{prefix}spamguard
+```
+
+## ,threatlevel
+
+Live threat level from joins, lockdowns and risky roles.
+
+**Usage:** `,threatlevel [value]`
+
+```bash
+{prefix}threatlevel
+```
+
+## ,trustscore
+
+Trust score for a member from account age, roles and history.
+
+**Usage:** `,trustscore [value]`
+**Aliases:** `trust`
+
+```bash
+{prefix}trustscore
+```
+
+## ,verify
+
+Verify yourself and receive the verified role.
+
+**Usage:** `,verify [value]`
+**Aliases:** `ver`, `veri`
+
+```bash
+{prefix}verify
+```
+
+## ,verifypanel
+
+Post a reaction-to-verify panel.
+
+**Usage:** `,verifypanel [value]`
+**Aliases:** `vpanel`
+
+```bash
+{prefix}verifypanel
+```
+
+## ,verifyrole
+
+Set the role given after verification.
+
+**Usage:** `,verifyrole [value]`
+**Aliases:** `vrole`
+
+```bash
+{prefix}verifyrole
+```
+
+## ,webhookguard
+
+Toggle the webhook guard and remove unknown webhooks.
+
+**Usage:** `,webhookguard [value]`
+**Aliases:** `wguard`
+
+```bash
+{prefix}webhookguard
+```
+
+## ,whitelist
+
+Manage the antinuke whitelist.
+
+**Usage:** `,whitelist`
+**Aliases:** `wl`

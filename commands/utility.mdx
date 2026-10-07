@@ -1,0 +1,505 @@
+---
+title: 'Utility commands'
+description: '39 utility commands in bleed.'
+---
+
+# Utility
+
+39 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,avatar`](#avatar) | Show a member's avatar. |
+| [`,bots`](#bots) | View all bots in the server. |
+| [`,changelog`](#changelog) | Shows the latest updates and changes to the bot. |
+| [`,charinfo`](#charinfo) | Get information about a character/symbol. |
+| [`,fm`](#fm) | Show what a member is listening to on Last.fm. |
+| [`,get`](#get) | Grab user and server info. |
+| [`,hasvoted`](#hasvoted) | Check whether someone voted for the bot. |
+| [`,help`](#help) | Browse every command, with details, aliases and usage. |
+| [`,inviteinfo`](#inviteinfo) | Get information on a discord invite. |
+| [`,leaderboard`](#leaderboard) | Show the server XP leaderboard. |
+| [`,pin`](#pin) | Pin or unpin a message. Reply to a message, or pass a message link or id. |
+| [`,ping`](#ping) | Check the bot's latency and API round trip. |
+| [`,poll`](#poll) | Start a reaction poll. |
+| [`,profile`](#profile) | See info about a user. |
+| [`,quote`](#quote) | Quote a message into a styled card — reply, link, id or plain text. |
+| [`,randomhex`](#randomhex) | Generate a random hex colour. |
+| [`,rank`](#rank) | Show your (or someone else's) level, XP and progress to the next level. |
+| [`,remind`](#remind) | Set a reminder. Supports durations like 10m, 2h, 1d. |
+| [`,roleinfo`](#roleinfo) | To Get Information About A Role |
+| [`,rolelist`](#rolelist) | View all roles in the server. |
+| [`,rtfm`](#rtfm) | Search documentation. |
+| [`,seen`](#seen) | Seen when a member was last seen in the server. |
+| [`,serverbanner`](#serverbanner) | Show the server banner. |
+| [`,serverguide`](#serverguide) | A sorted map of this server: channels by category, roles by rank, and where to get help. |
+| [`,servericon`](#servericon) | Show the server icon. |
+| [`,serverinfo`](#serverinfo) | Show details about this server: members, channels, roles, boosts and features. |
+| [`,serversplash`](#serversplash) | Show the server splash. |
+| [`,servertag`](#servertag) | View someone's server tag name and icon. |
+| [`,setchangelog`](#setchangelog) | Helps developers update the bot's change notes. _(owner only)_ |
+| [`,snipeimmunity`](#snipeimmunity) | Toggle snipe immunity — your deleted/edited messages can't be sniped. |
+| [`,stats`](#stats) | Server stats. |
+| [`,tag`](#tag) | Save and use text snippets. |
+| [`,timezone`](#timezone) | Manage your timezone settings. |
+| [`,uptime`](#uptime) | Show how long the bot has been running. |
+| [`,userinfo`](#userinfo) | Show account details for a user: badges, roles, join date and links. |
+| [`,variables`](#variables) | Show every variable you can use in embeds, welcomes and messages. |
+| [`,viewchangelog`](#viewchangelog) | Shows developers the current change notes. |
+| [`,voicemaster`](#voicemaster) | Voice channel management system. |
+| [`,vote`](#vote) | Get the link to vote for the bot. |
+
+## ,avatar
+
+Show a member's avatar.
+
+**Usage:** `,avatar`
+**Aliases:** `av`, `pfp`
+
+## ,bots
+
+View all bots in the server.
+
+**Usage:** `,bots`
+**Aliases:** `botlist`, `bt`
+
+```bash
+,bots
+```
+
+## ,changelog
+
+Shows the latest updates and changes to the bot.
+
+**Usage:** `,changelog`
+**Aliases:** `changes`, `chlog`, `cl`, `updates`
+
+```bash
+,changelog
+```
+
+## ,charinfo
+
+Get information about a character/symbol.
+
+**Usage:** `,charinfo`
+**Aliases:** `ch`, `char`
+
+```bash
+,charinfo a
+,charinfo @
+```
+
+## ,fm
+
+Show what a member is listening to on Last.fm.
+
+**Usage:** `,fm [set <username> | now [@user] | top [@user]]`
+**Aliases:** `lastfm`, `lfm`
+**Subcommands:** `{prefix}fm set <lastfm username>`
+
+```bash
+{prefix}fm set your-lastfm-name
+{prefix}fm
+{prefix}fm top @member
+```
+
+## ,get
+
+Grab user and server info.
+
+**Usage:** `,get <avatar|banner|servericon|serverbanner|profile|device>`
+**Aliases:** `fetch`, `grab`
+**Subcommands:** `avatar`, `banner`, `servericon`, `serverbanner`, `profile`, `device`, `serverinfo`, `servertag`
+
+```bash
+,get avatar @user
+,get servericon
+,get device @user
+```
+
+## ,hasvoted
+
+Check whether someone voted for the bot.
+
+**Usage:** `,hasvoted`
+**Aliases:** `checkvote`
+
+```bash
+,hasvoted
+,hasvoted @user
+```
+
+## ,help
+
+Browse every command, with details, aliases and usage.
+
+**Usage:** `,help [command|search <term>]`
+**Aliases:** `cmds`, `commands`, `h`
+**Subcommands:** `{prefix}help`, `{prefix}help <command>`, `{prefix}help search <term>`
+
+```bash
+{prefix}help
+{prefix}help ban
+{prefix}help search role
+```
+
+## ,inviteinfo
+
+Get information on a discord invite.
+
+**Usage:** `,inviteinfo`
+**Aliases:** `ii`
+
+```bash
+,inviteinfo https://discord.gg/bleed
+```
+
+## ,leaderboard
+
+Show the server XP leaderboard.
+
+**Usage:** `,leaderboard [page]`
+**Aliases:** `lb`, `levels`, `top`
+
+```bash
+{prefix}leaderboard
+{prefix}leaderboard 2
+```
+
+## ,pin
+
+Pin or unpin a message. Reply to a message, or pass a message link or id.
+
+**Usage:** `,pin [messageLink|messageId] [unpin]`
+**Aliases:** `pinmessage`, `unpin`
+
+```bash
+{prefix}pin (as a reply)
+{prefix}pin unpin (as a reply)
+```
+
+## ,ping
+
+Check the bot's latency and API round trip.
+
+**Usage:** `,ping`
+**Aliases:** `latency`, `pong`
+
+## ,poll
+
+Start a reaction poll.
+
+**Usage:** `,poll`
+**Aliases:** `question`
+
+## ,profile
+
+See info about a user.
+
+**Usage:** `,profile`
+**Aliases:** `me`, `pf`, `ui`, `whois`
+
+```bash
+,profile @user
+,whois 123456789012345678
+```
+
+## ,quote
+
+Quote a message into a styled card — reply, link, id or plain text.
+
+**Usage:** `,quote [reply | message link | id | @user | text] [--font --template --theme --bw --wide]`
+**Aliases:** `q`
+
+```bash
+,quote --font inter --theme mint
+,quote https://discord.com/channels/g/c/m
+,quote --as "sun tzu" art of war
+```
+
+## ,randomhex
+
+Generate a random hex colour.
+
+**Usage:** `,randomhex`
+**Aliases:** `randhex`, `rhex`
+
+```bash
+,randomhex
+```
+
+## ,rank
+
+Show your (or someone else's) level, XP and progress to the next level.
+
+**Usage:** `,rank [@user]`
+**Aliases:** `level`, `lvl`, `xp`
+
+```bash
+{prefix}rank
+{prefix}rank @member
+```
+
+## ,remind
+
+Set a reminder. Supports durations like 10m, 2h, 1d.
+
+**Usage:** `,remind <duration> <text> | ,remind list | ,remind clear`
+**Aliases:** `reminder`, `remindme`, `timeremind`
+**Subcommands:** `{prefix}remind <duration> <text>`, `{prefix}remind list`, `{prefix}remind clear`
+
+```bash
+{prefix}remind 30m stretch
+{prefix}remind 2h check the queue
+{prefix}remind list
+```
+
+## ,roleinfo
+
+To Get Information About A Role
+
+**Usage:** `,roleinfo <role>`
+**Aliases:** `ri`
+
+```bash
+{prefix}roleinfo @role
+```
+
+## ,rolelist
+
+View all roles in the server.
+
+**Usage:** `,rolelist`
+**Aliases:** `rls`
+
+```bash
+,rolelist
+```
+
+## ,rtfm
+
+Search documentation.
+
+**Usage:** `,rtfm`
+**Aliases:** `docs`, `man`
+
+```bash
+,rtfm djs Client
+,rtfm dpy commands.Bot
+```
+
+## ,seen
+
+Seen when a member was last seen in the server.
+
+**Usage:** `,seen`
+**Aliases:** `lastseen`, `sn`
+
+```bash
+,seen @user
+```
+
+## ,serverbanner
+
+Show the server banner.
+
+**Usage:** `,serverbanner`
+**Aliases:** `guildbanner`, `sbanner`
+
+```bash
+,serverbanner
+```
+
+## ,serverguide
+
+A sorted map of this server: channels by category, roles by rank, and where to get help.
+
+**Usage:** `,serverguide`
+**Aliases:** `guide`, `servermap`
+
+```bash
+{prefix}serverguide
+```
+
+## ,servericon
+
+Show the server icon.
+
+**Usage:** `,servericon`
+**Aliases:** `icon`, `sicon`
+
+```bash
+,servericon
+```
+
+## ,serverinfo
+
+Show details about this server: members, channels, roles, boosts and features.
+
+**Usage:** `,serverinfo`
+**Aliases:** `guild`, `server`, `si`
+
+```bash
+{prefix}serverinfo
+```
+
+## ,serversplash
+
+Show the server splash.
+
+**Usage:** `,serversplash`
+**Aliases:** `guildsplash`, `splash`, `ssplash`
+
+```bash
+,serversplash
+```
+
+## ,servertag
+
+View someone's server tag name and icon.
+
+**Usage:** `,servertag`
+**Aliases:** `guildtag`, `primaryguild`, `srvtag`, `stag`
+
+```bash
+,servertag @user
+```
+
+## ,setchangelog
+
+Helps developers update the bot's change notes.
+
+**Usage:** `,setchangelog`
+**Aliases:** `changelogset`, `scl`
+**Restricted:** bot owners only.
+
+```bash
+,setchangelog added 12 new commands
+,setchangelog publish
+,setchangelog clear
+```
+
+## ,snipeimmunity
+
+Toggle snipe immunity — your deleted/edited messages can't be sniped.
+
+**Usage:** `,snipeimmunity`
+**Aliases:** `sni`, `snipeim`
+
+```bash
+,snipeimmunity
+,snipeimmunity on
+,snipeimmunity off
+```
+
+## ,stats
+
+Server stats.
+
+**Usage:** `,stats <topmessages|server|user|messages>`
+**Aliases:** `botstats`, `bstats`
+**Subcommands:** `topmessages`, `server`, `user`, `messages`
+
+```bash
+,stats server
+,stats topmessages
+,stats user @member
+```
+
+## ,tag
+
+Save and use text snippets.
+
+**Usage:** `,tag <create|edit|delete|show|list|search>`
+**Aliases:** `tags`
+**Subcommands:** `create`, `edit`, `delete`, `show`, `list`, `search`, `top`, `random`, `info`, `owner`, `transfer`, `raw`, `variables`
+
+```bash
+,tag create rules read #rules first
+,tag rules
+,tag list
+```
+
+## ,timezone
+
+Manage your timezone settings.
+
+**Usage:** `,timezone`
+**Aliases:** `tz`
+
+```bash
+,timezone set Europe/London
+,timezone
+,timezone list
+```
+
+## ,uptime
+
+Show how long the bot has been running.
+
+**Usage:** `,uptime`
+**Aliases:** `up`
+
+## ,userinfo
+
+Show account details for a user: badges, roles, join date and links.
+
+**Usage:** `,userinfo [@user]`
+**Aliases:** `user`
+
+```bash
+{prefix}userinfo
+{prefix}userinfo @member
+```
+
+## ,variables
+
+Show every variable you can use in embeds, welcomes and messages.
+
+**Usage:** `,variables [test <text>]`
+**Aliases:** `placeholders`, `placeholderslist`, `vars`
+**Subcommands:** `test`, `list`
+
+```bash
+,variables
+,variables test welcome {user.name} to {guild.name}
+```
+
+## ,viewchangelog
+
+Shows developers the current change notes.
+
+**Usage:** `,viewchangelog`
+**Aliases:** `changelogview`, `vcl`
+
+```bash
+,viewchangelog
+```
+
+## ,voicemaster
+
+Voice channel management system.
+
+**Usage:** `,voicemaster <setup|reset|information|random|limit|reveal>`
+**Aliases:** `vm`
+**Subcommands:** `setup`, `reset`, `information`, `random`, `limit`, `reveal`, `lock`, `unlock`, `permit`, `deny`, `claim`, `drag`, `rename`, `delete`
+
+```bash
+,voicemaster setup
+,vm information
+,vm lock
+,vm rename Chill Zone
+,vm permit @user
+```
+
+## ,vote
+
+Get the link to vote for the bot.
+
+**Usage:** `,vote`
+**Aliases:** `vt`
+
+```bash
+,vote
+```

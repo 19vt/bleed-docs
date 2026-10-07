@@ -1,0 +1,47 @@
+---
+title: 'Appearance settings'
+description: 'Every appearance setting bleed exposes per server.'
+---
+
+# Appearance
+
+5 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `autoPfpEnabled` | Rotate server icon | `boolean` | `false` | Change the server icon on a timer from a list of images. |
+| `autoPfpIntervalMinutes` | Rotation interval (min) | `number` | `60` | How long each image stays up. Minimum 5. |
+| `autoPfpUrls` | Rotation queue | `json` | *empty* | Array of image URLs, used in order and looping. |
+| `autoPfpCursor` | Queue position | `number` | `0` | Which entry is showing. Advanced by the bot. |
+| `autoPfpLastAt` | Last rotation | `string` | *not set* | ISO timestamp of the last change. Managed by the bot. |
+
+## Rotate server icon
+```bash
+,config set autoPfpEnabled <value>
+```
+Change the server icon on a timer from a list of images.
+
+## Rotation interval (min)
+```bash
+,config set autoPfpIntervalMinutes <value>
+```
+How long each image stays up. Minimum 5.
+
+## Rotation queue
+```bash
+,config set autoPfpUrls <value>
+```
+Array of image URLs, used in order and looping.
+
+## Queue position
+```bash
+,config set autoPfpCursor <value>
+```
+Which entry is showing. Advanced by the bot.
+
+## Last rotation
+```bash
+,config set autoPfpLastAt <value>
+```
+ISO timestamp of the last change. Managed by the bot.

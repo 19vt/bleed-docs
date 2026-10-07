@@ -1,0 +1,117 @@
+---
+title: 'Voice settings'
+description: 'Every voice setting bleed exposes per server.'
+---
+
+# Voice
+
+15 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `vcEnabled` | VoiceMaster enabled | `boolean` | `false` |  |
+| `vcHubChannelId` | Hub channel | `channel` | *not set* | Joining this channel spawns a temp voice channel. |
+| `vcCategoryId` | Voice category | `channel` | *not set* |  |
+| `vcNameTemplate` | Name template | `string` | `{user}'s channel` | Placeholders: {user}, {display}, {count}. |
+| `vcUserLimit` | Default user limit | `number` | `0` |  |
+| `vcBitrate` | Bitrate (kbps) | `number` | `64` |  |
+| `vcDefaultLocked` | Lock new channels | `boolean` | `false` |  |
+| `vcDefaultHidden` | Ghost new channels | `boolean` | `false` |  |
+| `vcPanelEnabled` | Control panel | `boolean` | `true` | Post the button panel in every temp channel. |
+| `vcTrustedRoleIds` | Trusted roles | `list` | *empty* | Roles allowed to manage any temp channel. |
+| `vcLogChannelId` | Voice log | `channel` | *not set* |  |
+| `vcRegion` | Voice region | `string` | `auto` | auto, or a region like us-east. |
+| `vcPanelChannelId` | Panel channel | `channel` | *not set* | Where the Create VC panel was posted. |
+| `vcInterfaceChannelId` | Interface channel | `channel` | *not set* | The text channel holding the VoiceMaster interface. |
+| `vcPanelMessageId` | Panel message | `string` | *not set* | Message id of the Create VC panel. |
+
+## VoiceMaster enabled
+```bash
+,config set vcEnabled <value>
+```
+Type: `boolean`.
+
+## Hub channel
+```bash
+,config set vcHubChannelId <value>
+```
+Joining this channel spawns a temp voice channel.
+
+## Voice category
+```bash
+,config set vcCategoryId <value>
+```
+Type: `channel`.
+
+## Name template
+```bash
+,config set vcNameTemplate <value>
+```
+Placeholders: {user}, {display}, {count}.
+
+## Default user limit
+```bash
+,config set vcUserLimit <value>
+```
+Type: `number`.
+
+## Bitrate (kbps)
+```bash
+,config set vcBitrate <value>
+```
+Type: `number`.
+
+## Lock new channels
+```bash
+,config set vcDefaultLocked <value>
+```
+Type: `boolean`.
+
+## Ghost new channels
+```bash
+,config set vcDefaultHidden <value>
+```
+Type: `boolean`.
+
+## Control panel
+```bash
+,config set vcPanelEnabled <value>
+```
+Post the button panel in every temp channel.
+
+## Trusted roles
+```bash
+,config set vcTrustedRoleIds <value>
+```
+Roles allowed to manage any temp channel.
+
+## Voice log
+```bash
+,config set vcLogChannelId <value>
+```
+Type: `channel`.
+
+## Voice region
+```bash
+,config set vcRegion <value>
+```
+auto, or a region like us-east.
+
+## Panel channel
+```bash
+,config set vcPanelChannelId <value>
+```
+Where the Create VC panel was posted.
+
+## Interface channel
+```bash
+,config set vcInterfaceChannelId <value>
+```
+The text channel holding the VoiceMaster interface.
+
+## Panel message
+```bash
+,config set vcPanelMessageId <value>
+```
+Message id of the Create VC panel.

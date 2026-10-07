@@ -1,0 +1,58 @@
+---
+title: 'Face Reveal settings'
+description: 'Every face reveal setting bleed exposes per server.'
+---
+
+# Face Reveal
+
+6 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `faceRevealEnabled` | Face reveal enabled | `boolean` | `true` |  |
+| `boysFaceRevealId` | Boys channel | `channel` | *not set* |  |
+| `girlsFaceRevealId` | Girls channel | `channel` | *not set* |  |
+| `passEmoji` | Pass emoji | `emoji` | `approve` |  |
+| `smashEmoji` | Smash emoji | `emoji` | `deny` |  |
+| `faceRevealLogChannelId` | Face reveal log | `channel` | *not set* |  |
+
+## Face reveal enabled
+```bash
+,config set faceRevealEnabled <value>
+```
+Type: `boolean`.
+
+## Boys channel
+```bash
+,config set boysFaceRevealId <value>
+```
+Type: `channel`.
+Defaults to the `boysFaceRevealId` environment value when set.
+
+## Girls channel
+```bash
+,config set girlsFaceRevealId <value>
+```
+Type: `channel`.
+Defaults to the `girlsFaceRevealId` environment value when set.
+
+## Pass emoji
+```bash
+,config set passEmoji <value>
+```
+Type: `emoji`.
+Defaults to the `passEmojiId` environment value when set.
+
+## Smash emoji
+```bash
+,config set smashEmoji <value>
+```
+Type: `emoji`.
+Defaults to the `smashEmojiId` environment value when set.
+
+## Face reveal log
+```bash
+,config set faceRevealLogChannelId <value>
+```
+Type: `channel`.

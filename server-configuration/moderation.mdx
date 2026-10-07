@@ -1,0 +1,66 @@
+---
+title: 'Moderation settings'
+description: 'Every moderation setting bleed exposes per server.'
+---
+
+# Moderation
+
+7 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `ownerRoleId` | Owner role | `role` | *not set* |  |
+| `coOwnerRoleId` | Co-owner role | `role` | *not set* |  |
+| `muteRoleId` | Mute role | `role` | *not set* |  |
+| `jailRoleId` | Jail role | `role` | *not set* |  |
+| `jailChannelId` | Jail channel | `channel` | *not set* |  |
+| `modlogChannelId` | Mod log channel | `channel` | *not set* |  |
+| `dmOnPunish` | DM on punish | `boolean` | `true` |  |
+
+## Owner role
+```bash
+,config set ownerRoleId <value>
+```
+Type: `role`.
+Defaults to the `ownerRoleId` environment value when set.
+
+## Co-owner role
+```bash
+,config set coOwnerRoleId <value>
+```
+Type: `role`.
+Defaults to the `coOwnerRoleId` environment value when set.
+
+## Mute role
+```bash
+,config set muteRoleId <value>
+```
+Type: `role`.
+Defaults to the `muteRoleId` environment value when set.
+
+## Jail role
+```bash
+,config set jailRoleId <value>
+```
+Type: `role`.
+Defaults to the `jailRoleId` environment value when set.
+
+## Jail channel
+```bash
+,config set jailChannelId <value>
+```
+Type: `channel`.
+
+## Mod log channel
+```bash
+,config set modlogChannelId <value>
+```
+Type: `channel`.
+Defaults to the `logChannelId` environment value when set.
+
+## DM on punish
+```bash
+,config set dmOnPunish <value>
+```
+Type: `boolean`.

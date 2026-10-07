@@ -1,0 +1,992 @@
+---
+title: 'Convert commands'
+description: '83 convert commands in bleed.'
+---
+
+# Convert
+
+83 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,abs`](#abs) | Absolute value of a number. |
+| [`,age`](#age) | How old an account or date is. |
+| [`,average`](#average) | Average of the numbers you give. |
+| [`,bmi`](#bmi) | Body mass index from height and weight. |
+| [`,caesar`](#caesar) | Shift text with a Caesar cipher. |
+| [`,cbrt`](#cbrt) | Cube root. |
+| [`,ceil`](#ceil) | Round a number up. |
+| [`,charcodes`](#charcodes) | Character codes for a string. |
+| [`,colorinfo`](#colorinfo) | Everything about a colour: hex, RGB, HSL, contrast. |
+| [`,compound`](#compound) | Compound interest over time. |
+| [`,convertangle`](#convertangle) | Convert **Convert Angle** values between units. |
+| [`,convertarea`](#convertarea) | Convert **Convert Area** values between units. |
+| [`,convertdata`](#convertdata) | Convert **Convert Data** values between units. |
+| [`,convertenergy`](#convertenergy) | Convert **Convert Energy** values between units. |
+| [`,convertforce`](#convertforce) | Convert **Convert Force** values between units. |
+| [`,convertlength`](#convertlength) | Convert **Convert Length** values between units. |
+| [`,convertmass`](#convertmass) | Convert **Convert Mass** values between units. |
+| [`,convertpower`](#convertpower) | Convert **Convert Power** values between units. |
+| [`,convertpressure`](#convertpressure) | Convert **Convert Pressure** values between units. |
+| [`,convertspeed`](#convertspeed) | Convert **Convert Speed** values between units. |
+| [`,converttime`](#converttime) | Convert **Convert Time** values between units. |
+| [`,convertvolume`](#convertvolume) | Convert **Convert Volume** values between units. |
+| [`,cos`](#cos) | Cosine of a number (radians). |
+| [`,degrees`](#degrees) | Convert radians to degrees. |
+| [`,duration`](#duration) | Convert seconds into days, hours and minutes. |
+| [`,factorial`](#factorial) | Factorial of a number. |
+| [`,fibonacci`](#fibonacci) | List Fibonacci numbers. |
+| [`,floor`](#floor) | Round a number down. |
+| [`,fromcharcodes`](#fromcharcodes) | Turn character codes back into text. |
+| [`,fromunix`](#fromunix) | Convert a Unix timestamp into a date. |
+| [`,gcd`](#gcd) | Greatest common divisor of the numbers. |
+| [`,hex2hsl`](#hex2hsl) | Turn a hex colour into HSL values. |
+| [`,hex2rgb`](#hex2rgb) | Turn a hex colour into RGB values. |
+| [`,hexdecode`](#hexdecode) | Decode hexadecimal back into text. |
+| [`,hexencode`](#hexencode) | Encode text as hexadecimal. |
+| [`,htmldecode`](#htmldecode) | Unescape HTML entities. |
+| [`,htmlencode`](#htmlencode) | Escape text for HTML. |
+| [`,invertcolor`](#invertcolor) | Invert a colour. |
+| [`,isoweek`](#isoweek) | ISO week number for a date. |
+| [`,jwt`](#jwt) | Decode a JWT payload without verifying it. |
+| [`,lcm`](#lcm) | Least common multiple of the numbers. |
+| [`,ln`](#ln) | Natural logarithm. |
+| [`,loan`](#loan) | Monthly payments for a loan. |
+| [`,md5`](#md5) | MD5 hash of any text. |
+| [`,median`](#median) | Middle value of the numbers you give. |
+| [`,mode`](#mode) | Most frequent value in the list. |
+| [`,modulo`](#modulo) | Remainder after division. |
+| [`,nthroot`](#nthroot) | Nth root of a number. |
+| [`,percentchange`](#percentchange) | Percentage change between two numbers. |
+| [`,percentof`](#percentof) | What X% of a number is. |
+| [`,power`](#power) | Raise a number to a power. |
+| [`,prime`](#prime) | Check whether a number is prime. |
+| [`,primes`](#primes) | List every prime up to a limit. |
+| [`,product`](#product) | Multiply every number you give together. |
+| [`,quadratic`](#quadratic) | Solve a quadratic equation. |
+| [`,radians`](#radians) | Convert degrees to radians. |
+| [`,randomcolor`](#randomcolor) | Random colour with its codes. |
+| [`,randomnumber`](#randomnumber) | Generate a random number between the bounds you give. |
+| [`,range`](#range) | Smallest, largest and spread of the numbers. |
+| [`,rgb2hex`](#rgb2hex) | Turn RGB values into a hex colour. |
+| [`,round`](#round) | Round a number to the nearest whole number. |
+| [`,sha1`](#sha1) | SHA-1 hash of any text. |
+| [`,sha512`](#sha512) | SHA-512 hash of any text. |
+| [`,shortnumber`](#shortnumber) | Shrink a big number into 1.2k / 3.4M form. |
+| [`,sin`](#sin) | Sine of a number (radians). |
+| [`,snowflake`](#snowflake) | Timestamp and age of a Discord snowflake. |
+| [`,spellnumber`](#spellnumber) | Spell a number out in words. |
+| [`,sqrt`](#sqrt) | Square root. |
+| [`,stddev`](#stddev) | Standard deviation of the numbers. |
+| [`,sum`](#sum) | Add up every number you give. |
+| [`,tan`](#tan) | Tangent of a number (radians). |
+| [`,temperature`](#temperature) | Convert temperatures between C, F and K. |
+| [`,timezones`](#timezones) | Current time in major time zones. |
+| [`,tip`](#tip) | Split a bill and work out the tip. |
+| [`,tounix`](#tounix) | Convert a date into a Unix timestamp. |
+| [`,unbase64`](#unbase64) | Decode base64 back into text. |
+| [`,unbinary`](#unbinary) | Turn binary back into text. |
+| [`,unicodedecode`](#unicodedecode) | Decode unicode escapes back into text. |
+| [`,unicodeescape`](#unicodeescape) | Escape text into unicode code points. |
+| [`,urldecode`](#urldecode) | Decode a percent-encoded URL. |
+| [`,urlencode`](#urlencode) | Percent-encode text for use in a URL. |
+| [`,variance`](#variance) | Variance of the numbers. |
+| [`,weekday`](#weekday) | Which weekday a date falls on. |
+
+## ,abs
+
+Absolute value of a number.
+
+**Usage:** `,abs <value>`
+**Aliases:** `absx`
+
+```bash
+{prefix}abs hello
+```
+
+## ,age
+
+How old an account or date is.
+
+**Usage:** `,age <value>`
+**Aliases:** `agex`
+
+```bash
+{prefix}age hello
+```
+
+## ,average
+
+Average of the numbers you give.
+
+**Usage:** `,average <value>`
+**Aliases:** `ave`, `aver`
+
+```bash
+{prefix}average hello
+```
+
+## ,bmi
+
+Body mass index from height and weight.
+
+**Usage:** `,bmi <value>`
+**Aliases:** `bmix`
+
+```bash
+{prefix}bmi hello
+```
+
+## ,caesar
+
+Shift text with a Caesar cipher.
+
+**Usage:** `,caesar <value>`
+**Aliases:** `cae`, `caes`
+
+```bash
+{prefix}caesar hello
+```
+
+## ,cbrt
+
+Cube root.
+
+**Usage:** `,cbrt <value>`
+**Aliases:** `cbr`, `cbrx`
+
+```bash
+{prefix}cbrt hello
+```
+
+## ,ceil
+
+Round a number up.
+
+**Usage:** `,ceil <value>`
+**Aliases:** `cei`, `ceix`
+
+```bash
+{prefix}ceil hello
+```
+
+## ,charcodes
+
+Character codes for a string.
+
+**Usage:** `,charcodes <value>`
+**Aliases:** `cha`, `chax`
+
+```bash
+{prefix}charcodes hello
+```
+
+## ,colorinfo
+
+Everything about a colour: hex, RGB, HSL, contrast.
+
+**Usage:** `,colorinfo <value>`
+**Aliases:** `ci`, `colo`
+
+```bash
+{prefix}colorinfo hello
+```
+
+## ,compound
+
+Compound interest over time.
+
+**Usage:** `,compound <value>`
+
+```bash
+{prefix}compound hello
+```
+
+## ,convertangle
+
+Convert **Convert Angle** values between units.
+
+**Usage:** `,convertangle <value> <from> <to>`
+
+```bash
+{prefix}convertangle 100 c f
+```
+
+## ,convertarea
+
+Convert **Convert Area** values between units.
+
+**Usage:** `,convertarea <value> <from> <to>`
+
+```bash
+{prefix}convertarea 100 c f
+```
+
+## ,convertdata
+
+Convert **Convert Data** values between units.
+
+**Usage:** `,convertdata <value> <from> <to>`
+
+```bash
+{prefix}convertdata 100 c f
+```
+
+## ,convertenergy
+
+Convert **Convert Energy** values between units.
+
+**Usage:** `,convertenergy <value> <from> <to>`
+
+```bash
+{prefix}convertenergy 100 c f
+```
+
+## ,convertforce
+
+Convert **Convert Force** values between units.
+
+**Usage:** `,convertforce <value> <from> <to>`
+
+```bash
+{prefix}convertforce 100 c f
+```
+
+## ,convertlength
+
+Convert **Convert Length** values between units.
+
+**Usage:** `,convertlength <value> <from> <to>`
+**Aliases:** `conv`
+
+```bash
+{prefix}convertlength 100 c f
+```
+
+## ,convertmass
+
+Convert **Convert Mass** values between units.
+
+**Usage:** `,convertmass <value> <from> <to>`
+
+```bash
+{prefix}convertmass 100 c f
+```
+
+## ,convertpower
+
+Convert **Convert Power** values between units.
+
+**Usage:** `,convertpower <value> <from> <to>`
+
+```bash
+{prefix}convertpower 100 c f
+```
+
+## ,convertpressure
+
+Convert **Convert Pressure** values between units.
+
+**Usage:** `,convertpressure <value> <from> <to>`
+
+```bash
+{prefix}convertpressure 100 c f
+```
+
+## ,convertspeed
+
+Convert **Convert Speed** values between units.
+
+**Usage:** `,convertspeed <value> <from> <to>`
+
+```bash
+{prefix}convertspeed 100 c f
+```
+
+## ,converttime
+
+Convert **Convert Time** values between units.
+
+**Usage:** `,converttime <value> <from> <to>`
+
+```bash
+{prefix}converttime 100 c f
+```
+
+## ,convertvolume
+
+Convert **Convert Volume** values between units.
+
+**Usage:** `,convertvolume <value> <from> <to>`
+
+```bash
+{prefix}convertvolume 100 c f
+```
+
+## ,cos
+
+Cosine of a number (radians).
+
+**Usage:** `,cos <value>`
+**Aliases:** `cosx`
+
+```bash
+{prefix}cos hello
+```
+
+## ,degrees
+
+Convert radians to degrees.
+
+**Usage:** `,degrees <value>`
+**Aliases:** `deg`, `degr`
+
+```bash
+{prefix}degrees hello
+```
+
+## ,duration
+
+Convert seconds into days, hours and minutes.
+
+**Usage:** `,duration <value>`
+**Aliases:** `dur`, `dura`
+
+```bash
+{prefix}duration hello
+```
+
+## ,factorial
+
+Factorial of a number.
+
+**Usage:** `,factorial <value>`
+**Aliases:** `fac`, `facx`
+
+```bash
+{prefix}factorial hello
+```
+
+## ,fibonacci
+
+List Fibonacci numbers.
+
+**Usage:** `,fibonacci <value>`
+**Aliases:** `fib`, `fibo`
+
+```bash
+{prefix}fibonacci hello
+```
+
+## ,floor
+
+Round a number down.
+
+**Usage:** `,floor <value>`
+**Aliases:** `flo`, `flox`
+
+```bash
+{prefix}floor hello
+```
+
+## ,fromcharcodes
+
+Turn character codes back into text.
+
+**Usage:** `,fromcharcodes <value>`
+**Aliases:** `fcc`, `from`
+
+```bash
+{prefix}fromcharcodes hello
+```
+
+## ,fromunix
+
+Convert a Unix timestamp into a date.
+
+**Usage:** `,fromunix <value>`
+**Aliases:** `fro`, `fu`
+
+```bash
+{prefix}fromunix hello
+```
+
+## ,gcd
+
+Greatest common divisor of the numbers.
+
+**Usage:** `,gcd <value>`
+**Aliases:** `gcdx`
+
+```bash
+{prefix}gcd hello
+```
+
+## ,hex2hsl
+
+Turn a hex colour into HSL values.
+
+**Usage:** `,hex2hsl <value>`
+**Aliases:** `h2h`, `hexx`
+
+```bash
+{prefix}hex2hsl hello
+```
+
+## ,hex2rgb
+
+Turn a hex colour into RGB values.
+
+**Usage:** `,hex2rgb <value>`
+**Aliases:** `h2r`, `hex2`
+
+```bash
+{prefix}hex2rgb hello
+```
+
+## ,hexdecode
+
+Decode hexadecimal back into text.
+
+**Usage:** `,hexdecode <value>`
+**Aliases:** `hd`, `hexd`
+
+```bash
+{prefix}hexdecode hello
+```
+
+## ,hexencode
+
+Encode text as hexadecimal.
+
+**Usage:** `,hexencode <value>`
+**Aliases:** `he`, `hexe`
+
+```bash
+{prefix}hexencode hello
+```
+
+## ,htmldecode
+
+Unescape HTML entities.
+
+**Usage:** `,htmldecode <value>`
+**Aliases:** `htmx`
+
+```bash
+{prefix}htmldecode hello
+```
+
+## ,htmlencode
+
+Escape text for HTML.
+
+**Usage:** `,htmlencode <value>`
+**Aliases:** `htm`, `html`
+
+```bash
+{prefix}htmlencode hello
+```
+
+## ,invertcolor
+
+Invert a colour.
+
+**Usage:** `,invertcolor <value>`
+**Aliases:** `ic`, `inve`
+
+```bash
+{prefix}invertcolor hello
+```
+
+## ,isoweek
+
+ISO week number for a date.
+
+**Usage:** `,isoweek <value>`
+**Aliases:** `isow`, `iw`
+
+```bash
+{prefix}isoweek hello
+```
+
+## ,jwt
+
+Decode a JWT payload without verifying it.
+
+**Usage:** `,jwt <value>`
+**Aliases:** `jwtx`
+
+```bash
+{prefix}jwt hello
+```
+
+## ,lcm
+
+Least common multiple of the numbers.
+
+**Usage:** `,lcm <value>`
+**Aliases:** `lcmx`
+
+```bash
+{prefix}lcm hello
+```
+
+## ,ln
+
+Natural logarithm.
+
+**Usage:** `,ln <value>`
+**Aliases:** `lnx`
+
+```bash
+{prefix}ln hello
+```
+
+## ,loan
+
+Monthly payments for a loan.
+
+**Usage:** `,loan <value>`
+**Aliases:** `loa`, `loax`
+
+```bash
+{prefix}loan hello
+```
+
+## ,md5
+
+MD5 hash of any text.
+
+**Usage:** `,md5 <value>`
+**Aliases:** `m5`, `md5x`
+
+```bash
+{prefix}md5 hello
+```
+
+## ,median
+
+Middle value of the numbers you give.
+
+**Usage:** `,median <value>`
+**Aliases:** `med`, `medi`
+
+```bash
+{prefix}median hello
+```
+
+## ,mode
+
+Most frequent value in the list.
+
+**Usage:** `,mode <value>`
+**Aliases:** `mod`, `modx`
+
+```bash
+{prefix}mode hello
+```
+
+## ,modulo
+
+Remainder after division.
+
+**Usage:** `,modulo <value>`
+**Aliases:** `modu`
+
+```bash
+{prefix}modulo hello
+```
+
+## ,nthroot
+
+Nth root of a number.
+
+**Usage:** `,nthroot <value>`
+**Aliases:** `nr`, `nthr`
+
+```bash
+{prefix}nthroot hello
+```
+
+## ,percentchange
+
+Percentage change between two numbers.
+
+**Usage:** `,percentchange <value>`
+**Aliases:** `pc`, `per`
+
+```bash
+{prefix}percentchange hello
+```
+
+## ,percentof
+
+What X% of a number is.
+
+**Usage:** `,percentof <value>`
+**Aliases:** `perc`, `po`
+
+```bash
+{prefix}percentof hello
+```
+
+## ,power
+
+Raise a number to a power.
+
+**Usage:** `,power <value>`
+**Aliases:** `pow`, `powx`
+
+```bash
+{prefix}power hello
+```
+
+## ,prime
+
+Check whether a number is prime.
+
+**Usage:** `,prime <value>`
+**Aliases:** `pri`, `prix`
+
+```bash
+{prefix}prime hello
+```
+
+## ,primes
+
+List every prime up to a limit.
+
+**Usage:** `,primes <value>`
+**Aliases:** `prim`
+
+```bash
+{prefix}primes hello
+```
+
+## ,product
+
+Multiply every number you give together.
+
+**Usage:** `,product <value>`
+**Aliases:** `pro`, `prod`
+
+```bash
+{prefix}product hello
+```
+
+## ,quadratic
+
+Solve a quadratic equation.
+
+**Usage:** `,quadratic <value>`
+**Aliases:** `qua`, `quad`
+
+```bash
+{prefix}quadratic hello
+```
+
+## ,radians
+
+Convert degrees to radians.
+
+**Usage:** `,radians <value>`
+**Aliases:** `rad`, `radi`
+
+```bash
+{prefix}radians hello
+```
+
+## ,randomcolor
+
+Random colour with its codes.
+
+**Usage:** `,randomcolor <value>`
+**Aliases:** `ran`, `ranx`
+
+```bash
+{prefix}randomcolor hello
+```
+
+## ,randomnumber
+
+Generate a random number between the bounds you give.
+
+**Usage:** `,randomnumber <value>`
+**Aliases:** `randnum`, `rnum`
+
+```bash
+{prefix}randomnumber hello
+```
+
+## ,range
+
+Smallest, largest and spread of the numbers.
+
+**Usage:** `,range <value>`
+
+```bash
+{prefix}range hello
+```
+
+## ,rgb2hex
+
+Turn RGB values into a hex colour.
+
+**Usage:** `,rgb2hex <value>`
+**Aliases:** `r2h`, `rgb2`
+
+```bash
+{prefix}rgb2hex hello
+```
+
+## ,round
+
+Round a number to the nearest whole number.
+
+**Usage:** `,round <value>`
+**Aliases:** `rou`, `roux`
+
+```bash
+{prefix}round hello
+```
+
+## ,sha1
+
+SHA-1 hash of any text.
+
+**Usage:** `,sha1 <value>`
+**Aliases:** `s1`, `shax`
+
+```bash
+{prefix}sha1 hello
+```
+
+## ,sha512
+
+SHA-512 hash of any text.
+
+**Usage:** `,sha512 <value>`
+**Aliases:** `s512`, `sha5`
+
+```bash
+{prefix}sha512 hello
+```
+
+## ,shortnumber
+
+Shrink a big number into 1.2k / 3.4M form.
+
+**Usage:** `,shortnumber <value>`
+
+```bash
+{prefix}shortnumber hello
+```
+
+## ,sin
+
+Sine of a number (radians).
+
+**Usage:** `,sin <value>`
+**Aliases:** `sinx`
+
+```bash
+{prefix}sin hello
+```
+
+## ,snowflake
+
+Timestamp and age of a Discord snowflake.
+
+**Usage:** `,snowflake <value>`
+**Aliases:** `sno`, `snow`
+
+```bash
+{prefix}snowflake hello
+```
+
+## ,spellnumber
+
+Spell a number out in words.
+
+**Usage:** `,spellnumber <value>`
+**Aliases:** `spe`, `spel`
+
+```bash
+{prefix}spellnumber hello
+```
+
+## ,sqrt
+
+Square root.
+
+**Usage:** `,sqrt <value>`
+**Aliases:** `sqr`, `sqrx`
+
+```bash
+{prefix}sqrt hello
+```
+
+## ,stddev
+
+Standard deviation of the numbers.
+
+**Usage:** `,stddev <value>`
+**Aliases:** `std`, `stdd`
+
+```bash
+{prefix}stddev hello
+```
+
+## ,sum
+
+Add up every number you give.
+
+**Usage:** `,sum <value>`
+**Aliases:** `sumx`
+
+```bash
+{prefix}sum hello
+```
+
+## ,tan
+
+Tangent of a number (radians).
+
+**Usage:** `,tan <value>`
+**Aliases:** `tanx`
+
+```bash
+{prefix}tan hello
+```
+
+## ,temperature
+
+Convert temperatures between C, F and K.
+
+**Usage:** `,temperature <value> <from> <to>`
+**Aliases:** `tem`, `temp`
+
+```bash
+{prefix}temperature 100 c f
+```
+
+## ,timezones
+
+Current time in major time zones.
+
+**Usage:** `,timezones <value>`
+**Aliases:** `tim`, `time`
+
+```bash
+{prefix}timezones hello
+```
+
+## ,tip
+
+Split a bill and work out the tip.
+
+**Usage:** `,tip <value>`
+**Aliases:** `tipx`
+
+```bash
+{prefix}tip hello
+```
+
+## ,tounix
+
+Convert a date into a Unix timestamp.
+
+**Usage:** `,tounix <value>`
+**Aliases:** `toun`, `tu`
+
+```bash
+{prefix}tounix hello
+```
+
+## ,unbase64
+
+Decode base64 back into text.
+
+**Usage:** `,unbase64 <value>`
+**Aliases:** `ub64`, `unba`
+
+```bash
+{prefix}unbase64 hello
+```
+
+## ,unbinary
+
+Turn binary back into text.
+
+**Usage:** `,unbinary <value>`
+**Aliases:** `unb`, `unbi`
+
+```bash
+{prefix}unbinary hello
+```
+
+## ,unicodedecode
+
+Decode unicode escapes back into text.
+
+**Usage:** `,unicodedecode <value>`
+
+```bash
+{prefix}unicodedecode hello
+```
+
+## ,unicodeescape
+
+Escape text into unicode code points.
+
+**Usage:** `,unicodeescape <value>`
+**Aliases:** `unic`, `unix`
+
+```bash
+{prefix}unicodeescape hello
+```
+
+## ,urldecode
+
+Decode a percent-encoded URL.
+
+**Usage:** `,urldecode <value>`
+**Aliases:** `url`, `urld`
+
+```bash
+{prefix}urldecode hello
+```
+
+## ,urlencode
+
+Percent-encode text for use in a URL.
+
+**Usage:** `,urlencode <value>`
+**Aliases:** `ue`, `urle`
+
+```bash
+{prefix}urlencode hello
+```
+
+## ,variance
+
+Variance of the numbers.
+
+**Usage:** `,variance <value>`
+**Aliases:** `var`, `vari`
+
+```bash
+{prefix}variance hello
+```
+
+## ,weekday
+
+Which weekday a date falls on.
+
+**Usage:** `,weekday <value>`
+**Aliases:** `wd`, `week`
+
+```bash
+{prefix}weekday hello
+```

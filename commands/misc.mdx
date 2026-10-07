@@ -1,0 +1,337 @@
+---
+title: 'Misc commands'
+description: '34 misc commands in bleed.'
+---
+
+# Misc
+
+34 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,afk`](#afk) | Set an AFK status so people know you are away. |
+| [`,banner`](#banner) | Show a user's profile banner. |
+| [`,botinfo`](#botinfo) | Show stats about the bot itself: users, servers, latency, memory and shards. |
+| [`,builder`](#builder) | Build embeds interactively. |
+| [`,calc`](#calc) | Evaluate a maths expression. |
+| [`,ce`](#ce) | Send an embed using a script. |
+| [`,channelinfo`](#channelinfo) | Show details about a channel. |
+| [`,color`](#color) | Preview a colour from a hex code. |
+| [`,copy`](#copy) | Copy a message script using id or link. |
+| [`,editsnipe`](#editsnipe) | Show the most recently edited message in this channel. |
+| [`,emoji`](#emoji) | Manage server emojis. |
+| [`,emojiinfo`](#emojiinfo) | Show details about an emoji. |
+| [`,emojis`](#emojis) | List the server's custom emoji. |
+| [`,emotes`](#emotes) | View all emotes in the server. |
+| [`,enlarge`](#enlarge) | Enlarge an emoji. |
+| [`,extractemotes`](#extractemotes) | Extract every emote from a message. |
+| [`,extractstickers`](#extractstickers) | Extract every sticker from a message. |
+| [`,firstmessage`](#firstmessage) | Jump to the first message in a channel. |
+| [`,guildicon`](#guildicon) | Show the server icon. |
+| [`,img2gif`](#img2gif) | Convert an image into a GIF. |
+| [`,inrole`](#inrole) | List the members with a role. |
+| [`,invite`](#invite) | Show invite counts and rewards. |
+| [`,joined`](#joined) | Show when a member joined. |
+| [`,jumbo`](#jumbo) | Show an emoji at full size. |
+| [`,memberlist`](#memberlist) | List members by join order. |
+| [`,permissions`](#permissions) | Show a member's permissions. |
+| [`,qr`](#qr) | Turn text or a link into a QR code. |
+| [`,roles`](#roles) | List every role in the server. |
+| [`,sticker`](#sticker) | Manage server stickers. |
+| [`,stickers`](#stickers) | List the server's stickers. |
+| [`,svg`](#svg) | Render svg code into an image. |
+| [`,timer`](#timer) | Start a countdown timer. |
+| [`,translate`](#translate) | Translate text into another language. |
+| [`,urban`](#urban) | Look a term up in Urban Dictionary. |
+
+## ,afk
+
+Set an AFK status so people know you are away.
+
+**Usage:** `,afk`
+**Aliases:** `away`
+
+## ,banner
+
+Show a user's profile banner.
+
+**Usage:** `,banner [@user]`
+**Aliases:** `bn`, `userbanner`
+
+```bash
+{prefix}banner @member
+```
+
+## ,botinfo
+
+Show stats about the bot itself: users, servers, latency, memory and shards.
+
+**Usage:** `,botinfo`
+**Aliases:** `about`, `bi`, `bot`
+
+```bash
+{prefix}botinfo
+```
+
+## ,builder
+
+Build embeds interactively.
+
+**Usage:** `,builder`
+**Aliases:** `bd`, `embedbuild`
+
+```bash
+,builder
+,builder {embed }{description: hello }
+```
+
+## ,calc
+
+Evaluate a maths expression.
+
+**Usage:** `,calc`
+**Aliases:** `calculate`, `compute`, `math`
+
+## ,ce
+
+Send an embed using a script.
+
+**Usage:** `,ce`
+**Aliases:** `code`, `codeblock`
+
+```bash
+,ce {embed }{color: #000000 }{description: hello }
+```
+
+## ,channelinfo
+
+Show details about a channel.
+
+**Usage:** `,channelinfo`
+**Aliases:** `chi`, `cinfo`
+
+## ,color
+
+Preview a colour from a hex code.
+
+**Usage:** `,color`
+**Aliases:** `col`, `colour`, `hex`
+
+## ,copy
+
+Copy a message script using id or link.
+
+**Usage:** `,copy`
+**Aliases:** `cp`
+
+```bash
+,copy
+,copy https://discord.com/channels/1/2/3
+,copy 123456789012345678
+```
+
+## ,editsnipe
+
+Show the most recently edited message in this channel.
+
+**Usage:** `,editsnipe`
+**Aliases:** `esnipe`
+
+## ,emoji
+
+Manage server emojis.
+
+**Usage:** `,emoji <add|addmany|remove|removemany|rename|list>`
+**Aliases:** `em`, `emojitool`
+**Subcommands:** `add`, `addmany`, `remove`, `removemany`, `rename`, `list`, `information`, `stats`, `zip`
+
+```bash
+,emoji add bleed <:bleed:1234>
+,emoji rename old new
+,emoji stats
+```
+
+## ,emojiinfo
+
+Show details about an emoji.
+
+**Usage:** `,emojiinfo`
+**Aliases:** `ei`, `eminfo`
+
+## ,emojis
+
+List the server's custom emoji.
+
+**Usage:** `,emojis`
+**Aliases:** `ej`, `emojlist`, `listemojis`
+
+## ,emotes
+
+View all emotes in the server.
+
+**Usage:** `,emotes`
+**Aliases:** `emo`
+
+```bash
+,emotes
+```
+
+## ,enlarge
+
+Enlarge an emoji.
+
+**Usage:** `,enlarge`
+**Aliases:** `big`, `en`, `hugemoji`, `zoom`
+
+```bash
+,enlarge <:approve:1234567890>
+```
+
+## ,extractemotes
+
+Extract every emote from a message.
+
+**Usage:** `,extractemotes`
+**Aliases:** `emotextract`
+
+```bash
+,extractemotes (reply to a message)
+```
+
+## ,extractstickers
+
+Extract every sticker from a message.
+
+**Usage:** `,extractstickers`
+**Aliases:** `stickerextract`
+
+```bash
+,extractstickers (reply to a message)
+```
+
+## ,firstmessage
+
+Jump to the first message in a channel.
+
+**Usage:** `,firstmessage`
+**Aliases:** `first`, `fmmsg`
+
+## ,guildicon
+
+Show the server icon.
+
+**Usage:** `,guildicon`
+
+## ,img2gif
+
+Convert an image into a GIF.
+
+**Usage:** `,img2gif`
+**Aliases:** `gifify`, `makemove`
+
+## ,inrole
+
+List the members with a role.
+
+**Usage:** `,inrole`
+**Aliases:** `hasrole`, `ir`
+
+## ,invite
+
+Show invite counts and rewards.
+
+**Usage:** `,invite`
+**Aliases:** `inv`, `invitecount`, `invites`
+
+## ,joined
+
+Show when a member joined.
+
+**Usage:** `,joined`
+**Aliases:** `joinedat`, `joinpos`
+
+## ,jumbo
+
+Show an emoji at full size.
+
+**Usage:** `,jumbo`
+**Aliases:** `bigemoji`
+
+## ,memberlist
+
+List members by join order.
+
+**Usage:** `,memberlist`
+**Aliases:** `ml`, `rolemembers`
+
+## ,permissions
+
+Show a member's permissions.
+
+**Usage:** `,permissions`
+**Aliases:** `perm`, `perms`
+
+## ,qr
+
+Turn text or a link into a QR code.
+
+**Usage:** `,qr`
+**Aliases:** `qrcode`
+
+## ,roles
+
+List every role in the server.
+
+**Usage:** `,roles`
+**Aliases:** `allroles`, `serverroles`
+
+## ,sticker
+
+Manage server stickers.
+
+**Usage:** `,sticker <add|remove|rename|cleanup|tag|list>`
+**Subcommands:** `add`, `remove`, `rename`, `cleanup`, `tag`, `list`
+
+```bash
+,sticker add CoolSticker https://example.com/image.png
+,sticker remove CoolSticker
+```
+
+## ,stickers
+
+List the server's stickers.
+
+**Usage:** `,stickers`
+**Aliases:** `stk`
+
+## ,svg
+
+Render svg code into an image.
+
+**Usage:** `,svg`
+**Aliases:** `svgs`
+
+```bash
+,svg <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="100" cy="100" r="80" fill="red"/></svg>
+```
+
+## ,timer
+
+Start a countdown timer.
+
+**Usage:** `,timer`
+**Aliases:** `countdown`
+
+## ,translate
+
+Translate text into another language.
+
+**Usage:** `,translate`
+**Aliases:** `tl`, `tr`, `ts`
+
+## ,urban
+
+Look a term up in Urban Dictionary.
+
+**Usage:** `,urban`
+**Aliases:** `define`, `dict`, `ud`

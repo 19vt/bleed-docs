@@ -1,0 +1,47 @@
+---
+title: 'Rep settings'
+description: 'Every rep setting bleed exposes per server.'
+---
+
+# Rep
+
+5 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `repEnabled` | Rep enabled | `boolean` | `true` | Allow members to rep each other. |
+| `repChannelId` | Rep channel | `channel` | *not set* | Channel where reps are recorded. |
+| `repCooldownMinutes` | Rep cooldown (min) | `number` | `0` |  |
+| `repEmoji` | Rep emoji | `emoji` | `approve` |  |
+| `repLogChannelId` | Rep log channel | `channel` | *not set* |  |
+
+## Rep enabled
+```bash
+,config set repEnabled <value>
+```
+Allow members to rep each other.
+
+## Rep channel
+```bash
+,config set repChannelId <value>
+```
+Channel where reps are recorded.
+
+## Rep cooldown (min)
+```bash
+,config set repCooldownMinutes <value>
+```
+Type: `number`.
+
+## Rep emoji
+```bash
+,config set repEmoji <value>
+```
+Type: `emoji`.
+
+## Rep log channel
+```bash
+,config set repLogChannelId <value>
+```
+Type: `channel`.

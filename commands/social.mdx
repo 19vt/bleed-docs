@@ -1,0 +1,74 @@
+---
+title: 'Social commands'
+description: '4 social commands in bleed.'
+---
+
+# Social
+
+4 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,reddit`](#reddit) | Reddit related commands. |
+| [`,soundcloud`](#soundcloud) | SoundCloud related commands. |
+| [`,tiktok`](#tiktok) | TikTok related commands. |
+| [`,youtube`](#youtube) | YouTube related commands. |
+
+## ,reddit
+
+Reddit related commands.
+
+**Usage:** `,reddit <post|comments|user|media|randompost|trending|rules|subinfo|mods|sub|search|download|thread|trophies>`
+**Aliases:** `rd`, `red`, `rit`
+
+```bash
+{prefix}reddit sub discordapp
+{prefix}reddit post 1abcde
+{prefix}reddit user spez
+{prefix}reddit search discord bots
+```
+
+## ,soundcloud
+
+SoundCloud related commands.
+
+**Usage:** `,soundcloud <search|track|user|usertracks|playlist|related|download>`
+**Aliases:** `cloud`, `sc`, `scld`
+**Subcommands:** `{prefix}soundcloud search <query>`, `{prefix}soundcloud track <link|id>`, `{prefix}soundcloud user <link|username|id>`, `{prefix}soundcloud usertracks <link|username|id>`, `{prefix}soundcloud playlist <link|id>`, `{prefix}soundcloud related <link|id>`, `{prefix}soundcloud download <link|id>`
+
+```bash
+{prefix}soundcloud search lofi
+{prefix}soundcloud track https://soundcloud.com/forss/flickermood
+{prefix}soundcloud user fors
+{prefix}soundcloud download https://soundcloud.com/forss/flickermood
+```
+
+## ,tiktok
+
+TikTok related commands.
+
+**Usage:** `,tiktok <video|user|followers|posts|search|hashtag|comments|feed|role>`
+**Aliases:** `tt`
+**Subcommands:** `{prefix}tiktok video|repost|info <link>`, `{prefix}tiktok user|followers <@username>`, `{prefix}tiktok posts <@username>`, `{prefix}tiktok search <query>`, `{prefix}tiktok hashtag <tag>`, `{prefix}tiktok comments <link>`, `{prefix}tiktok trending`, `{prefix}tiktok feed add|remove|list|test`, `{prefix}tiktok role add|remove|list`
+
+```bash
+{prefix}tiktok video https://www.tiktok.com/@user/video/123
+{prefix}tiktok user @user
+{prefix}tiktok posts @user
+{prefix}tiktok feed add @user #clips
+```
+
+## ,youtube
+
+YouTube related commands.
+
+**Usage:** `,youtube <search|searchshorts|video|channel|latest|playlist|hashtag|comments|feed|role>`
+**Aliases:** `tube`, `utube`, `yutub`
+**Subcommands:** `{prefix}youtube search <query>`, `{prefix}youtube searchshorts <query>`, `{prefix}youtube video <id|url>`, `{prefix}youtube channel <id|@handle|url>`, `{prefix}youtube latest <id|@handle|url>`, `{prefix}youtube playlist <id|url>`, `{prefix}youtube hashtag <tag>`, `{prefix}youtube comments <id|url>`, `{prefix}youtube feed add|remove|list|test`, `{prefix}youtube role add|remove|list`
+
+```bash
+{prefix}youtube search lofi beats
+{prefix}youtube video https://youtu.be/dQw4w9WgXcQ
+{prefix}youtube channel @MrBeast
+{prefix}youtube feed add @MrBeast #uploads
+```

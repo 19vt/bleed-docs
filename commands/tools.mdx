@@ -1,0 +1,940 @@
+---
+title: 'Tools commands'
+description: '78 tools commands in bleed.'
+---
+
+# Tools
+
+78 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,auditlog`](#auditlog) | Server tool — audit log. |
+| [`,banestimate`](#banestimate) | Server tool — ban estimate. |
+| [`,boostcount`](#boostcount) | Show the **Boost Count**. |
+| [`,boostlevel`](#boostlevel) | Server tool — boost level. |
+| [`,botcountx`](#botcountx) | Show the **Bot Count**. |
+| [`,botinvite`](#botinvite) | Server tool — bot invite. |
+| [`,botmetrics`](#botmetrics) | Server tool — bot metrics. |
+| [`,categorycount`](#categorycount) | Show the **Category Count**. |
+| [`,channelcount`](#channelcount) | Show the **Channel Count**. |
+| [`,channelinfo2`](#channelinfo2) | Server tool — channel info. |
+| [`,channelmembers`](#channelmembers) | Server tool — channel members. |
+| [`,channelorder`](#channelorder) | Server tool — channel order. |
+| [`,charinfo2`](#charinfo2) | Server tool — character info. |
+| [`,counterpanel`](#counterpanel) | Server tool — counter panel. |
+| [`,dateadd`](#dateadd) | Server tool — dateadd. |
+| [`,datediff`](#datediff) | Server tool — datediff. |
+| [`,dominantcolor`](#dominantcolor) | Server tool — dominant colour. |
+| [`,emojicountx`](#emojicountx) | Show the **Emoji Count**. |
+| [`,fileinfo`](#fileinfo) | Server tool — file info. |
+| [`,guildage`](#guildage) | Server tool — server age. |
+| [`,guildcount`](#guildcount) | Show the **Server Count**. |
+| [`,hashcompare`](#hashcompare) | Server tool — compare hashes. |
+| [`,humancount`](#humancount) | Show the **Human Count**. |
+| [`,isbase64`](#isbase64) | Validate a value — is it a **Isbase 6 4**? |
+| [`,iscreditcard`](#iscreditcard) | Validate a value — is it a **Iscreditcard**? |
+| [`,isdomain`](#isdomain) | Validate a value — is it a **Isdomain**? |
+| [`,isemail`](#isemail) | Validate a value — is it a **Isemail**? |
+| [`,iseven`](#iseven) | Validate a value — is it a **Is Even**? |
+| [`,ishex`](#ishex) | Validate a value — is it a **Ishex**? |
+| [`,isip`](#isip) | Validate a value — is it a **Isip**? |
+| [`,isipv6`](#isipv6) | Validate a value — is it a **Isipv 6**? |
+| [`,isjson`](#isjson) | Validate a value — is it a **Isjson**? |
+| [`,isjwt`](#isjwt) | Validate a value — is it a **Isjwt**? |
+| [`,ismac`](#ismac) | Validate a value — is it a **Ismac**? |
+| [`,isnumber`](#isnumber) | Validate a value — is it a **Isnumber**? |
+| [`,isodd`](#isodd) | Validate a value — is it a **Iso Dd**? |
+| [`,ispalindrome`](#ispalindrome) | Validate a value — is it a **Ispalindrome**? |
+| [`,isphone`](#isphone) | Validate a value — is it a **Isphone**? |
+| [`,isprime`](#isprime) | Validate a value — is it a **Is Prime**? |
+| [`,isroman`](#isroman) | Validate a value — is it a **Isroman**? |
+| [`,issnowflake`](#issnowflake) | Validate a value — is it a **Issnowflake**? |
+| [`,isstrongpassword`](#isstrongpassword) | Validate a value — is it a **Isstrongpassword**? |
+| [`,isurl`](#isurl) | Validate a value — is it a **Isurl**? |
+| [`,isuuid`](#isuuid) | Validate a value — is it a **Isuuid**? |
+| [`,jsonformat`](#jsonformat) | Server tool — json formatter. |
+| [`,jsonkeys`](#jsonkeys) | Server tool — json keys. |
+| [`,maxmembers`](#maxmembers) | Server tool — max members. |
+| [`,memberage`](#memberage) | Server tool — member age. |
+| [`,membersearch`](#membersearch) | Server tool — member search. |
+| [`,nowstamps`](#nowstamps) | Server tool — now stamps. |
+| [`,onlinecount`](#onlinecount) | Show the **Online Count**. |
+| [`,passwordscore`](#passwordscore) | Server tool — password score. |
+| [`,permissionsof`](#permissionsof) | Server tool — permissions of. |
+| [`,regextest`](#regextest) | Server tool — regex tester. |
+| [`,rolecount`](#rolecount) | Show the **Role Count**. |
+| [`,rolehierarchy`](#rolehierarchy) | Server tool — role hierarchy. |
+| [`,roleinfo2`](#roleinfo2) | Server tool — role info. |
+| [`,servermeta`](#servermeta) | Server tool — server meta. |
+| [`,shardcount`](#shardcount) | Show the **Shard Count**. |
+| [`,shardinfo`](#shardinfo) | Server tool — shard info. |
+| [`,stickercount`](#stickercount) | Show the **Sticker Count**. |
+| [`,supportserver`](#supportserver) | Server tool — support server. |
+| [`,tdate`](#tdate) | Timestamp helper — **Short Date**. |
+| [`,textchannelcount`](#textchannelcount) | Show the **Text Channel Count**. |
+| [`,textstats`](#textstats) | Timestamp helper — **Text Stats**. |
+| [`,tfriendly`](#tfriendly) | Timestamp helper — **Friendly Timestamp**. |
+| [`,tfull`](#tfull) | Timestamp helper — **Full Timestamp**. |
+| [`,tfulldate`](#tfulldate) | Timestamp helper — **Long Date**. |
+| [`,timestamp`](#timestamp) | Timestamp helper — **Time Stamp**. |
+| [`,tlong`](#tlong) | Timestamp helper — **Long Timestamp**. |
+| [`,trelative`](#trelative) | Timestamp helper — **Relative Timestamp**. |
+| [`,tshort`](#tshort) | Timestamp helper — **Short Timestamp**. |
+| [`,unicodeescape2`](#unicodeescape2) | Server tool — unicode escape. |
+| [`,unitsinfo`](#unitsinfo) | Server tool — unit list. |
+| [`,usercount`](#usercount) | Show the **User Count**. |
+| [`,voicechannelcount`](#voicechannelcount) | Show the **Voice Channel Count**. |
+| [`,voicemembers`](#voicemembers) | Server tool — voice members. |
+| [`,wordfrequency`](#wordfrequency) | Server tool — word frequency. |
+
+## ,auditlog
+
+Server tool — audit log.
+
+**Usage:** `,auditlog`
+**Aliases:** `al`
+
+```bash
+{prefix}auditlog
+```
+
+## ,banestimate
+
+Server tool — ban estimate.
+
+**Usage:** `,banestimate`
+**Aliases:** `bane`, `banx`
+
+```bash
+{prefix}banestimate
+```
+
+## ,boostcount
+
+Show the **Boost Count**.
+
+**Usage:** `,boostcount`
+**Aliases:** `boos`
+
+```bash
+{prefix}boostcount
+```
+
+## ,boostlevel
+
+Server tool — boost level.
+
+**Usage:** `,boostlevel`
+**Aliases:** `boo`, `boox`
+
+```bash
+{prefix}boostlevel
+```
+
+## ,botcountx
+
+Show the **Bot Count**.
+
+**Usage:** `,botcountx`
+
+```bash
+{prefix}botcountx
+```
+
+## ,botinvite
+
+Server tool — bot invite.
+
+**Usage:** `,botinvite`
+**Aliases:** `boti`, `botx`
+
+```bash
+{prefix}botinvite
+```
+
+## ,botmetrics
+
+Server tool — bot metrics.
+
+**Usage:** `,botmetrics`
+**Aliases:** `bm`, `botm`
+
+```bash
+{prefix}botmetrics
+```
+
+## ,categorycount
+
+Show the **Category Count**.
+
+**Usage:** `,categorycount`
+**Aliases:** `cat`, `cate`
+
+```bash
+{prefix}categorycount
+```
+
+## ,channelcount
+
+Show the **Channel Count**.
+
+**Usage:** `,channelcount`
+**Aliases:** `chc`
+
+```bash
+{prefix}channelcount
+```
+
+## ,channelinfo2
+
+Server tool — channel info.
+
+**Usage:** `,channelinfo2`
+**Aliases:** `ci2`
+
+```bash
+{prefix}channelinfo2
+```
+
+## ,channelmembers
+
+Server tool — channel members.
+
+**Usage:** `,channelmembers`
+**Aliases:** `cm`
+
+```bash
+{prefix}channelmembers
+```
+
+## ,channelorder
+
+Server tool — channel order.
+
+**Usage:** `,channelorder`
+**Aliases:** `cod`
+
+```bash
+{prefix}channelorder
+```
+
+## ,charinfo2
+
+Server tool — character info.
+
+**Usage:** `,charinfo2`
+
+```bash
+{prefix}charinfo2
+```
+
+## ,counterpanel
+
+Server tool — counter panel.
+
+**Usage:** `,counterpanel`
+**Aliases:** `cpanel`
+
+```bash
+{prefix}counterpanel
+```
+
+## ,dateadd
+
+Server tool — dateadd.
+
+**Usage:** `,dateadd`
+**Aliases:** `dat`, `date`
+
+```bash
+{prefix}dateadd
+```
+
+## ,datediff
+
+Server tool — datediff.
+
+**Usage:** `,datediff`
+**Aliases:** `datx`
+
+```bash
+{prefix}datediff
+```
+
+## ,dominantcolor
+
+Server tool — dominant colour.
+
+**Usage:** `,dominantcolor`
+**Aliases:** `dom`, `domi`
+
+```bash
+{prefix}dominantcolor
+```
+
+## ,emojicountx
+
+Show the **Emoji Count**.
+
+**Usage:** `,emojicountx`
+**Aliases:** `ec`
+
+```bash
+{prefix}emojicountx
+```
+
+## ,fileinfo
+
+Server tool — file info.
+
+**Usage:** `,fileinfo`
+**Aliases:** `fil`, `file`
+
+```bash
+{prefix}fileinfo
+```
+
+## ,guildage
+
+Server tool — server age.
+
+**Usage:** `,guildage`
+**Aliases:** `sage`
+
+```bash
+{prefix}guildage
+```
+
+## ,guildcount
+
+Show the **Server Count**.
+
+**Usage:** `,guildcount`
+**Aliases:** `gc`
+
+```bash
+{prefix}guildcount
+```
+
+## ,hashcompare
+
+Server tool — compare hashes.
+
+**Usage:** `,hashcompare`
+
+```bash
+{prefix}hashcompare
+```
+
+## ,humancount
+
+Show the **Human Count**.
+
+**Usage:** `,humancount`
+**Aliases:** `hc`
+
+```bash
+{prefix}humancount
+```
+
+## ,isbase64
+
+Validate a value — is it a **Isbase 6 4**?
+
+**Usage:** `,isbase64 <value>`
+**Aliases:** `i64`, `isba`
+
+```bash
+{prefix}isbase64 hello@example.com
+```
+
+## ,iscreditcard
+
+Validate a value — is it a **Iscreditcard**?
+
+**Usage:** `,iscreditcard <value>`
+**Aliases:** `isc`, `iscr`
+
+```bash
+{prefix}iscreditcard hello@example.com
+```
+
+## ,isdomain
+
+Validate a value — is it a **Isdomain**?
+
+**Usage:** `,isdomain <value>`
+**Aliases:** `isd`, `isdo`
+
+```bash
+{prefix}isdomain hello@example.com
+```
+
+## ,isemail
+
+Validate a value — is it a **Isemail**?
+
+**Usage:** `,isemail <value>`
+**Aliases:** `ise`, `isem`
+
+```bash
+{prefix}isemail hello@example.com
+```
+
+## ,iseven
+
+Validate a value — is it a **Is Even**?
+
+**Usage:** `,iseven <value>`
+**Aliases:** `isev`, `isex`
+
+```bash
+{prefix}iseven hello@example.com
+```
+
+## ,ishex
+
+Validate a value — is it a **Ishex**?
+
+**Usage:** `,ishex <value>`
+**Aliases:** `ish`, `ishx`
+
+```bash
+{prefix}ishex hello@example.com
+```
+
+## ,isip
+
+Validate a value — is it a **Isip**?
+
+**Usage:** `,isip <value>`
+**Aliases:** `isi`, `isix`
+
+```bash
+{prefix}isip hello@example.com
+```
+
+## ,isipv6
+
+Validate a value — is it a **Isipv 6**?
+
+**Usage:** `,isipv6 <value>`
+**Aliases:** `i6`
+
+```bash
+{prefix}isipv6 hello@example.com
+```
+
+## ,isjson
+
+Validate a value — is it a **Isjson**?
+
+**Usage:** `,isjson <value>`
+**Aliases:** `isj`, `isjs`
+
+```bash
+{prefix}isjson hello@example.com
+```
+
+## ,isjwt
+
+Validate a value — is it a **Isjwt**?
+
+**Usage:** `,isjwt <value>`
+**Aliases:** `isjx`
+
+```bash
+{prefix}isjwt hello@example.com
+```
+
+## ,ismac
+
+Validate a value — is it a **Ismac**?
+
+**Usage:** `,ismac <value>`
+**Aliases:** `ism`, `ismx`
+
+```bash
+{prefix}ismac hello@example.com
+```
+
+## ,isnumber
+
+Validate a value — is it a **Isnumber**?
+
+**Usage:** `,isnumber <value>`
+**Aliases:** `isn`, `isnu`
+
+```bash
+{prefix}isnumber hello@example.com
+```
+
+## ,isodd
+
+Validate a value — is it a **Iso Dd**?
+
+**Usage:** `,isodd <value>`
+**Aliases:** `id`, `iso`
+
+```bash
+{prefix}isodd hello@example.com
+```
+
+## ,ispalindrome
+
+Validate a value — is it a **Ispalindrome**?
+
+**Usage:** `,ispalindrome <value>`
+**Aliases:** `ispa`
+
+```bash
+{prefix}ispalindrome hello@example.com
+```
+
+## ,isphone
+
+Validate a value — is it a **Isphone**?
+
+**Usage:** `,isphone <value>`
+**Aliases:** `isp`, `isph`
+
+```bash
+{prefix}isphone hello@example.com
+```
+
+## ,isprime
+
+Validate a value — is it a **Is Prime**?
+
+**Usage:** `,isprime <value>`
+**Aliases:** `ispr`, `ispx`
+
+```bash
+{prefix}isprime hello@example.com
+```
+
+## ,isroman
+
+Validate a value — is it a **Isroman**?
+
+**Usage:** `,isroman <value>`
+**Aliases:** `isr`, `isro`
+
+```bash
+{prefix}isroman hello@example.com
+```
+
+## ,issnowflake
+
+Validate a value — is it a **Issnowflake**?
+
+**Usage:** `,issnowflake <value>`
+**Aliases:** `iss`, `issn`
+
+```bash
+{prefix}issnowflake hello@example.com
+```
+
+## ,isstrongpassword
+
+Validate a value — is it a **Isstrongpassword**?
+
+**Usage:** `,isstrongpassword <value>`
+**Aliases:** `isst`, `issx`
+
+```bash
+{prefix}isstrongpassword hello@example.com
+```
+
+## ,isurl
+
+Validate a value — is it a **Isurl**?
+
+**Usage:** `,isurl <value>`
+**Aliases:** `isu`, `isux`
+
+```bash
+{prefix}isurl hello@example.com
+```
+
+## ,isuuid
+
+Validate a value — is it a **Isuuid**?
+
+**Usage:** `,isuuid <value>`
+**Aliases:** `isuu`
+
+```bash
+{prefix}isuuid hello@example.com
+```
+
+## ,jsonformat
+
+Server tool — json formatter.
+
+**Usage:** `,jsonformat`
+**Aliases:** `jso`, `json`
+
+```bash
+{prefix}jsonformat
+```
+
+## ,jsonkeys
+
+Server tool — json keys.
+
+**Usage:** `,jsonkeys`
+**Aliases:** `jsox`
+
+```bash
+{prefix}jsonkeys
+```
+
+## ,maxmembers
+
+Server tool — max members.
+
+**Usage:** `,maxmembers`
+**Aliases:** `max`, `maxm`
+
+```bash
+{prefix}maxmembers
+```
+
+## ,memberage
+
+Server tool — member age.
+
+**Usage:** `,memberage`
+**Aliases:** `memx`
+
+```bash
+{prefix}memberage
+```
+
+## ,membersearch
+
+Server tool — member search.
+
+**Usage:** `,membersearch`
+**Aliases:** `mem`, `memb`
+
+```bash
+{prefix}membersearch
+```
+
+## ,nowstamps
+
+Server tool — now stamps.
+
+**Usage:** `,nowstamps`
+**Aliases:** `nows`, `ns`
+
+```bash
+{prefix}nowstamps
+```
+
+## ,onlinecount
+
+Show the **Online Count**.
+
+**Usage:** `,onlinecount`
+**Aliases:** `oc`
+
+```bash
+{prefix}onlinecount
+```
+
+## ,passwordscore
+
+Server tool — password score.
+
+**Usage:** `,passwordscore`
+
+```bash
+{prefix}passwordscore
+```
+
+## ,permissionsof
+
+Server tool — permissions of.
+
+**Usage:** `,permissionsof`
+
+```bash
+{prefix}permissionsof
+```
+
+## ,regextest
+
+Server tool — regex tester.
+
+**Usage:** `,regextest`
+**Aliases:** `rege`, `regx`
+
+```bash
+{prefix}regextest
+```
+
+## ,rolecount
+
+Show the **Role Count**.
+
+**Usage:** `,rolecount`
+
+```bash
+{prefix}rolecount
+```
+
+## ,rolehierarchy
+
+Server tool — role hierarchy.
+
+**Usage:** `,rolehierarchy`
+**Aliases:** `rh`, `rolx`
+
+```bash
+{prefix}rolehierarchy
+```
+
+## ,roleinfo2
+
+Server tool — role info.
+
+**Usage:** `,roleinfo2`
+**Aliases:** `ri2`, `rol`
+
+```bash
+{prefix}roleinfo2
+```
+
+## ,servermeta
+
+Server tool — server meta.
+
+**Usage:** `,servermeta`
+**Aliases:** `smeta`
+
+```bash
+{prefix}servermeta
+```
+
+## ,shardcount
+
+Show the **Shard Count**.
+
+**Usage:** `,shardcount`
+**Aliases:** `shar`
+
+```bash
+{prefix}shardcount
+```
+
+## ,shardinfo
+
+Server tool — shard info.
+
+**Usage:** `,shardinfo`
+
+```bash
+{prefix}shardinfo
+```
+
+## ,stickercount
+
+Show the **Sticker Count**.
+
+**Usage:** `,stickercount`
+**Aliases:** `sti`, `stic`
+
+```bash
+{prefix}stickercount
+```
+
+## ,supportserver
+
+Server tool — support server.
+
+**Usage:** `,supportserver`
+**Aliases:** `supx`
+
+```bash
+{prefix}supportserver
+```
+
+## ,tdate
+
+Timestamp helper — **Short Date**.
+
+**Usage:** `,tdate`
+**Aliases:** `tda`, `tdax`
+
+```bash
+{prefix}tdate
+```
+
+## ,textchannelcount
+
+Show the **Text Channel Count**.
+
+**Usage:** `,textchannelcount`
+**Aliases:** `tcc`, `text`
+
+```bash
+{prefix}textchannelcount
+```
+
+## ,textstats
+
+Timestamp helper — **Text Stats**.
+
+**Usage:** `,textstats`
+**Aliases:** `tex`, `texx`
+
+```bash
+{prefix}textstats
+```
+
+## ,tfriendly
+
+Timestamp helper — **Friendly Timestamp**.
+
+**Usage:** `,tfriendly`
+**Aliases:** `tfr`, `tfri`
+
+```bash
+{prefix}tfriendly
+```
+
+## ,tfull
+
+Timestamp helper — **Full Timestamp**.
+
+**Usage:** `,tfull`
+**Aliases:** `tfux`
+
+```bash
+{prefix}tfull
+```
+
+## ,tfulldate
+
+Timestamp helper — **Long Date**.
+
+**Usage:** `,tfulldate`
+**Aliases:** `tfu`, `tful`
+
+```bash
+{prefix}tfulldate
+```
+
+## ,timestamp
+
+Timestamp helper — **Time Stamp**.
+
+**Usage:** `,timestamp`
+**Aliases:** `timx`
+
+```bash
+{prefix}timestamp
+```
+
+## ,tlong
+
+Timestamp helper — **Long Timestamp**.
+
+**Usage:** `,tlong`
+**Aliases:** `tlo`, `tlox`
+
+```bash
+{prefix}tlong
+```
+
+## ,trelative
+
+Timestamp helper — **Relative Timestamp**.
+
+**Usage:** `,trelative`
+**Aliases:** `tre`, `trel`
+
+```bash
+{prefix}trelative
+```
+
+## ,tshort
+
+Timestamp helper — **Short Timestamp**.
+
+**Usage:** `,tshort`
+**Aliases:** `tsh`, `tsho`
+
+```bash
+{prefix}tshort
+```
+
+## ,unicodeescape2
+
+Server tool — unicode escape.
+
+**Usage:** `,unicodeescape2`
+**Aliases:** `ue2`
+
+```bash
+{prefix}unicodeescape2
+```
+
+## ,unitsinfo
+
+Server tool — unit list.
+
+**Usage:** `,unitsinfo`
+**Aliases:** `unit`
+
+```bash
+{prefix}unitsinfo
+```
+
+## ,usercount
+
+Show the **User Count**.
+
+**Usage:** `,usercount`
+**Aliases:** `uc`, `use`
+
+```bash
+{prefix}usercount
+```
+
+## ,voicechannelcount
+
+Show the **Voice Channel Count**.
+
+**Usage:** `,voicechannelcount`
+**Aliases:** `vcc`, `voic`
+
+```bash
+{prefix}voicechannelcount
+```
+
+## ,voicemembers
+
+Server tool — voice members.
+
+**Usage:** `,voicemembers`
+**Aliases:** `voi`, `voix`
+
+```bash
+{prefix}voicemembers
+```
+
+## ,wordfrequency
+
+Server tool — word frequency.
+
+**Usage:** `,wordfrequency`
+**Aliases:** `wor`, `worx`
+
+```bash
+{prefix}wordfrequency
+```

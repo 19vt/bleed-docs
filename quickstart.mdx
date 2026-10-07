@@ -1,0 +1,49 @@
+---
+title: 'Quickstart'
+description: 'From invite to a fully configured server in five commands.'
+---
+
+# Quickstart
+
+The prefix is `,`. Change it any time with `,prefix add <prefix>`.
+
+## 1. Check the role order
+
+bleed can only manage roles *below* its own. Move its role into the top five
+roles, or moderation commands will refuse to act.
+
+## 2. Run the guided setup
+
+```bash
+,setup
+```
+
+Creates the moderation roles (jail, mute, image mute, reaction mute), a mod
+category, a jail channel and a log channel, then wires the mod log to it.
+
+## 3. Turn on what you need
+
+```bash
+,voicemaster setup   # join-to-create voice hub + interface channel
+,filter setup        # automod filters and a filter log channel
+,antinuke setup      # every anti-nuke module with default punishments
+,ticket setup        # support tickets, panel, transcripts
+```
+
+## 4. Configure anything else
+
+```bash
+,config
+```
+
+Every setting is per server. The same values are editable on the
+[dashboard](https://bleedrip.vercel.app/manage.html), and anything left empty falls back to the
+bot default.
+
+## 5. Check it works
+
+```bash
+,help
+,variables
+,stats
+```

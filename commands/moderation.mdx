@@ -1,0 +1,1516 @@
+---
+title: 'Moderation commands'
+description: '143 moderation commands in bleed.'
+---
+
+# Moderation
+
+143 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,announce`](#announce) | Post an announcement embed. |
+| [`,autopfp`](#autopfp) | Rotate this server's icon on a timer from a list of images. |
+| [`,autorestart`](#autorestart) | Automatically reset selected channels on an interval. _(co-owner+)_ |
+| [`,autorole`](#autorole) | Choose roles given automatically to new members. |
+| [`,ban`](#ban) | Ban a member, optionally purging their recent messages. _(co-owner+)_ |
+| [`,bans`](#bans) | View all banned members in the server. |
+| [`,botclear`](#botclear) | Bulk delete messages sent by bots in this channel. _(co-owner+)_ |
+| [`,botstatus`](#botstatus) | Change the bot's status for this server. _(owner only)_ |
+| [`,casesearch`](#casesearch) | Moderation preset — case search. |
+| [`,channelclone`](#channelclone) | Channel management — channel clone. _(co-owner+)_ |
+| [`,channelcreate`](#channelcreate) | Channel management — channel create. |
+| [`,channeldelete`](#channeldelete) | Channel management — channel delete. |
+| [`,channelhide`](#channelhide) | Channel management — channel hide. |
+| [`,channellock`](#channellock) | Channel management — channel lock. |
+| [`,channelnsfw`](#channelnsfw) | Channel management — channel nsfw. |
+| [`,channelparent`](#channelparent) | Channel management — channel parent. |
+| [`,channelposition`](#channelposition) | Channel management — channel position. |
+| [`,channelrename`](#channelrename) | Channel management — channel rename. |
+| [`,channelshow`](#channelshow) | Channel management — channel show. |
+| [`,channeltopic`](#channeltopic) | Channel management — channel topic. |
+| [`,channelunlock`](#channelunlock) | Channel management — channel unlock. |
+| [`,clearsnipe`](#clearsnipe) | Clear saved snipe data. |
+| [`,clearwarns`](#clearwarns) | Clear every warning for a member. |
+| [`,clone`](#clone) | Rebuild this server's roles from another server. _(owner only)_ |
+| [`,config`](#config) | Open the per-server configuration panel and change any setting in place. _(owner only)_ |
+| [`,deafen`](#deafen) | Server-deafen a member in voice. |
+| [`,deafenall`](#deafenall) | Moderation preset — deafen all. _(co-owner+)_ |
+| [`,delnote`](#delnote) | Delete a staff note. |
+| [`,embed`](#embed) | Build, save and post embeds with a live preview, and bind one as the welcome message. |
+| [`,emojiadd`](#emojiadd) | Add an emoji to the server. |
+| [`,emojidelete`](#emojidelete) | Delete a server emoji. |
+| [`,forcenick`](#forcenick) | Force a nickname that sticks even if they try to change it. _(co-owner+)_ |
+| [`,hackban`](#hackban) | Ban a user by id, even if they are not in the server. _(owner only)_ |
+| [`,hardban`](#hardban) | Permanently ban someone — owners only. _(owner only)_ |
+| [`,hide`](#hide) | Hide this channel from members. |
+| [`,history`](#history) | Show a member's moderation history. |
+| [`,imagemute`](#imagemute) | Prevent someone from sending images/embeds for a while. _(co-owner+)_ |
+| [`,inspect`](#inspect) | Inspect a member's roles, punishments and notes at a glance. |
+| [`,jail`](#jail) | Jail a member, restricting them to the jail channel. |
+| [`,jailsetup`](#jailsetup) | Configure the jail role and channel. |
+| [`,kick`](#kick) | Kick a member from the server. |
+| [`,list`](#list) | List members, with filtering and pagination. |
+| [`,lock`](#lock) | Lock this channel so members cannot send messages. |
+| [`,lockall`](#lockall) | Lock all channels at once. _(co-owner+)_ |
+| [`,massrole`](#massrole) | Give or remove a role for many members at once. _(owner only)_ |
+| [`,membercount`](#membercount) | Show how many members the server has. |
+| [`,modhelp`](#modhelp) | Staff guide to the moderation commands. |
+| [`,modstats`](#modstats) | Moderation preset — mod stats. |
+| [`,modthresholds`](#modthresholds) | See warning thresholds. |
+| [`,modwarnings`](#modwarnings) | See someone's warnings. |
+| [`,mute`](#mute) | Mute (time out) a member. |
+| [`,muteallchannel`](#muteallchannel) | Moderation preset — mute all channel. _(co-owner+)_ |
+| [`,nick`](#nick) | Change a member's nickname. |
+| [`,nickname`](#nickname) | Change a user's nickname. |
+| [`,nickresetall`](#nickresetall) | Moderation preset — reset all nicknames. _(co-owner+)_ |
+| [`,note`](#note) | Add a staff note to a member. |
+| [`,notes`](#notes) | List a member's staff notes. |
+| [`,nuke`](#nuke) | Clone and delete this channel, wiping its history. _(owner only)_ |
+| [`,pingonjoin`](#pingonjoin) | Ping users when they join your server. |
+| [`,prefix`](#prefix) | Change this server's command prefix. |
+| [`,purge`](#purge) | Bulk delete recent messages in this channel. |
+| [`,purgeafter`](#purgeafter) | Bulk-delete messages (Purge After). |
+| [`,purgebetween`](#purgebetween) | Bulk-delete messages (Purge Between). |
+| [`,purgebot`](#purgebot) | Purge the bot's own recent messages from this channel. |
+| [`,purgebotslash`](#purgebotslash) | Bulk-delete messages (Purge Bot Slash). |
+| [`,purgeby`](#purgeby) | Bulk-delete messages (Purge By). |
+| [`,purgecaps`](#purgecaps) | Bulk-delete messages (Purge Caps). |
+| [`,purgecontains`](#purgecontains) | Bulk-delete messages (Purge Contains). |
+| [`,purgeembeds`](#purgeembeds) | Bulk-delete messages (Purge Embeds). |
+| [`,purgeemoji`](#purgeemoji) | Bulk-delete messages (Purge Emoji). |
+| [`,purgefiles`](#purgefiles) | Bulk-delete messages (Purge Files). |
+| [`,purgehuman`](#purgehuman) | Bulk-delete messages (Purge Human). |
+| [`,purgeimages`](#purgeimages) | Bulk-delete messages (Purge Images). |
+| [`,purgeinvites`](#purgeinvites) | Bulk-delete messages (Purge Invites). |
+| [`,purgelinks`](#purgelinks) | Bulk-delete messages (Purge Links). |
+| [`,purgematch`](#purgematch) | Bulk-delete messages (Purge Match). |
+| [`,purgementions`](#purgementions) | Bulk-delete messages (Purge Mentions). |
+| [`,purgepin`](#purgepin) | Bulk-delete messages (Purge Pin). |
+| [`,purgestickers`](#purgestickers) | Bulk-delete messages (Purge Stickers). |
+| [`,purgeuser`](#purgeuser) | Bulk-delete messages (Purge User). |
+| [`,purgewebhooks`](#purgewebhooks) | Bulk-delete messages (Purge Webhooks). |
+| [`,reactionmute`](#reactionmute) | Prevent someone from reacting for a while. _(co-owner+)_ |
+| [`,reactionsnipe`](#reactionsnipe) | See recently removed reactions. |
+| [`,removeforcenick`](#removeforcenick) | Remove a forced nickname from someone. _(co-owner+)_ |
+| [`,removehardban`](#removehardban) | Remove hardban status from a user. _(owner only)_ |
+| [`,role`](#role) | Add or remove a role from a member. |
+| [`,roleaddall`](#roleaddall) | Role management — role add all. _(co-owner+)_ |
+| [`,roleclone`](#roleclone) | Role management — role clone. _(co-owner+)_ |
+| [`,rolecolor`](#rolecolor) | Role management — role color. |
+| [`,rolecreate`](#rolecreate) | Role management — role create. |
+| [`,roledelete`](#roledelete) | Role management — role delete. |
+| [`,rolehoist`](#rolehoist) | Role management — role hoist. |
+| [`,rolemention`](#rolemention) | Toggle whether a role can be mentioned. |
+| [`,rolementionable`](#rolementionable) | Role management — role mentionable. |
+| [`,roleposition2`](#roleposition2) | Role management — role position. |
+| [`,roleremoveall`](#roleremoveall) | Role management — role remove all. _(co-owner+)_ |
+| [`,rolerename`](#rolerename) | Role management — role rename. |
+| [`,say`](#say) | Send a message as the bot. |
+| [`,setwarnthreshold`](#setwarnthreshold) | Set warning thresholds. |
+| [`,slowmode`](#slowmode) | Set the channel slowmode interval. |
+| [`,slowmode10`](#slowmode10) | Set channel slowmode — **Slow Mode 1 0**. |
+| [`,slowmode15m`](#slowmode15m) | Set channel slowmode — **Slow Mode 1 5 M**. |
+| [`,slowmode1d`](#slowmode1d) | Set channel slowmode — **Slow Mode 1 D**. |
+| [`,slowmode1h`](#slowmode1h) | Set channel slowmode — **Slow Mode 1 H**. |
+| [`,slowmode1m`](#slowmode1m) | Set channel slowmode — **Slow Mode 1 M**. |
+| [`,slowmode30`](#slowmode30) | Set channel slowmode — **Slow Mode 3 0**. |
+| [`,slowmode5`](#slowmode5) | Set channel slowmode — **Slow Mode 5**. |
+| [`,slowmode5m`](#slowmode5m) | Set channel slowmode — **Slow Mode 5 M**. |
+| [`,slowmode6h`](#slowmode6h) | Set channel slowmode — **Slow Mode 6 H**. |
+| [`,slowmodeoff`](#slowmodeoff) | Set channel slowmode — **Slow Mode Off**. |
+| [`,snipe`](#snipe) | Show the most recently deleted message in this channel. |
+| [`,softban`](#softban) | Ban and immediately unban a member to clear their messages. _(co-owner+)_ |
+| [`,stafflist`](#stafflist) | Moderation preset — staff list. |
+| [`,statchannel`](#statchannel) | Moderation preset — stat channel. |
+| [`,stealemoji`](#stealemoji) | Steal an emoji from another server. |
+| [`,sticky`](#sticky) | Sticky messages at the bottom of channels. |
+| [`,striproles`](#striproles) | Moderation preset — strip roles. _(co-owner+)_ |
+| [`,tempban`](#tempban) | Temporarily ban a member. _(co-owner+)_ |
+| [`,tempmute`](#tempmute) | Temporarily mute a member. |
+| [`,thresholds`](#thresholds) | See how many warnings trigger punishments. |
+| [`,timeout`](#timeout) | Time out a member for a duration. |
+| [`,topic`](#topic) | Change this channel's topic. |
+| [`,unban`](#unban) | Unban a user by id. |
+| [`,unbanall`](#unbanall) | Unban every banned user. _(co-owner+)_ |
+| [`,undeafen`](#undeafen) | Remove a member's server deafen. |
+| [`,unhide`](#unhide) | Make this channel visible again. |
+| [`,unimagemute`](#unimagemute) | Remove an image mute. |
+| [`,unjail`](#unjail) | Release a member from jail. |
+| [`,unlock`](#unlock) | Unlock this channel again. |
+| [`,unlockall`](#unlockall) | Unlock all channels at once. _(co-owner+)_ |
+| [`,unmute`](#unmute) | Remove a member's mute. |
+| [`,unmuteall`](#unmuteall) | Unmute every member in your voice channel. _(co-owner+)_ |
+| [`,unreactionmute`](#unreactionmute) | Remove a reaction mute. |
+| [`,untimeout`](#untimeout) | Remove a member's timeout. |
+| [`,untimeoutall`](#untimeoutall) | Remove timeout from everyone. _(co-owner+)_ |
+| [`,unwarn`](#unwarn) | Remove a warning from a member. |
+| [`,voicekick`](#voicekick) | Voice moderation — voice kick. |
+| [`,voicemove`](#voicemove) | Voice moderation — voice move. |
+| [`,voicesummon`](#voicesummon) | Voice moderation — voice summon. |
+| [`,warn`](#warn) | Warn a member and record it in their history. |
+| [`,warnhelp`](#warnhelp) | Guide to the warning system. |
+| [`,warnings`](#warnings) | See warnings for a user. |
+| [`,warns`](#warns) | Show a member's warnings. |
+
+## ,announce
+
+Post an announcement embed.
+
+**Usage:** `,announce`
+**Aliases:** `ann`, `announcement`
+
+## ,autopfp
+
+Rotate this server's icon on a timer from a list of images.
+
+**Usage:** `,autopfp [add|remove|list|interval|now|on|off|clear]`
+**Aliases:** `autoprofilepicture`, `rotateicon`
+**Subcommands:** `add`, `remove`, `list`, `interval`, `now`, `on`, `off`, `clear`
+
+```bash
+,autopfp add https://i.imgur.com/ex.png
+,autopfp interval 120
+,autopfp now
+```
+
+## ,autorestart
+
+Automatically reset selected channels on an interval.
+
+**Usage:** `,autorestart`
+**Aliases:** `arest`, `autoreste`
+
+## ,autorole
+
+Choose roles given automatically to new members.
+
+**Usage:** `,autorole`
+**Aliases:** `ar`
+
+## ,ban
+
+Ban a member, optionally purging their recent messages.
+
+**Usage:** `,ban`
+**Aliases:** `b`, `fuckoff`
+
+## ,bans
+
+View all banned members in the server.
+
+**Usage:** `,bans`
+**Aliases:** `banlist`, `banned`
+
+```bash
+,bans
+,bans 2
+```
+
+## ,botclear
+
+Bulk delete messages sent by bots in this channel.
+
+**Usage:** `,botclear [amount]`
+**Aliases:** `bc`, `botpurge`
+
+```bash
+{prefix}botclear 50
+```
+
+## ,botstatus
+
+Change the bot's status for this server.
+
+**Usage:** `,botstatus`
+**Aliases:** `bstatus`, `setstatus`
+
+## ,casesearch
+
+Moderation preset — case search.
+
+**Usage:** `,casesearch <target>`
+**Aliases:** `cas`, `case`
+
+```bash
+{prefix}casesearch @user
+```
+
+## ,channelclone
+
+Channel management — channel clone.
+
+**Usage:** `,channelclone <target>`
+
+```bash
+{prefix}channelclone @user
+```
+
+## ,channelcreate
+
+Channel management — channel create.
+
+**Usage:** `,channelcreate <target>`
+
+```bash
+{prefix}channelcreate @user
+```
+
+## ,channeldelete
+
+Channel management — channel delete.
+
+**Usage:** `,channeldelete <target>`
+
+```bash
+{prefix}channeldelete @user
+```
+
+## ,channelhide
+
+Channel management — channel hide.
+
+**Usage:** `,channelhide <target>`
+
+```bash
+{prefix}channelhide @user
+```
+
+## ,channellock
+
+Channel management — channel lock.
+
+**Usage:** `,channellock <target>`
+
+```bash
+{prefix}channellock @user
+```
+
+## ,channelnsfw
+
+Channel management — channel nsfw.
+
+**Usage:** `,channelnsfw <target>`
+**Aliases:** `cn`
+
+```bash
+{prefix}channelnsfw @user
+```
+
+## ,channelparent
+
+Channel management — channel parent.
+
+**Usage:** `,channelparent <target>`
+
+```bash
+{prefix}channelparent @user
+```
+
+## ,channelposition
+
+Channel management — channel position.
+
+**Usage:** `,channelposition <target>`
+
+```bash
+{prefix}channelposition @user
+```
+
+## ,channelrename
+
+Channel management — channel rename.
+
+**Usage:** `,channelrename <target>`
+**Aliases:** `cr`
+
+```bash
+{prefix}channelrename @user
+```
+
+## ,channelshow
+
+Channel management — channel show.
+
+**Usage:** `,channelshow <target>`
+
+```bash
+{prefix}channelshow @user
+```
+
+## ,channeltopic
+
+Channel management — channel topic.
+
+**Usage:** `,channeltopic <target>`
+**Aliases:** `ct`
+
+```bash
+{prefix}channeltopic @user
+```
+
+## ,channelunlock
+
+Channel management — channel unlock.
+
+**Usage:** `,channelunlock <target>`
+**Aliases:** `cu`
+
+```bash
+{prefix}channelunlock @user
+```
+
+## ,clearsnipe
+
+Clear saved snipe data.
+
+**Usage:** `,clearsnipe`
+**Aliases:** `cs`
+
+```bash
+,clearsnipe
+,clearsnipe all
+```
+
+## ,clearwarns
+
+Clear every warning for a member.
+
+**Usage:** `,clearwarns`
+**Aliases:** `clearwarnings`, `cw`
+
+## ,clone
+
+Rebuild this server's roles from another server.
+
+**Usage:** `,clone <source_server_id>`
+**Aliases:** `cloneserver`, `guildclone`, `serverclone`
+
+```bash
+{prefix}clone 1550186959857524876
+```
+
+## ,config
+
+Open the per-server configuration panel and change any setting in place.
+
+**Usage:** `,config [view|get|set|unset|reset|export] [key] [value]`
+**Aliases:** `cfg`, `configpanel`, `set`
+**Subcommands:** `{prefix}config`, `{prefix}config view`, `{prefix}config get <key>`, `{prefix}config set <key> <value>`, `{prefix}config unset <key>`, `{prefix}config reset all`, `{prefix}config export`
+
+```bash
+{prefix}config
+{prefix}config view
+{prefix}config set vcHubChannelId #hub
+{prefix}config export
+```
+
+## ,deafen
+
+Server-deafen a member in voice.
+
+**Usage:** `,deafen`
+**Aliases:** `deaf`, `df`
+
+## ,deafenall
+
+Moderation preset — deafen all.
+
+**Usage:** `,deafenall <target>`
+**Aliases:** `da`, `dea`
+
+```bash
+{prefix}deafenall @user
+```
+
+## ,delnote
+
+Delete a staff note.
+
+**Usage:** `,delnote`
+**Aliases:** `removenote`
+
+## ,embed
+
+Build, save and post embeds with a live preview, and bind one as the welcome message.
+
+**Usage:** `,embed <create|save|post|list|edit|delete|export|preview|welcome|status> [...]`
+**Aliases:** `e`, `embedbuilder`, `sendembed`
+
+```bash
+{prefix}embed create
+{prefix}embed create {embed }{color: #000000 }{description: hello }
+{prefix}embed post rules #info
+{prefix}embed welcome set welcome #general
+```
+
+## ,emojiadd
+
+Add an emoji to the server.
+
+**Usage:** `,emojiadd`
+**Aliases:** `addemoji`, `ea`
+
+## ,emojidelete
+
+Delete a server emoji.
+
+**Usage:** `,emojidelete`
+**Aliases:** `delemoji`, `ed`, `removeemoji`
+
+## ,forcenick
+
+Force a nickname that sticks even if they try to change it.
+
+**Usage:** `,forcenick`
+**Aliases:** `fn`
+
+```bash
+,forcenick @user Sticky Name
+,forcenick @user reset
+```
+
+## ,hackban
+
+Ban a user by id, even if they are not in the server.
+
+**Usage:** `,hackban <userId|@user> [reason]`
+**Aliases:** `banid`, `forceban`, `hb`
+
+```bash
+{prefix}hackban 123456789012345678 raiding
+```
+
+## ,hardban
+
+Permanently ban someone — owners only.
+
+**Usage:** `,hardban`
+**Aliases:** `hardbanish`
+
+```bash
+,hardban @user raiding
+```
+
+## ,hide
+
+Hide this channel from members.
+
+**Usage:** `,hide`
+**Aliases:** `hidechan`
+
+## ,history
+
+Show a member's moderation history.
+
+**Usage:** `,history`
+**Aliases:** `hist`, `modhistory`
+
+## ,imagemute
+
+Prevent someone from sending images/embeds for a while.
+
+**Usage:** `,imagemute`
+**Aliases:** `imute`
+
+```bash
+,imagemute @user 10m spamming pictures
+```
+
+## ,inspect
+
+Inspect a member's roles, punishments and notes at a glance.
+
+**Usage:** `,inspect`
+**Aliases:** `check`, `ins`, `inspectuser`, `userinspect`
+
+## ,jail
+
+Jail a member, restricting them to the jail channel.
+
+**Usage:** `,jail`
+**Aliases:** `j`
+
+## ,jailsetup
+
+Configure the jail role and channel.
+
+**Usage:** `,jailsetup`
+**Aliases:** `jsetup`, `setupjail`
+
+## ,kick
+
+Kick a member from the server.
+
+**Usage:** `,kick`
+**Aliases:** `k`
+
+## ,list
+
+List members, with filtering and pagination.
+
+**Usage:** `,list`
+**Aliases:** `l`
+
+## ,lock
+
+Lock this channel so members cannot send messages.
+
+**Usage:** `,lock`
+**Aliases:** `lc`, `lockchan`
+
+## ,lockall
+
+Lock all channels at once.
+
+**Usage:** `,lockall`
+**Aliases:** `lock-all`
+
+## ,massrole
+
+Give or remove a role for many members at once.
+
+**Usage:** `,massrole`
+**Aliases:** `bulkrole`, `mr`
+
+## ,membercount
+
+Show how many members the server has.
+
+**Usage:** `,membercount`
+**Aliases:** `mc`, `members`
+
+## ,modhelp
+
+Staff guide to the moderation commands.
+
+**Usage:** `,modhelp`
+**Aliases:** `mhelp`, `modh`
+
+## ,modstats
+
+Moderation preset — mod stats.
+
+**Usage:** `,modstats <target>`
+**Aliases:** `mstats`
+
+```bash
+{prefix}modstats @user
+```
+
+## ,modthresholds
+
+See warning thresholds.
+
+**Usage:** `,modthresholds`
+**Aliases:** `modthr`, `mth`
+
+```bash
+,modthresholds
+```
+
+## ,modwarnings
+
+See someone's warnings.
+
+**Usage:** `,modwarnings`
+**Aliases:** `modwarns`, `mwl`
+
+```bash
+,modwarnings @user
+```
+
+## ,mute
+
+Mute (time out) a member.
+
+**Usage:** `,mute`
+**Aliases:** `m`, `stfu`
+
+## ,muteallchannel
+
+Moderation preset — mute all channel.
+
+**Usage:** `,muteallchannel <target>`
+**Aliases:** `mac`, `mut`
+
+```bash
+{prefix}muteallchannel @user
+```
+
+## ,nick
+
+Change a member's nickname.
+
+**Usage:** `,nick`
+**Aliases:** `n`
+
+## ,nickname
+
+Change a user's nickname.
+
+**Usage:** `,nickname`
+**Aliases:** `setnick`
+
+```bash
+,nickname @user New Name
+,nickname @user
+```
+
+## ,nickresetall
+
+Moderation preset — reset all nicknames.
+
+**Usage:** `,nickresetall <target>`
+**Aliases:** `nic`, `nra`
+
+```bash
+{prefix}nickresetall @user
+```
+
+## ,note
+
+Add a staff note to a member.
+
+**Usage:** `,note`
+**Aliases:** `addnote`, `staffnote`
+
+## ,notes
+
+List a member's staff notes.
+
+**Usage:** `,notes`
+**Aliases:** `viewnotes`
+
+## ,nuke
+
+Clone and delete this channel, wiping its history.
+
+**Usage:** `,nuke`
+**Aliases:** `nk`
+
+## ,pingonjoin
+
+Ping users when they join your server.
+
+**Usage:** `,pingonjoin <enable|disable|channel|message|test|list>`
+**Aliases:** `ghostping`, `gp`, `joinping`, `pingjoin`, `poj`
+**Subcommands:** `enable`, `disable`, `channel`, `message`, `test`, `list`, `reset`
+
+```bash
+,pingonjoin enable
+,pingonjoin channel #general
+,pingonjoin message welcome {user}!
+,pingonjoin test
+```
+
+## ,prefix
+
+Change this server's command prefix.
+
+**Usage:** `,prefix`
+**Aliases:** `setprefix`
+
+## ,purge
+
+Bulk delete recent messages in this channel.
+
+**Usage:** `,purge`
+**Aliases:** `c`, `clear`, `prune`
+
+## ,purgeafter
+
+Bulk-delete messages (Purge After).
+
+**Usage:** `,purgeafter [amount]`
+**Aliases:** `pa`
+
+```bash
+{prefix}purgeafter 20
+```
+
+## ,purgebetween
+
+Bulk-delete messages (Purge Between).
+
+**Usage:** `,purgebetween [amount]`
+
+```bash
+{prefix}purgebetween 20
+```
+
+## ,purgebot
+
+Purge the bot's own recent messages from this channel.
+
+**Usage:** `,purgebot`
+**Aliases:** `clearbots`, `pb`
+
+## ,purgebotslash
+
+Bulk-delete messages (Purge Bot Slash).
+
+**Usage:** `,purgebotslash [amount]`
+**Aliases:** `pbs`
+
+```bash
+{prefix}purgebotslash 20
+```
+
+## ,purgeby
+
+Bulk-delete messages (Purge By).
+
+**Usage:** `,purgeby [amount]`
+
+```bash
+{prefix}purgeby 20
+```
+
+## ,purgecaps
+
+Bulk-delete messages (Purge Caps).
+
+**Usage:** `,purgecaps [amount]`
+
+```bash
+{prefix}purgecaps 20
+```
+
+## ,purgecontains
+
+Bulk-delete messages (Purge Contains).
+
+**Usage:** `,purgecontains [amount]`
+
+```bash
+{prefix}purgecontains 20
+```
+
+## ,purgeembeds
+
+Bulk-delete messages (Purge Embeds).
+
+**Usage:** `,purgeembeds [amount]`
+**Aliases:** `pe`, `pur`
+
+```bash
+{prefix}purgeembeds 20
+```
+
+## ,purgeemoji
+
+Bulk-delete messages (Purge Emoji).
+
+**Usage:** `,purgeemoji [amount]`
+
+```bash
+{prefix}purgeemoji 20
+```
+
+## ,purgefiles
+
+Bulk-delete messages (Purge Files).
+
+**Usage:** `,purgefiles [amount]`
+
+```bash
+{prefix}purgefiles 20
+```
+
+## ,purgehuman
+
+Bulk-delete messages (Purge Human).
+
+**Usage:** `,purgehuman [amount]`
+**Aliases:** `phuman`
+
+```bash
+{prefix}purgehuman 20
+```
+
+## ,purgeimages
+
+Bulk-delete messages (Purge Images).
+
+**Usage:** `,purgeimages [amount]`
+**Aliases:** `pimg`
+
+```bash
+{prefix}purgeimages 20
+```
+
+## ,purgeinvites
+
+Bulk-delete messages (Purge Invites).
+
+**Usage:** `,purgeinvites [amount]`
+**Aliases:** `pi`, `purg`
+
+```bash
+{prefix}purgeinvites 20
+```
+
+## ,purgelinks
+
+Bulk-delete messages (Purge Links).
+
+**Usage:** `,purgelinks [amount]`
+**Aliases:** `plink`
+
+```bash
+{prefix}purgelinks 20
+```
+
+## ,purgematch
+
+Bulk-delete messages (Purge Match).
+
+**Usage:** `,purgematch [amount]`
+**Aliases:** `pmatch`
+
+```bash
+{prefix}purgematch 20
+```
+
+## ,purgementions
+
+Bulk-delete messages (Purge Mentions).
+
+**Usage:** `,purgementions [amount]`
+**Aliases:** `pm`
+
+```bash
+{prefix}purgementions 20
+```
+
+## ,purgepin
+
+Bulk-delete messages (Purge Pin).
+
+**Usage:** `,purgepin [amount]`
+
+```bash
+{prefix}purgepin 20
+```
+
+## ,purgestickers
+
+Bulk-delete messages (Purge Stickers).
+
+**Usage:** `,purgestickers [amount]`
+**Aliases:** `purx`
+
+```bash
+{prefix}purgestickers 20
+```
+
+## ,purgeuser
+
+Bulk-delete messages (Purge User).
+
+**Usage:** `,purgeuser [amount]`
+**Aliases:** `puser`
+
+```bash
+{prefix}purgeuser 20
+```
+
+## ,purgewebhooks
+
+Bulk-delete messages (Purge Webhooks).
+
+**Usage:** `,purgewebhooks [amount]`
+**Aliases:** `pw`
+
+```bash
+{prefix}purgewebhooks 20
+```
+
+## ,reactionmute
+
+Prevent someone from reacting for a while.
+
+**Usage:** `,reactionmute`
+**Aliases:** `rmute`
+
+```bash
+,reactionmute @user 30m spamming reactions
+```
+
+## ,reactionsnipe
+
+See recently removed reactions.
+
+**Usage:** `,reactionsnipe`
+**Aliases:** `rsnipe`
+
+```bash
+,reactionsnipe
+,reactionsnipe <:approve:1234567890>
+```
+
+## ,removeforcenick
+
+Remove a forced nickname from someone.
+
+**Usage:** `,removeforcenick`
+**Aliases:** `rfn`, `unfn`, `unforcenick`
+
+```bash
+,removeforcenick @user
+```
+
+## ,removehardban
+
+Remove hardban status from a user.
+
+**Usage:** `,removehardban`
+**Aliases:** `rhb`, `unhardban`, `unhb`
+
+```bash
+,removehardban 123456789012345678
+```
+
+## ,role
+
+Add or remove a role from a member.
+
+**Usage:** `,role`
+**Aliases:** `r`
+
+## ,roleaddall
+
+Role management — role add all.
+
+**Usage:** `,roleaddall <target>`
+**Aliases:** `raa`
+
+```bash
+{prefix}roleaddall @user
+```
+
+## ,roleclone
+
+Role management — role clone.
+
+**Usage:** `,roleclone <target>`
+
+```bash
+{prefix}roleclone @user
+```
+
+## ,rolecolor
+
+Role management — role color.
+
+**Usage:** `,rolecolor <target>`
+
+```bash
+{prefix}rolecolor @user
+```
+
+## ,rolecreate
+
+Role management — role create.
+
+**Usage:** `,rolecreate <target>`
+
+```bash
+{prefix}rolecreate @user
+```
+
+## ,roledelete
+
+Role management — role delete.
+
+**Usage:** `,roledelete <target>`
+
+```bash
+{prefix}roledelete @user
+```
+
+## ,rolehoist
+
+Role management — role hoist.
+
+**Usage:** `,rolehoist <target>`
+
+```bash
+{prefix}rolehoist @user
+```
+
+## ,rolemention
+
+Toggle whether a role can be mentioned.
+
+**Usage:** `,rolemention`
+**Aliases:** `pingroll`
+
+## ,rolementionable
+
+Role management — role mentionable.
+
+**Usage:** `,rolementionable <target>`
+
+```bash
+{prefix}rolementionable @user
+```
+
+## ,roleposition2
+
+Role management — role position.
+
+**Usage:** `,roleposition2 <target>`
+**Aliases:** `rp2`
+
+```bash
+{prefix}roleposition2 @user
+```
+
+## ,roleremoveall
+
+Role management — role remove all.
+
+**Usage:** `,roleremoveall <target>`
+**Aliases:** `rra`
+
+```bash
+{prefix}roleremoveall @user
+```
+
+## ,rolerename
+
+Role management — role rename.
+
+**Usage:** `,rolerename <target>`
+
+```bash
+{prefix}rolerename @user
+```
+
+## ,say
+
+Send a message as the bot.
+
+**Usage:** `,say`
+**Aliases:** `echo`, `speak`
+
+## ,setwarnthreshold
+
+Set warning thresholds.
+
+**Usage:** `,setwarnthreshold`
+**Aliases:** `modsetthreshold`, `setthreshold`
+
+```bash
+,setwarnthreshold 3 timeout 1h
+,setwarnthreshold 5 kick
+,setwarnthreshold 3 remove
+,setwarnthreshold reset
+```
+
+## ,slowmode
+
+Set the channel slowmode interval.
+
+**Usage:** `,slowmode`
+**Aliases:** `slow`, `sm`
+
+## ,slowmode10
+
+Set channel slowmode — **Slow Mode 1 0**.
+
+**Usage:** `,slowmode10 <target>`
+**Aliases:** `sm10`
+
+```bash
+{prefix}slowmode10 @user
+```
+
+## ,slowmode15m
+
+Set channel slowmode — **Slow Mode 1 5 M**.
+
+**Usage:** `,slowmode15m <target>`
+**Aliases:** `sm15`
+
+```bash
+{prefix}slowmode15m @user
+```
+
+## ,slowmode1d
+
+Set channel slowmode — **Slow Mode 1 D**.
+
+**Usage:** `,slowmode1d <target>`
+**Aliases:** `sm1d`
+
+```bash
+{prefix}slowmode1d @user
+```
+
+## ,slowmode1h
+
+Set channel slowmode — **Slow Mode 1 H**.
+
+**Usage:** `,slowmode1h <target>`
+**Aliases:** `sm1h`
+
+```bash
+{prefix}slowmode1h @user
+```
+
+## ,slowmode1m
+
+Set channel slowmode — **Slow Mode 1 M**.
+
+**Usage:** `,slowmode1m <target>`
+**Aliases:** `sm1m`
+
+```bash
+{prefix}slowmode1m @user
+```
+
+## ,slowmode30
+
+Set channel slowmode — **Slow Mode 3 0**.
+
+**Usage:** `,slowmode30 <target>`
+**Aliases:** `sm30`
+
+```bash
+{prefix}slowmode30 @user
+```
+
+## ,slowmode5
+
+Set channel slowmode — **Slow Mode 5**.
+
+**Usage:** `,slowmode5 <target>`
+**Aliases:** `sm5`
+
+```bash
+{prefix}slowmode5 @user
+```
+
+## ,slowmode5m
+
+Set channel slowmode — **Slow Mode 5 M**.
+
+**Usage:** `,slowmode5m <target>`
+**Aliases:** `sm5m`
+
+```bash
+{prefix}slowmode5m @user
+```
+
+## ,slowmode6h
+
+Set channel slowmode — **Slow Mode 6 H**.
+
+**Usage:** `,slowmode6h <target>`
+**Aliases:** `sm6h`
+
+```bash
+{prefix}slowmode6h @user
+```
+
+## ,slowmodeoff
+
+Set channel slowmode — **Slow Mode Off**.
+
+**Usage:** `,slowmodeoff <target>`
+**Aliases:** `smoff`
+
+```bash
+{prefix}slowmodeoff @user
+```
+
+## ,snipe
+
+Show the most recently deleted message in this channel.
+
+**Usage:** `,snipe`
+**Aliases:** `s`
+
+## ,softban
+
+Ban and immediately unban a member to clear their messages.
+
+**Usage:** `,softban`
+**Aliases:** `sb`
+
+## ,stafflist
+
+Moderation preset — staff list.
+
+**Usage:** `,stafflist <target>`
+**Aliases:** `sl`
+
+```bash
+{prefix}stafflist @user
+```
+
+## ,statchannel
+
+Moderation preset — stat channel.
+
+**Usage:** `,statchannel <target>`
+**Aliases:** `stat`
+
+```bash
+{prefix}statchannel @user
+```
+
+## ,stealemoji
+
+Steal an emoji from another server.
+
+**Usage:** `,stealemoji`
+**Aliases:** `se`
+
+## ,sticky
+
+Sticky messages at the bottom of channels.
+
+**Usage:** `,sticky <set|list|edit|remove>`
+**Aliases:** `stick`, `stickyfix`
+**Subcommands:** `set`, `list`, `edit`, `remove`
+
+```bash
+,sticky set Welcome to the server!
+,sticky list
+,sticky remove
+```
+
+## ,striproles
+
+Moderation preset — strip roles.
+
+**Usage:** `,striproles <target>`
+
+```bash
+{prefix}striproles @user
+```
+
+## ,tempban
+
+Temporarily ban a member.
+
+**Usage:** `,tempban`
+**Aliases:** `tb`
+
+## ,tempmute
+
+Temporarily mute a member.
+
+**Usage:** `,tempmute`
+**Aliases:** `tm`
+
+## ,thresholds
+
+See how many warnings trigger punishments.
+
+**Usage:** `,thresholds`
+**Aliases:** `thr`, `warnthresholds`
+
+```bash
+,thresholds
+```
+
+## ,timeout
+
+Time out a member for a duration.
+
+**Usage:** `,timeout`
+**Aliases:** `tmo`, `to`
+
+## ,topic
+
+Change this channel's topic.
+
+**Usage:** `,topic`
+**Aliases:** `settopic`
+
+## ,unban
+
+Unban a user by id.
+
+**Usage:** `,unban`
+**Aliases:** `ub`, `unbanid`
+
+## ,unbanall
+
+Unban every banned user.
+
+**Usage:** `,unbanall`
+**Aliases:** `uba`
+
+## ,undeafen
+
+Remove a member's server deafen.
+
+**Usage:** `,undeafen`
+**Aliases:** `udf`, `undeaf`
+
+## ,unhide
+
+Make this channel visible again.
+
+**Usage:** `,unhide`
+**Aliases:** `unhidechan`
+
+## ,unimagemute
+
+Remove an image mute.
+
+**Usage:** `,unimagemute`
+**Aliases:** `uim`
+
+```bash
+,unimagemute @user
+```
+
+## ,unjail
+
+Release a member from jail.
+
+**Usage:** `,unjail`
+**Aliases:** `uj`
+
+## ,unlock
+
+Unlock this channel again.
+
+**Usage:** `,unlock`
+**Aliases:** `ul`
+
+## ,unlockall
+
+Unlock all channels at once.
+
+**Usage:** `,unlockall`
+**Aliases:** `unlock-all`
+
+```bash
+,unlockall
+```
+
+## ,unmute
+
+Remove a member's mute.
+
+**Usage:** `,unmute`
+**Aliases:** `um`
+
+## ,unmuteall
+
+Unmute every member in your voice channel.
+
+**Usage:** `,unmuteall`
+**Aliases:** `uma`
+
+## ,unreactionmute
+
+Remove a reaction mute.
+
+**Usage:** `,unreactionmute`
+**Aliases:** `urm`
+
+```bash
+,unreactionmute @user
+```
+
+## ,untimeout
+
+Remove a member's timeout.
+
+**Usage:** `,untimeout`
+**Aliases:** `utmo`, `uto`
+
+## ,untimeoutall
+
+Remove timeout from everyone.
+
+**Usage:** `,untimeoutall`
+**Aliases:** `untoall`
+
+```bash
+,untimeoutall
+```
+
+## ,unwarn
+
+Remove a warning from a member.
+
+**Usage:** `,unwarn`
+**Aliases:** `delwarn`, `removewarn`, `uw`
+
+## ,voicekick
+
+Voice moderation — voice kick.
+
+**Usage:** `,voicekick <target>`
+**Aliases:** `vk`
+
+```bash
+{prefix}voicekick @user
+```
+
+## ,voicemove
+
+Voice moderation — voice move.
+
+**Usage:** `,voicemove <target>`
+
+```bash
+{prefix}voicemove @user
+```
+
+## ,voicesummon
+
+Voice moderation — voice summon.
+
+**Usage:** `,voicesummon <target>`
+**Aliases:** `vs`
+
+```bash
+{prefix}voicesummon @user
+```
+
+## ,warn
+
+Warn a member and record it in their history.
+
+**Usage:** `,warn`
+**Aliases:** `w`, `warning`
+
+```bash
+,warn @user spamming
+```
+
+## ,warnhelp
+
+Guide to the warning system.
+
+**Usage:** `,warnhelp`
+**Aliases:** `wh`
+
+## ,warnings
+
+See warnings for a user.
+
+**Usage:** `,warnings`
+**Aliases:** `w-list`, `w-show`
+
+```bash
+,warnings @user
+```
+
+## ,warns
+
+Show a member's warnings.
+
+**Usage:** `,warns`
+**Aliases:** `infractions`, `ws`

@@ -1,0 +1,74 @@
+---
+title: 'Customization commands'
+description: '4 customization commands in bleed.'
+---
+
+# Customization
+
+4 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,badge`](#badge) | Manage roles for people with the server tag. |
+| [`,buttonrole`](#buttonrole) | Set up self-assignable roles with buttons. |
+| [`,roletoggle`](#roletoggle) | Toggle roles on or off for someone. |
+| [`,vanity`](#vanity) | Vanity role settings. |
+
+## ,badge
+
+Manage roles for people with the server tag.
+
+**Usage:** `,badge <add|remove|list|sync|message|channel|variables>`
+**Aliases:** `bdg`, `tagrole`
+**Subcommands:** `{prefix}badge add @role`, `{prefix}badge remove @role`, `{prefix}badge list`, `{prefix}badge sync`, `{prefix}badge message set|view`
+
+```bash
+{prefix}badge add @Tagged
+{prefix}badge list
+{prefix}badge sync
+{prefix}badge message set Thanks for repping {guild}, {mention}!
+```
+
+## ,buttonrole
+
+Set up self-assignable roles with buttons.
+
+**Usage:** `,buttonrole <add|remove|removeall|list|limit|styles|reset|edit>`
+**Aliases:** `brol`, `brole`, `button`, `buttonroles`, `rolebutton`
+
+```bash
+{prefix}buttonrole add <message id> @Role Label
+{prefix}buttonrole add <message id> @Role Label :emoji: success
+{prefix}buttonrole list
+{prefix}buttonrole remove <message id> @Role
+{prefix}buttonrole limit 3
+```
+
+## ,roletoggle
+
+Toggle roles on or off for someone.
+
+**Usage:** `,roletoggle @member @Role1 @Role2`
+**Aliases:** `rt`
+**Subcommands:** `{prefix}roletoggle <@member> <@role...>`
+
+```bash
+{prefix}roletoggle @User @Muted
+{prefix}roletoggle @User @Role1 @Role2
+```
+
+## ,vanity
+
+Vanity role settings.
+
+**Usage:** `,vanity <set|role|message|blacklist|unblacklist|cooldown|channels|sync|variables>`
+**Aliases:** `vanityurl`, `vty`
+**Subcommands:** `{prefix}vanity set <keyword>`, `{prefix}vanity role add|remove|list @role`, `{prefix}vanity message set|view|preview <text>`, `{prefix}vanity blacklist user|role|text|list`, `{prefix}vanity unblacklist user|role|text`
+
+```bash
+{prefix}vanity set .gg/server
+{prefix}vanity role add @Repping
+{prefix}vanity message set Thanks for repping {guild}, {mention}!
+{prefix}vanity cooldown 3600
+{prefix}vanity sync
+```

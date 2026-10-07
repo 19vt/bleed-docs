@@ -1,0 +1,24 @@
+---
+title: 'Permissions'
+description: 'What the bot needs, and why.'
+---
+
+# Permissions
+
+bleed asks for the permissions it needs per feature rather than blanket
+administrator. The role order matters more than the permission list: a role
+below the one it is trying to manage is the most common cause of a refused
+action.
+
+| Feature | Permissions |
+|---------|-------------|
+| Moderation | Ban Members, Kick Members, Moderate Members, Manage Roles |
+| Channels | Manage Channels, View Audit Log |
+| Messages | Manage Messages, Read Message History, Send Messages, Embed Links |
+| Security | View Audit Log, Manage Roles, Manage Channels, Ban Members |
+| Tickets | Manage Channels, Manage Roles |
+| VoiceMaster | Manage Channels, Move Members |
+| Levels and welcomes | Send Messages, Embed Links |
+
+If a command refuses to act on a member, check that the member is not above the
+bot's highest role.

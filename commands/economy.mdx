@@ -1,0 +1,363 @@
+---
+title: 'Economy commands'
+description: '27 economy commands in bleed.'
+---
+
+# Economy
+
+27 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,addshopitem`](#addshopitem) | Economy — add shop item. |
+| [`,balance`](#balance) | Show a wallet — server coins by default, the shared global wallet with `global`. |
+| [`,bank`](#bank) | Show a bank balance — server wallet by default, global with `bank global`. |
+| [`,beg`](#beg) | Beg for coins — server wallet by default, global with `beg global`. |
+| [`,buy`](#buy) | Buy a shop item — paid from the server wallet, or the global one with `global`. |
+| [`,convert`](#convert) | Move coins between your server wallet and the global wallet that follows you across every server. |
+| [`,crime`](#crime) | Commit a crime for coins — server wallet by default, global with `crime global`. |
+| [`,daily`](#daily) | Claim the daily reward — server wallet by default, global with `daily global`. |
+| [`,deposit`](#deposit) | Move wallet coins into the bank — server wallet by default, global with `deposit global`. |
+| [`,economystats`](#economystats) | Circulation, accounts and the top holder — this server by default, the whole bot with `global`. |
+| [`,gamble`](#gamble) | Double-or-nothing wager — server wallet by default, global with `global`. |
+| [`,give`](#give) | Give coins from your wallet on hand — server by default, global with `global`. |
+| [`,global`](#global) | Your global economy wallet — the coins that follow you across every server bleed is in. |
+| [`,inventory`](#inventory) | Show what a member owns — items are per-server possessions. |
+| [`,pay`](#pay) | Pay someone from wallet+bank — server wallet by default, global with `global`. |
+| [`,removeshopitem`](#removeshopitem) | Economy — remove shop item. |
+| [`,resetmoney`](#resetmoney) | Reset a wallet to the starting balance — staff for server scope; global is the bot owners' only. |
+| [`,richest`](#richest) | The wealthiest members — this server by default, the whole bot with `global`. |
+| [`,rob`](#rob) | Rob another member — server wallet by default, global with `global`. |
+| [`,roulette`](#roulette) | Spin the wheel — server wallet by default, global with `global`. |
+| [`,sell`](#sell) | Sell an item back — proceeds land in the server wallet, or the global one with `global`. |
+| [`,setmoney`](#setmoney) | Set a wallet balance — staff for server scope; the global scope is the bot owners' only. |
+| [`,shop`](#shop) | Browse the shop — purchases draw from the server wallet, or the global one with `shop global`. |
+| [`,slotsbet`](#slotsbet) | Three-reel slots for coins — server wallet by default, global with `global`. |
+| [`,weekly`](#weekly) | Claim the weekly reward — server wallet by default, global with `weekly global`. |
+| [`,withdraw`](#withdraw) | Move bank coins back to the wallet — server bank by default, global with `withdraw global`. |
+| [`,work`](#work) | Work an hour away for coins — server wallet by default, global with `work global`. |
+
+## ,addshopitem
+
+Economy — add shop item.
+
+**Usage:** `,addshopitem`
+**Aliases:** `adds`, `asi`
+
+```bash
+{prefix}addshopitem
+```
+
+## ,balance
+
+Show a wallet — server coins by default, the shared global wallet with `global`.
+
+**Usage:** `,balance [global] [user]`
+**Aliases:** `bal`
+
+```bash
+{prefix}balance
+{prefix}balance @user
+{prefix}balance global
+{prefix}balance global @user
+```
+
+## ,bank
+
+Show a bank balance — server wallet by default, global with `bank global`.
+
+**Usage:** `,bank [global] [user]`
+
+```bash
+{prefix}bank
+{prefix}bank global
+```
+
+## ,beg
+
+Beg for coins — server wallet by default, global with `beg global`.
+
+**Usage:** `,beg [global]`
+**Aliases:** `begx`
+
+```bash
+{prefix}beg
+{prefix}beg global
+```
+
+## ,buy
+
+Buy a shop item — paid from the server wallet, or the global one with `global`.
+
+**Usage:** `,buy [global] <item>`
+**Aliases:** `buyx`
+
+```bash
+{prefix}buy laptop
+{prefix}buy global laptop
+```
+
+## ,convert
+
+Move coins between your server wallet and the global wallet that follows you across every server.
+
+**Usage:** `,convert <global|server> <amount|all>`
+**Aliases:** `econconvert`, `econv`
+
+```bash
+{prefix}convert global 500
+{prefix}convert server all
+{prefix}convert global all
+```
+
+## ,crime
+
+Commit a crime for coins — server wallet by default, global with `crime global`.
+
+**Usage:** `,crime [global]`
+**Aliases:** `cri`, `crix`
+
+```bash
+{prefix}crime
+{prefix}crime global
+```
+
+## ,daily
+
+Claim the daily reward — server wallet by default, global with `daily global`.
+
+**Usage:** `,daily [global]`
+**Aliases:** `dai`, `daix`
+
+```bash
+{prefix}daily
+{prefix}daily global
+```
+
+## ,deposit
+
+Move wallet coins into the bank — server wallet by default, global with `deposit global`.
+
+**Usage:** `,deposit [global] <amount|all>`
+**Aliases:** `dep`, `depo`
+
+```bash
+{prefix}deposit 200
+{prefix}deposit global all
+```
+
+## ,economystats
+
+Circulation, accounts and the top holder — this server by default, the whole bot with `global`.
+
+**Usage:** `,economystats [global]`
+**Aliases:** `econ`, `es`
+
+```bash
+{prefix}economystats
+{prefix}economystats global
+```
+
+## ,gamble
+
+Double-or-nothing wager — server wallet by default, global with `global`.
+
+**Usage:** `,gamble [global] <amount|all>`
+**Aliases:** `gam`, `gamb`
+
+```bash
+{prefix}gamble 100
+{prefix}gamble global all
+```
+
+## ,give
+
+Give coins from your wallet on hand — server by default, global with `global`.
+
+**Usage:** `,give [global] @user <amount>`
+**Aliases:** `giv`, `givx`
+
+```bash
+{prefix}give @user 100
+{prefix}give global @user 100
+```
+
+## ,global
+
+Your global economy wallet — the coins that follow you across every server bleed is in.
+
+**Usage:** `,global [richest|stats|move <server|global> <amount>]`
+**Aliases:** `geco`, `globaleco`
+
+```bash
+{prefix}global
+{prefix}global richest
+{prefix}global stats
+{prefix}global move global 500
+```
+
+## ,inventory
+
+Show what a member owns — items are per-server possessions.
+
+**Usage:** `,inventory [user]`
+**Aliases:** `inv2`
+
+```bash
+{prefix}inventory
+{prefix}inventory @user
+```
+
+## ,pay
+
+Pay someone from wallet+bank — server wallet by default, global with `global`.
+
+**Usage:** `,pay [global] @user <amount>`
+**Aliases:** `payx`
+
+```bash
+{prefix}pay @user 100
+{prefix}pay global @user 100
+```
+
+## ,removeshopitem
+
+Economy — remove shop item.
+
+**Usage:** `,removeshopitem`
+**Aliases:** `remo`, `rsi`
+
+```bash
+{prefix}removeshopitem
+```
+
+## ,resetmoney
+
+Reset a wallet to the starting balance — staff for server scope; global is the bot owners' only.
+
+**Usage:** `,resetmoney [global] @user`
+**Aliases:** `rese`, `resx`
+
+```bash
+{prefix}resetmoney @user
+{prefix}resetmoney global @user
+```
+
+## ,richest
+
+The wealthiest members — this server by default, the whole bot with `global`.
+
+**Usage:** `,richest [global]`
+**Aliases:** `rich`
+
+```bash
+{prefix}richest
+{prefix}richest global
+```
+
+## ,rob
+
+Rob another member — server wallet by default, global with `global`.
+
+**Usage:** `,rob [global] @user`
+**Aliases:** `robx`
+
+```bash
+{prefix}rob @user
+{prefix}rob global @user
+```
+
+## ,roulette
+
+Spin the wheel — server wallet by default, global with `global`.
+
+**Usage:** `,roulette [global] <red|black|green|even|odd> <bet>`
+**Aliases:** `roul`
+
+```bash
+{prefix}roulette red 100
+{prefix}roulette global black 200
+```
+
+## ,sell
+
+Sell an item back — proceeds land in the server wallet, or the global one with `global`.
+
+**Usage:** `,sell [global] <item>`
+**Aliases:** `sel`, `selx`
+
+```bash
+{prefix}sell laptop
+{prefix}sell global laptop
+```
+
+## ,setmoney
+
+Set a wallet balance — staff for server scope; the global scope is the bot owners' only.
+
+**Usage:** `,setmoney [global] @user <amount>`
+**Aliases:** `setm`, `setx`
+
+```bash
+{prefix}setmoney @user 1000
+{prefix}setmoney global @user 1000
+```
+
+## ,shop
+
+Browse the shop — purchases draw from the server wallet, or the global one with `shop global`.
+
+**Usage:** `,shop [global]`
+**Aliases:** `store`
+
+```bash
+{prefix}shop
+{prefix}shop global
+```
+
+## ,slotsbet
+
+Three-reel slots for coins — server wallet by default, global with `global`.
+
+**Usage:** `,slotsbet [global] <amount|all>`
+**Aliases:** `ss`
+
+```bash
+{prefix}slotsbet 100
+{prefix}slotsbet global all
+```
+
+## ,weekly
+
+Claim the weekly reward — server wallet by default, global with `weekly global`.
+
+**Usage:** `,weekly [global]`
+**Aliases:** `wee`, `weex`
+
+```bash
+{prefix}weekly
+{prefix}weekly global
+```
+
+## ,withdraw
+
+Move bank coins back to the wallet — server bank by default, global with `withdraw global`.
+
+**Usage:** `,withdraw [global] <amount|all>`
+**Aliases:** `wit`, `with`
+
+```bash
+{prefix}withdraw 200
+{prefix}withdraw global all
+```
+
+## ,work
+
+Work an hour away for coins — server wallet by default, global with `work global`.
+
+**Usage:** `,work [global]`
+
+```bash
+{prefix}work
+{prefix}work global
+```

@@ -1,0 +1,68 @@
+---
+title: 'Welcome settings'
+description: 'Every welcome setting bleed exposes per server.'
+---
+
+# Welcome
+
+8 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `welcomeEnabled` | Welcome enabled | `boolean` | `false` |  |
+| `welcomeChannelId` | Welcome channel | `channel` | *not set* |  |
+| `welcomeTemplate` | Welcome embed | `string` | *not set* | Name of a saved embed template to send on join. |
+| `welcomeDmEnabled` | DM welcome | `boolean` | `false` |  |
+| `welcomeDmTemplate` | DM embed | `string` | *not set* |  |
+| `leaveEnabled` | Leave message | `boolean` | `false` |  |
+| `leaveChannelId` | Leave channel | `channel` | *not set* |  |
+| `leaveTemplate` | Leave embed | `string` | *not set* |  |
+
+## Welcome enabled
+```bash
+,config set welcomeEnabled <value>
+```
+Type: `boolean`.
+
+## Welcome channel
+```bash
+,config set welcomeChannelId <value>
+```
+Type: `channel`.
+
+## Welcome embed
+```bash
+,config set welcomeTemplate <value>
+```
+Name of a saved embed template to send on join.
+
+## DM welcome
+```bash
+,config set welcomeDmEnabled <value>
+```
+Type: `boolean`.
+
+## DM embed
+```bash
+,config set welcomeDmTemplate <value>
+```
+Type: `string`.
+
+## Leave message
+```bash
+,config set leaveEnabled <value>
+```
+Type: `boolean`.
+
+## Leave channel
+```bash
+,config set leaveChannelId <value>
+```
+Type: `channel`.
+
+## Leave embed
+```bash
+,config set leaveTemplate <value>
+```
+Type: `string`.

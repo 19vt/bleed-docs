@@ -1,0 +1,105 @@
+---
+title: 'Automation commands'
+description: '6 automation commands in bleed.'
+---
+
+# Automation
+
+6 commands.
+
+| Command | What it does |
+|---------|--------------|
+| [`,boost`](#boost) | Manage boost notifications and awards for this server. |
+| [`,bumpreminder`](#bumpreminder) | Manage disboard bump reminders. |
+| [`,invoke`](#invoke) | Change what the bot says for mod actions. |
+| [`,reaction`](#reaction) | Set up auto reactions for messages. |
+| [`,responder`](#responder) | Set up automatic responses to messages. |
+| [`,welcome`](#welcome) | Set up welcome and leave messages. |
+
+## ,boost
+
+Manage boost notifications and awards for this server.
+
+**Usage:** `,boost <channel|message|view|settings|test|remove|variables>`
+**Aliases:** `boosting`, `boosts`
+
+```bash
+{prefix}boost channel #boosts
+{prefix}boost message Thanks {mention} for boosting {guild}!
+{prefix}boost view
+{prefix}boost test
+```
+
+## ,bumpreminder
+
+Manage disboard bump reminders.
+
+**Usage:** `,bumpreminder <channel|role|message|thankyou|autolock|autoclean|test|config>`
+**Aliases:** `bump`
+
+```bash
+{prefix}bumpreminder channel #bumps
+{prefix}bumpreminder role @Bumpers
+{prefix}bumpreminder message It's bump time {role}!
+{prefix}bumpreminder autoclean
+{prefix}bumpreminder test
+```
+
+## ,invoke
+
+Change what the bot says for mod actions.
+
+**Usage:** `,invoke <message|dm|view|reset|variables> <action> [text]`
+**Aliases:** `invokemsg`, `iv`
+**Subcommands:** `{prefix}invoke view <action>`, `{prefix}invoke message <action> <text>`, `{prefix}invoke dm <action> <text>`, `{prefix}invoke reset <action|all>`, `{prefix}invoke variables`
+
+```bash
+{prefix}invoke view ban
+{prefix}invoke message ban You were banned from {guild} by {moderator}.
+{prefix}invoke dm mute You were muted in {guild} for {duration}.
+{prefix}invoke reset ban
+```
+
+## ,reaction
+
+Set up auto reactions for messages.
+
+**Usage:** `,reaction <add|edit|rename|move|remove|list|strict|exclusive>`
+**Aliases:** `autoreact`, `autoreactions`, `re`, `react`, `reactions`
+**Subcommands:** `{prefix}reaction add <name> <trigger> <emoji>`, `{prefix}reaction remove <name>`, `{prefix}reaction rename <name> <new name>`, `{prefix}reaction move <name> [#channel]`, `{prefix}reaction list`, `{prefix}reaction clear`, `{prefix}reaction strict add|remove|list <name>`, `{prefix}reaction exclusive channel|role|list|remove`
+
+```bash
+{prefix}reaction add nice good bot :robot:
+{prefix}reaction list
+{prefix}reaction clear
+```
+
+## ,responder
+
+Set up automatic responses to messages.
+
+**Usage:** `,responder <add|edit|rename|move|remove|list|strict|exclusive>`
+**Aliases:** `autoresp`, `autoresponder`, `trigger`, `triggers`
+**Subcommands:** `{prefix}responder add <name> <trigger> | <response>`, `{prefix}responder remove <name>`, `{prefix}responder rename <name> <new name>`, `{prefix}responder move <name> [#channel]`, `{prefix}responder list`, `{prefix}responder clear`, `{prefix}responder strict add|remove|list <name>`, `{prefix}responder exclusive channel|role|list|remove`
+
+```bash
+{prefix}responder add hello hi | hello there!
+{prefix}responder list
+{prefix}responder strict add hello
+{prefix}responder exclusive channel hello #general
+```
+
+## ,welcome
+
+Set up welcome and leave messages.
+
+**Usage:** `,welcome <message|channel|dm|test|variables|toggle>`
+**Aliases:** `greet`, `wlc`
+**Subcommands:** `{prefix}welcome message set|preview|remove|leave`, `{prefix}welcome channel add|remove|list|leave`, `{prefix}welcome dm enable|disable|status|message`, `{prefix}welcome test welcome|leave`, `{prefix}welcome on|off`, `{prefix}welcome variables`
+
+```bash
+{prefix}welcome message set Welcome {user}!
+{prefix}welcome channel add #welcome
+{prefix}welcome dm enable
+{prefix}welcome test welcome
+```

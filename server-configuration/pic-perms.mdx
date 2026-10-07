@@ -1,0 +1,47 @@
+---
+title: 'Pic Perms settings'
+description: 'Every pic perms setting bleed exposes per server.'
+---
+
+# Pic Perms
+
+5 settings. Change them with
+`,config`, or on the [dashboard](https://bleedrip.vercel.app/manage.html).
+
+| Key | Setting | Type | Default | Notes |
+|-----|---------|------|---------|-------|
+| `picEnabled` | Pic perms enabled | `boolean` | `true` |  |
+| `picRoleId` | Pic perms role | `role` | *not set* | Role granted once the code is redeemed. |
+| `picCode` | Pic perms code | `string` | *not set* | Code members send to unlock pic perms. |
+| `picEmojiId` | Pic perms emoji | `emoji` | *not set* |  |
+| `picChannelId` | Pic perms channel | `channel` | *not set* |  |
+
+## Pic perms enabled
+```bash
+,config set picEnabled <value>
+```
+Type: `boolean`.
+
+## Pic perms role
+```bash
+,config set picRoleId <value>
+```
+Role granted once the code is redeemed.
+
+## Pic perms code
+```bash
+,config set picCode <value>
+```
+Code members send to unlock pic perms.
+
+## Pic perms emoji
+```bash
+,config set picEmojiId <value>
+```
+Type: `emoji`.
+
+## Pic perms channel
+```bash
+,config set picChannelId <value>
+```
+Type: `channel`.
